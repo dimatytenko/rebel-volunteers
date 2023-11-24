@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   * {
     padding: 0px;
-    margin: 0px;
     border: 0px;
+    margin: 0px;
   }
 
   *,
@@ -31,11 +31,14 @@ export const GlobalStyles = createGlobalStyle`
   h6 {
     font-weight: inherit;
     font-size: inherit;
+    margin: 0px;
   }
 
   html,
   body {
     height: 100%;
+    font-family: 'e-Ukraine Head';
+    line-height: 1;
   }
   
   #root {
