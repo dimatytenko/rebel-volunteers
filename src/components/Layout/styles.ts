@@ -7,7 +7,7 @@ export const StyledLayout = styled.div<{ $theme?: ThemeType }>`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: ${({ theme, $theme }) => theme.palette.colors[$theme || 'primary']};
+  background-color: ${({ theme, $theme }) => theme.palette.colors[$theme || 'black']};
 `;
 
 export const Main = styled.main<{ $isMobile?: boolean }>`
@@ -23,5 +23,5 @@ export const StyledHeader = styled.header`
 
 // Footer
 export const StyledFooter = styled.footer`
-  padding: 15px 0;
+  padding: 30px 0;
 `;
