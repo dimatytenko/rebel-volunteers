@@ -5,28 +5,8 @@ import styled, { css, StyledProps } from 'styled-components';
 
 import { StyledSvgIconProps } from './types';
 
-const getColor = ({
-  theme,
-  color,
-  defaultColor,
-}: {
-  theme: any;
-  color?: string;
-  defaultColor: string;
-}) => {
-  switch (color) {
-    case 'primary':
-      return theme.palette.colors.primary;
-    case 'secondary':
-      return theme.palette.colors.secondary;
-    case 'black':
-      return theme.palette.colors.black;
-    case 'none':
-      return 'none';
-
-    default:
-      return defaultColor;
-  }
+const getColor = ({ theme, color, defaultColor }: { theme: any; color?: string; defaultColor: string }) => {
+  return color ? theme.palette.colors[color] : defaultColor;
 };
 
 const stroke = ({ theme, stroke }: StyledProps<StyledSvgIconProps>) => {

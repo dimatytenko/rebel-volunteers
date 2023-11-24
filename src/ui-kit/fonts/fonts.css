@@ -2,7 +2,7 @@
   font-family: 'e-Ukraine Head';
   font-style: normal;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;
   letter-spacing: 0;
   src:
     url('files/e-ukrainehead-regular_w.woff2') format('woff2'),
@@ -14,7 +14,7 @@
   font-family: 'e-Ukraine';
   font-style: normal;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;
   letter-spacing: 0;
   src:
     url('files/e-ukraine-regular_w.woff2') format('woff2'),

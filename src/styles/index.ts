@@ -38,7 +38,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     height: 100%;
     font-family: 'e-Ukraine Head';
-    line-height: 1;
+    line-height: normal;
+    color: ${({ theme }) => theme.palette.colors.secondary};
   }
   
   #root {

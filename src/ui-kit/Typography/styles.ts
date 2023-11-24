@@ -6,7 +6,7 @@ import styled, { css, StyledProps } from 'styled-components';
 import { TextBaseProps } from './types';
 
 const color = ({ $color, theme }: StyledProps<TextBaseProps>) => {
-  return $color ? theme.palette.colors[$color] : theme.palette.colors.primary;
+  return $color ? theme.palette.colors[$color] : theme.palette.colors.secondary;
 };
 
 const fontCase = ({ $case }: StyledProps<TextBaseProps>) => {
@@ -43,6 +43,13 @@ export const StyledHeading3 = styled.h3`
     'liga' off;
   font-size: 50px;
   line-height: 0.62;
+`;
+
+export const StyledHeading4 = styled.h4`
+  ${styles};
+  font-family: e-Ukraine;
+  font-size: 25px;
+  line-height: 1;
 `;
 
 export const StyledHeading5 = styled.h5`

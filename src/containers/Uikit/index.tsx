@@ -25,25 +25,25 @@ export const Uikit = () => {
         <br />
         <div>Typography</div>
         <Heading1 $case="uppercase">rebel volunteers</Heading1>
-        <Heading1 $case="uppercase" $color="secondary">
+        <Heading1 $case="uppercase" $color="primary">
           rebel volunteers
         </Heading1>
         <Heading2 $case="uppercase">наша діяльність</Heading2>
-        <Heading2 $case="uppercase" $color="secondary">
+        <Heading2 $case="uppercase" $color="primary">
           наша діяльність
         </Heading2>
         <br />
         <Heading3>Ми передали</Heading3>
-        <Heading3 $color="secondary">Ми передали</Heading3>
+        <Heading3 $color="primary">Ми передали</Heading3>
         <br />
         <Heading5>Військові</Heading5>
-        <Heading5 $color="secondary">Військові</Heading5>
+        <Heading5 $color="primary">Військові</Heading5>
         <Text1>Ми надаємо продукти та необхідні речі для людей чиє житло було зруйновано або пошкоджено.</Text1>
-        <Text1 $color="secondary">
+        <Text1 $color="primary">
           Ми надаємо продукти та необхідні речі для людей чиє житло було зруйновано або пошкоджено.
         </Text1>
         <Text2>Ціль: 200 000 грн</Text2>
-        <Text2 $color="secondary">Ціль: 200 000 грн</Text2>
+        <Text2 $color="primary">Ціль: 200 000 грн</Text2>
 
         <br />
       </Container>
