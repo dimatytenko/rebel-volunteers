@@ -1,9 +1,12 @@
-import { Logo } from '../../ui-kit/Logo';
+import { Team } from '../Team';
+import { Br } from '../../ui-kit/Br';
 
 export const Main = () => {
   return (
     <div>
-      <Logo width="191px" height="191px" />
+      <Br desktop={120} mobile={60} />
+      <Team />
+      <Br desktop={120} mobile={60} />
     </div>
   );
 };

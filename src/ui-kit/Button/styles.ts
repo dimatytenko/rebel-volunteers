@@ -12,7 +12,7 @@ export const StyledLink = styled(RouteLink)<{ $active?: boolean }>`
     width: ${({ $active }) => ($active ? '100%' : '0%')};
     height: 1.5px;
     background-color: ${({ theme }) => theme.palette.colors.secondary};
-    transition: ${({ theme }) => theme.transition.primary};
+    transition: all ${({ theme }) => theme.transition.primary};
   }
 
   &:hover:before {
@@ -27,7 +27,7 @@ export const ButtonBase = styled.button`
   gap: 13px;
   padding: 12px 24px;
   background-color: ${({ theme }) => theme.palette.colors.red};
-  transition: ${({ theme }) => theme.transition.primary};
+  transition: all ${({ theme }) => theme.transition.primary};
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.colors.redHover};

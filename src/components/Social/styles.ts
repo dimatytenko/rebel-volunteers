@@ -9,7 +9,7 @@ export const StyledSocial = styled.div`
 
 export const IconButton = styled.a<{ $type?: SocialType }>`
   & > svg > path {
-    transition: ${({ theme }) => theme.transition.primary};
+    transition: fill ${({ theme }) => theme.transition.primary};
   }
 
   &:hover > svg > path {
