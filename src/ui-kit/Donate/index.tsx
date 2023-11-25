@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { IconSvg } from '../Icon/Svg';
 import { DonateWrapper, RotateWrapper, StyledIcon } from './styles';
 
