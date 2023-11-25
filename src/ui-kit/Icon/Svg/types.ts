@@ -1,7 +1,16 @@
 export const colorOptions = <const>['primary', 'secondary', 'black', 'grey', 'greyHover', 'none'];
 export type color = (typeof colorOptions)[number];
 
-export const iconOptions = <const>['mail', 'instagram', 'facebook', 'arrow', 'arrow-short', 'arrow-long', 'phone'];
+export const iconOptions = <const>[
+  'mail',
+  'instagram',
+  'facebook',
+  'arrow',
+  'arrow-short',
+  'arrow-long',
+  'phone',
+  'donate',
+];
 export type icon = (typeof iconOptions)[number];
 
 export interface StyledSvgIconProps {

@@ -16,7 +16,7 @@ interface HeaderProps {
 export const HeaderComponent: React.FC<HeaderProps> = ({ path }) => {
   return (
     <StyledHeader>
-      <Container point={POINTS.s}>
+      <Container point={POINTS.m}>
         <HeaderContent>
           <Logo width="78px" height="78px" />
           <HeaderRightContent>

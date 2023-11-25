@@ -20,7 +20,7 @@ interface FooterProps {
 export const FooterComponent: React.FC<FooterProps> = ({ path }) => {
   return (
     <StyledFooter>
-      <Container point={POINTS.s}>
+      <Container point={POINTS.m}>
         <FooterContent>
           <Logo width="78px" height="78px" />
           <FooterRightContent>
