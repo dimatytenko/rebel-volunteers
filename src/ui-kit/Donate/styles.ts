@@ -50,3 +50,38 @@ export const StyledIcon = styled(IconSvg).attrs({
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+const pulsing = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+export const DonateWrapperPulsing = styled.div`
+  position: fixed;
+  top: 164px;
+  left: 50%;
+  transform: translateX(+353px);
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.palette.colors.red};
+  overflow: hidden;
+  cursor: pointer;
+  animation: ${pulsing} 700ms ease-in-out infinite;
+  transition: background-color ${({ theme }) => theme.transition.primary};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.colors.redHover};
+
+    ${RotateWrapper} {
+      animation-play-state: paused;
+    }
+  }
+`;

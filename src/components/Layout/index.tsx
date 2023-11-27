@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { StyledLayout, Main } from './styles';
 import { IAppLayoutProps } from '../../types/layout';
-import { Donate } from '../../ui-kit/Donate';
+import { Donate, DonatePulsing } from '../../ui-kit/Donate';
 
 export const LayoutComponent: FC<IAppLayoutProps> = ({
   children,
@@ -26,6 +26,7 @@ export const LayoutComponent: FC<IAppLayoutProps> = ({
       <Main>{children}</Main>
 
       <Donate />
+      <DonatePulsing />
       {!hideFooter && footer}
     </StyledLayout>
   );
