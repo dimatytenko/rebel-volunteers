@@ -19,6 +19,7 @@ export const RotateWrapper = styled.div`
 
 export const DonateWrapper = styled.div`
   position: fixed;
+  z-index: 100;
   top: 164px;
   left: 50%;
   transform: translateX(+353px);
@@ -65,23 +66,24 @@ const pulsing = keyframes`
 
 export const DonateWrapperPulsing = styled.div`
   position: fixed;
-  top: 164px;
+  z-index: 100;
+  top: 400px;
   left: 50%;
   transform: translateX(+353px);
+`;
+
+export const DonatePulsingButton = styled.div`
   width: 208px;
   height: 208px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.palette.colors.red};
   overflow: hidden;
   cursor: pointer;
-  animation: ${pulsing} 700ms ease-in-out infinite;
   transition: background-color ${({ theme }) => theme.transition.primary};
+  animation: ${pulsing} 700ms ease-in-out infinite;
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.colors.redHover};
-
-    ${RotateWrapper} {
-      animation-play-state: paused;
-    }
+    animation-play-state: paused;
   }
 `;

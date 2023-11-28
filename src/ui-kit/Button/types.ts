@@ -13,3 +13,10 @@ export interface LinkButtonProps extends WithChildren {
   target?: HTMLAttributeAnchorTarget;
   icon?: React.ReactNode;
 }
+
+export type DirectionArrowType = 'left' | 'right';
+export interface ArrowButtonProps {
+  className?: string;
+  direction: DirectionArrowType;
+  onClick?: () => void;
+}

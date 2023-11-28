@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { Link as RouteLink } from 'react-router-dom';
 
+import { IconSvg } from '../Icon/Svg';
+import { DirectionArrowType } from './types';
+
 export const StyledLink = styled(RouteLink)<{ $active?: boolean }>`
   position: relative;
 
@@ -52,4 +55,35 @@ export const LinkRoute = styled(RouteLink)`
   height: 100%;
   text-decoration: none;
   text-underline: none;
+`;
+
+export const ArrowButtonBase = styled.button`
+  position: relative;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: ${({ theme }) => theme.palette.colors.grey};
+  transition: all ${({ theme }) => theme.transition.primary};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.colors.systemHover};
+  }
+`;
+
+export const ArrowButtonIcon = styled(IconSvg).attrs({
+  type: 'arrow',
+  width: '24px',
+  height: '24px',
+  viewBox: '0 0 10 17',
+  fill: 'none',
+  stroke: 'primary',
+})<{ direction: DirectionArrowType }>`
+  pposition: absolute;
+  top: 50%;
+  left: 50%;
+  transform: ${({ direction }) => (direction === 'left' ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;

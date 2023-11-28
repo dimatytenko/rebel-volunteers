@@ -1,5 +1,5 @@
 import { IconSvg } from '../Icon/Svg';
-import { DonateWrapper, RotateWrapper, StyledIcon, DonateWrapperPulsing } from './styles';
+import { DonateWrapper, RotateWrapper, StyledIcon, DonateWrapperPulsing, DonatePulsingButton } from './styles';
 
 export const Donate = () => {
   return (
@@ -15,10 +15,10 @@ export const Donate = () => {
 export const DonatePulsing = () => {
   return (
     <DonateWrapperPulsing>
-      <RotateWrapper>
+      <DonatePulsingButton>
         <IconSvg type="donate" width="208" height="208" viewBox="0 0 208 208" />
-      </RotateWrapper>
-      <StyledIcon />
+        <StyledIcon />
+      </DonatePulsingButton>
     </DonateWrapperPulsing>
   );
 };

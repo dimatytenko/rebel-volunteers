@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { WithChildren } from '../../types/helpers';
-import { NavLinkProps, LinkButtonProps } from './types';
+import { NavLinkProps, LinkButtonProps, ArrowButtonProps } from './types';
 import { Text1 } from '../Typography';
-import { StyledLink, ButtonBase, ALink, LinkRoute } from './styles';
+import { StyledLink, ButtonBase, ALink, LinkRoute, ArrowButtonBase, ArrowButtonIcon } from './styles';
 export const HomeLink: React.FC<WithChildren> = ({ children, ...props }) => {
   return (
     <Link to={'/'} {...props}>
@@ -29,5 +29,13 @@ export const LinkButton: React.FC<LinkButtonProps> = ({ to, href, target, icon, 
       {icon && icon}
       <Text1>{children}</Text1>
     </ButtonBase>
+  );
+};
+
+export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, onClick, ...props }) => {
+  return (
+    <ArrowButtonBase onClick={onClick} {...props}>
+      <ArrowButtonIcon direction={direction} />
+    </ArrowButtonBase>
   );
 };

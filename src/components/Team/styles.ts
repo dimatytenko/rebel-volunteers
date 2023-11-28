@@ -5,10 +5,11 @@ import { Text1 } from '../../ui-kit/Typography';
 export const TeamWrapper = styled.div``;
 
 export const TeamContent = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 25px;
-  row-gap: 37px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(174px, 1fr));
+  justify-content: center;
+  grid-column-gap: 25px;
+  grid-row-gap: 37px;
 `;
 
 export const TeamMemberWrapper = styled.div`
