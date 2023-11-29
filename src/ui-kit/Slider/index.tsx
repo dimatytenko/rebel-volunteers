@@ -32,7 +32,7 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
             spaceBetween: 15,
             slidesPerView: 1,
           },
-          768: {
+          900: {
             slidesPerView: isGrid ? 2 : 1,
           },
           1224: {

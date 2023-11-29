@@ -17,6 +17,10 @@ export const StyledItem = styled.div`
   max-width: 378px;
 `;
 
+export const ImageWrapper = styled.div`
+  min-width: 64px;
+`;
+
 export const Image = styled.img``;
 
 export const Link = styled.a`
