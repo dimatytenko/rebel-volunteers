@@ -22,6 +22,8 @@ const ArrowsWrapperStyles = css`
 
 export const SliderWrapper = styled.div<{ $isGrid?: boolean }>`
   position: relative;
+  display: flex;
+  flex-direction: column-reverse;
   padding: 0 ${({ $isGrid }) => ($isGrid ? `78px` : `0`)};
 `;
 
@@ -45,7 +47,10 @@ const ArrowButtonStyles = css`
   z-index: 1;
 `;
 
-export const ArrowButtonWrapper = styled.div<{ $isGrid?: boolean; $position?: 'right' | 'left' }>`
+export const ArrowButtonWrapper = styled.div<{
+  $isGrid?: boolean;
+  $position?: 'right' | 'left';
+}>`
   ${({ $isGrid }) => ($isGrid ? ArrowButtonStyles : `undefined`)};
   ${({ $position }) => ($position === 'right' ? `right: 0;` : `left: 0;`)};
 `;

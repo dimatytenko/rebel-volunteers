@@ -20,6 +20,14 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
 
   return (
     <SliderWrapper $isGrid={isGrid}>
+      <ArrowsWrapper $isGrid={isGrid}>
+        <ArrowButtonWrapper ref={prevRef} $isGrid={isGrid} $position="left">
+          <ArrowButton direction="left" />
+        </ArrowButtonWrapper>
+        <ArrowButtonWrapper ref={nextRef} $isGrid={isGrid} $position="right">
+          <ArrowButton direction="right" />
+        </ArrowButtonWrapper>
+      </ArrowsWrapper>
       <StyledSwiper
         loop={isLoop}
         navigation={navigation}
@@ -40,7 +48,12 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
           },
         }}
         onInit={(swiper) => {
-          if (typeof swiper.params.navigation !== 'boolean' && swiper.params.navigation) {
+          if (
+            typeof swiper.params.navigation !== 'boolean' &&
+            swiper.params.navigation &&
+            prevRef.current &&
+            nextRef.current
+          ) {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
             swiper.navigation.init();
@@ -52,14 +65,6 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
           <SwiperSlide key={i}>{child}</SwiperSlide>
         ))}
       </StyledSwiper>
-      <ArrowsWrapper $isGrid={isGrid}>
-        <ArrowButtonWrapper ref={prevRef} $isGrid={isGrid} $position="left">
-          <ArrowButton direction="left" />
-        </ArrowButtonWrapper>
-        <ArrowButtonWrapper ref={nextRef} $isGrid={isGrid} $position="right">
-          <ArrowButton direction="right" />
-        </ArrowButtonWrapper>
-      </ArrowsWrapper>
     </SliderWrapper>
   );
 };
