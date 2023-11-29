@@ -39,7 +39,7 @@ export const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
         {member.name ? <TextInfo $isLink={!!member.link}>{member.name}</TextInfo> : <Plug />}
         <TextInfo $isLink={!!member.link}>{member.nickname}</TextInfo>
         <TextInfo $isLink={!!member.link}>{member.position}</TextInfo>
-        {member.link && <ALink href={member.link} target="_blank" />}
+        {member.link && <ALink href={member.link} target="_blank" rel="noopener noreferrer" />}
       </InfoWrapper>
     </TeamMemberWrapper>
   );

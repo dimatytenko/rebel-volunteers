@@ -1,13 +1,13 @@
 import React, { useRef, Children, PropsWithChildren } from 'react';
 import { SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Grid } from 'swiper/modules';
 
-import { StyledSwiper, ArrowButtonWrapper, ArrowsWrapper } from './styles';
+import { StyledSwiper, ArrowButtonWrapper, ArrowsWrapper, SliderWrapper } from './styles';
 import { SliderProps } from './types';
 import { ArrowButton } from '../Button';
 
-export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation, isLoop, children }) => {
-  const modules = [Navigation, Autoplay];
+export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation, isLoop, isGrid, children }) => {
+  const modules = [Navigation, Autoplay, Grid];
   const arrayChildren = Children.toArray(children);
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
@@ -16,17 +16,27 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
     nextEl: nextRef.current,
   };
   const navigation = isNavigation && navigationRefs;
+  const grid = isGrid ? { rows: 3 } : undefined;
 
   return (
-    <>
+    <SliderWrapper $isGrid={isGrid}>
       <StyledSwiper
         loop={isLoop}
         navigation={navigation}
-        autoplay={{ delay: 3000 }}
+        autoplay={isGrid ? undefined : { delay: 3000 }}
+        grid={grid}
+        $isGrid={isGrid}
         modules={[...modules]}
         breakpoints={{
           320: {
             spaceBetween: 15,
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: isGrid ? 2 : 1,
+          },
+          1224: {
+            slidesPerView: isGrid ? 3 : 1,
           },
         }}
         onInit={(swiper) => {
@@ -42,14 +52,14 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
           <SwiperSlide key={i}>{child}</SwiperSlide>
         ))}
       </StyledSwiper>
-      <ArrowsWrapper>
-        <ArrowButtonWrapper ref={prevRef}>
+      <ArrowsWrapper $isGrid={isGrid}>
+        <ArrowButtonWrapper ref={prevRef} $isGrid={isGrid} $position="left">
           <ArrowButton direction="left" />
         </ArrowButtonWrapper>
-        <ArrowButtonWrapper ref={nextRef}>
+        <ArrowButtonWrapper ref={nextRef} $isGrid={isGrid} $position="right">
           <ArrowButton direction="right" />
         </ArrowButtonWrapper>
       </ArrowsWrapper>
-    </>
+    </SliderWrapper>
   );
 };

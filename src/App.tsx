@@ -7,6 +7,7 @@ import { Layout } from './containers/Layout';
 import { defaultTheme } from './ui-kit/theme';
 import './ui-kit/fonts/fonts.css';
 import 'swiper/css';
+import 'swiper/css/grid';
 import 'swiper/css/navigation';
 
 function App() {
