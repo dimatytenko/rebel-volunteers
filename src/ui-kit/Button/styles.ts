@@ -59,9 +59,6 @@ export const LinkRoute = styled(RouteLink)`
 
 export const ArrowButtonBase = styled.button`
   position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -87,3 +84,34 @@ export const ArrowButtonIcon = styled(IconSvg).attrs({
   left: 50%;
   transform: ${({ direction }) => (direction === 'left' ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
+
+export const StyledButton = styled.button`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  width 100%;
+  font-family: e-Ukraine;
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+  font-size: 20px;
+  line-height: 1;
+  background-color: ${({ theme }) => theme.palette.colors.red};
+  transition: all ${({ theme }) => theme.transition.primary};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.colors.redHover};
+  }
+`;
+
+export const ArrowShortButtonIcon = styled(IconSvg).attrs({
+  type: 'arrow-short',
+  width: '20px',
+  height: '20px',
+  viewBox: '0 0 17 17',
+  fill: 'none',
+  stroke: 'secondary',
+})``;

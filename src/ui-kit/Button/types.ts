@@ -7,16 +7,18 @@ export interface NavLinkProps extends WithChildren {
   active: boolean;
 }
 
-export interface LinkButtonProps extends WithChildren {
-  href?: string;
-  to?: string;
-  target?: HTMLAttributeAnchorTarget;
-  icon?: React.ReactNode;
-}
-
 export type DirectionArrowType = 'left' | 'right';
 export interface ArrowButtonProps {
   className?: string;
   direction: DirectionArrowType;
   onClick?: () => void;
+}
+
+export interface ButtonProps extends WithChildren {
+  className?: string;
+  onClick?: () => void;
+  href?: string;
+  to?: string;
+  target?: HTMLAttributeAnchorTarget;
+  icon?: React.ReactNode;
 }

@@ -5,6 +5,7 @@ import { Br } from '../../ui-kit/Br';
 import { Merch } from '../Merch';
 import { Directions } from '../../components/Directions';
 import { OurSupport } from '../OurSupport';
+import { Passed } from '../Passed';
 
 export const Main = () => {
   return (
@@ -12,6 +13,8 @@ export const Main = () => {
       <Hero />
       <Br desktop={100} mobile={60} />
       <OurActivity />
+      <Br desktop={150} mobile={60} />
+      <Passed />
       <Br desktop={100} mobile={60} />
       <Directions />
       <Br desktop={150} mobile={60} />

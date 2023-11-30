@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Heading2, Text1 } from '../../ui-kit/Typography';
+import { Button } from '../../ui-kit/Button';
 
 export const Wrapper = styled.div``;
 
@@ -13,9 +14,7 @@ export const SliderWrapper = styled.div`
   max-width: 482px;
 `;
 
-export const TextWrapper = styled.div`
-  position: relative;
-  top: -70px;
+export const RightSideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -25,7 +24,12 @@ export const TextWrapper = styled.div`
 
 export const Title = styled(Heading2)`
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 0.2;
+  margin-bottom: 70px;
 `;
 
 export const Subtitle = styled(Text1)``;
+
+export const StyledButton = styled(Button)`
+  width: 276px;
+`;
