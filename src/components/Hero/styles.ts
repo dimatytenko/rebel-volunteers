@@ -21,6 +21,8 @@ export const HeroSubtitle = styled(Text1)`
   margin: 42px 0;
 `;
 
+export const ImageWrapper = styled.div``;
+
 export const Image = styled.img``;
 
 export const LeftBlock = styled.div`
@@ -33,10 +35,4 @@ export const RightBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-`;
-
-export const Image6Wrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 8px;
 `;

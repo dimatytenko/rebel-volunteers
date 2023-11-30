@@ -4,9 +4,9 @@ import {
   HeroContent,
   HeroSubtitle,
   Image,
+  ImageWrapper,
   RightBlock,
   LeftBlock,
-  Image6Wrapper,
 } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
@@ -29,17 +29,25 @@ export const HeroComponent = () => {
               жити у Вільній
             </HeroSubtitle>
             <LeftBlock>
-              <Image src={img_1} alt="img_1" />
-              <Image src={img_2} alt="img_2" />
+              <ImageWrapper>
+                <Image src={img_1} alt="img_1" />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image src={img_2} alt="img_2" />
+              </ImageWrapper>
             </LeftBlock>
           </div>
-          <Image src={img_3} alt="img_3" />
+          <ImageWrapper>
+            <Image src={img_3} alt="img_3" />
+          </ImageWrapper>
           <RightBlock>
-            <Image src={img_4} alt="img_4" />
+            <ImageWrapper>
+              <Image src={img_4} alt="img_4" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <Image src={img_5} alt="img_5" />
+            </ImageWrapper>
           </RightBlock>
-          <Image6Wrapper>
-            <Image src={img_5} alt="img_5" />
-          </Image6Wrapper>
         </HeroContent>
       </Container>
     </HeroWrapper>
