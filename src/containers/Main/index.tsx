@@ -6,11 +6,14 @@ import { Merch } from '../Merch';
 import { Directions } from '../../components/Directions';
 import { OurSupport } from '../OurSupport';
 import { Passed } from '../Passed';
+import { Collection } from '../Collection';
 
 export const Main = () => {
   return (
     <div>
       <Hero />
+      <Br desktop={100} mobile={60} />
+      <Collection />
       <Br desktop={100} mobile={60} />
       <OurActivity />
       <Br desktop={150} mobile={60} />

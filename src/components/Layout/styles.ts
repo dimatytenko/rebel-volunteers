@@ -8,7 +8,7 @@ export const StyledLayout = styled.div<{ $theme?: ThemeType }>`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: ${({ theme, $theme }) => theme.palette.colors[$theme || 'black']};
+  background-color: ${({ theme, $theme }) => theme.palette.colors[$theme || 'primary']};
 `;
 
 export const Main = styled.main<{ $isMobile?: boolean }>`

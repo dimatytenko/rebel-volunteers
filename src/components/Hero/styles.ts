@@ -13,7 +13,6 @@ export const HeroContent = styled.div`
   position: relative;
   display: flex;
   gap: 24px;
-  padding-bottom: 99px;
 `;
 
 export const HeroSubtitle = styled(Text1)`
