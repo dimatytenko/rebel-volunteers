@@ -1,6 +1,9 @@
 export interface MerchProps {
   data: {
-    id: string;
-    img: string;
-  }[];
+    galleryID: string;
+    images: {
+      id: string;
+      img: string;
+    }[];
+  };
 }

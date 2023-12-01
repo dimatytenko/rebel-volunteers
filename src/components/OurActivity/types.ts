@@ -1,6 +1,9 @@
 export interface OurAtivityProps {
   data: {
-    id: string;
-    img: string;
-  }[];
+    galleryID: string;
+    images: {
+      id: string;
+      img: string;
+    }[];
+  };
 }

@@ -9,6 +9,7 @@ import './ui-kit/fonts/fonts.css';
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/navigation';
+import 'photoswipe/style.css';
 
 function App() {
   return (
