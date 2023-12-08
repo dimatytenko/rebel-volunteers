@@ -7,6 +7,7 @@ import { Directions } from '../../components/Directions';
 import { OurSupport } from '../OurSupport';
 import { Passed } from '../Passed';
 import { Collection } from '../Collection';
+import { Widget } from '../../components/Widget';
 
 export const Main = () => {
   return (
@@ -26,6 +27,8 @@ export const Main = () => {
       <Merch />
       <Br desktop={100} mobile={60} />
       <OurSupport />
+      <Br desktop={150} mobile={60} />
+      <Widget />
       <Br desktop={150} mobile={60} />
     </div>
   );
