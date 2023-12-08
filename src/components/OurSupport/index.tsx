@@ -3,7 +3,7 @@ import React from 'react';
 import { OurSupportComponentProps } from './types';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { Wrapper, Title, StyledItem, ImageWrapper, Image, Link } from './styles';
+import { Wrapper, Title,  ImageWrapper, Image, Link, TextLink } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
 export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data }) => {
@@ -16,14 +16,12 @@ export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data }
         <Slider isNavigation isLoop isGrid>
           {data.map((item) => {
             return (
-              <StyledItem key={item.id}>
-                <ImageWrapper>
-                  <Image src={item.logo} alt={item.name} />
-                </ImageWrapper>
-                <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                  {item.name}
+                <Link key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">
+                  <ImageWrapper>
+                    <Image src={item.logo} alt={item.name} />
+                  </ImageWrapper>
+                  <TextLink>{item.name}</TextLink>
                 </Link>
-              </StyledItem>
             );
           })}
         </Slider>
