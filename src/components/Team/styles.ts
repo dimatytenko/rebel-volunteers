@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Text1 } from '../../ui-kit/Typography';
+import { Heading2, Text1 } from '../../ui-kit/Typography';
 
 export const TeamWrapper = styled.div``;
 
@@ -12,12 +12,43 @@ export const TeamContent = styled.div`
   grid-row-gap: 37px;
 `;
 
-export const TeamMemberWrapper = styled.div`
+export const Title = styled(Heading2)`
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 70px;
+`;
+
+export const TextInfo = styled(Text1)<{ $isLink: boolean }>`
+  display: block;
+  text-align: center;
+  transition: color ${({ theme }) => theme.transition.primary};
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform ${({ theme }) => theme.transition.primary};
+`;
+
+export const TeamMemberWrapper = styled.div<{ $isLink: boolean }>`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding-bottom: 28px;
+
+  &:hover {
+    ${TextInfo} {
+      color: ${({ theme, $isLink }) => ($isLink ? theme.palette.colors.greyHover : theme.palette.colors.secondary)};
+      text-decoration: ${({ $isLink }) => ($isLink ? 'underline' : 'none')};
+    }
+
+    ${Image} {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -27,28 +58,8 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-export const TextInfo = styled(Text1)<{ $isLink: boolean }>`
-  display: block;
-  text-align: center;
-  text-decoration: ${({ $isLink }) => ($isLink ? 'underline' : 'none')};
-  transition: color ${({ theme }) => theme.transition.primary};
-`;
-
-export const InfoWrapper = styled.div<{ $isLink: boolean }>`
-  position: relative;
+export const InfoWrapper = styled.div`
   max-width: 135px;
-
-  &:hover {
-    ${TextInfo} {
-      color: ${({ theme, $isLink }) => ($isLink ? theme.palette.colors.greyHover : theme.palette.colors.secondary)};
-    }
-  }
 `;
 
 export const Plug = styled.div`

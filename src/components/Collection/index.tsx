@@ -20,7 +20,7 @@ export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data }
   return (
     <CollectionWrapper>
       <Container point={POINTS.m}>
-        <CollectionContent img={data.img}>
+        <CollectionContent $img={data.img}>
           <TitleWrapper>
             <CollectionTitle>терміновий збір</CollectionTitle>
             <Label>

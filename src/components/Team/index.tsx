@@ -4,6 +4,7 @@ import { TeamProps, TeamMemberProps } from './types';
 import {
   TeamWrapper,
   TeamContent,
+  Title,
   TeamMemberWrapper,
   ImageWrapper,
   Image,
@@ -19,6 +20,7 @@ export const TeamComponent: React.FC<TeamProps> = ({ team }) => {
   return (
     <TeamWrapper>
       <Container point={POINTS.m}>
+        <Title>Команда</Title>
         <TeamContent>
           {team.map((member) => {
             return <TeamMember key={member.id} member={member} />;
@@ -31,11 +33,11 @@ export const TeamComponent: React.FC<TeamProps> = ({ team }) => {
 
 export const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
   return (
-    <TeamMemberWrapper>
+    <TeamMemberWrapper $isLink={!!member.link}>
       <ImageWrapper>
         <Image src={member.img} alt={member.name} />
       </ImageWrapper>
-      <InfoWrapper $isLink={!!member.link}>
+      <InfoWrapper>
         {member.name ? <TextInfo $isLink={!!member.link}>{member.name}</TextInfo> : <Plug />}
         <TextInfo $isLink={!!member.link}>{member.nickname}</TextInfo>
         <TextInfo $isLink={!!member.link}>{member.position}</TextInfo>
