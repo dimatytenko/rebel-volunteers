@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Instagram, Mail, Facebook, Arrow, ArrowShort, ArrowLong, Phone, Donate } from './Paths';
+import { Instagram, Mail, Facebook, Arrow, ArrowShort, ArrowLong, Phone, Donate, DonateHeart } from './Paths';
 import { StyledSvgIconProps } from './types';
 
 export const SvgChildren: React.FC<StyledSvgIconProps> = ({ type }) => {
@@ -21,6 +21,8 @@ export const SvgChildren: React.FC<StyledSvgIconProps> = ({ type }) => {
       return <Phone />;
     case 'donate':
       return <Donate />;
+    case 'donate-heart':
+      return <DonateHeart />;
 
     default:
       return null;

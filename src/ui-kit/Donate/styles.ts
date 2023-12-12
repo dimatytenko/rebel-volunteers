@@ -2,6 +2,42 @@ import styled, { keyframes } from 'styled-components';
 
 import { IconSvg } from '../../ui-kit/Icon/Svg';
 
+export const StyledIcon = styled(IconSvg).attrs({
+  type: 'arrow-long',
+  width: '34px',
+  height: '17px',
+  viewBox: '0 0 34 17',
+})`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ${({ theme }) => theme.transition.primary};
+`;
+
+export const StyledHeart = styled(IconSvg).attrs({
+  type: 'donate-heart',
+  width: '64px',
+  height: '64px',
+  viewBox: '0 0 64 64',
+  fill: 'none',
+})`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ${({ theme }) => theme.transition.primary};
+`;
+
+export const StyledTextIcon = styled(IconSvg).attrs({
+  type: 'donate',
+  width: '208px',
+  height: '208px',
+  viewBox: '0 0 208 208',
+})`
+  transition: all ${({ theme }) => theme.transition.primary};
+`;
+
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
@@ -40,16 +76,47 @@ export const DonateWrapper = styled.div`
   }
 `;
 
-export const StyledIcon = styled(IconSvg).attrs({
-  type: 'arrow-long',
-  width: '34px',
-  height: '17px',
-  viewBox: '0 0 34 17',
-})`
-  position: absolute;
-  top: 50%;
+export const DonateHeartWrapper = styled.div`
+  position: fixed;
+  z-index: 100;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 20px;
+  transform: translateX(+485px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.palette.colors.red};
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ${({ theme }) => theme.transition.primary};
+  ${StyledTextIcon} {
+    opacity: 0;
+    pointer-events: none;
+  }
+  ${StyledIcon} {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    width: 208px;
+    height: 208px;
+    transform: translateX(+353px);
+    background-color: ${({ theme }) => theme.palette.colors.redHover};
+
+    ${StyledTextIcon} {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    ${StyledHeart} {
+      opacity: 0;
+      pointer-events: none;
+    }
+    ${StyledIcon} {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
 `;
 
 const pulsing = keyframes`

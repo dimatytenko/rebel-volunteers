@@ -10,6 +10,7 @@ export const iconOptions = <const>[
   'arrow-long',
   'phone',
   'donate',
+  'donate-heart',
 ];
 export type icon = (typeof iconOptions)[number];
 

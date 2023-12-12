@@ -1,14 +1,45 @@
-import { IconSvg } from '../Icon/Svg';
-import { DonateWrapper, RotateWrapper, StyledIcon, DonateWrapperPulsing, DonatePulsingButton } from './styles';
+import { useEffect, useState } from 'react';
+
+import {
+  DonateWrapper,
+  DonateHeartWrapper,
+  RotateWrapper,
+  StyledIcon,
+  StyledHeart,
+  DonateWrapperPulsing,
+  DonatePulsingButton,
+  StyledTextIcon,
+} from './styles';
 
 export const Donate = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window?.pageYOffset > 40 ? setScrolled(true) : setScrolled(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <DonateWrapper>
-      <RotateWrapper>
-        <IconSvg type="donate" width="208" height="208" viewBox="0 0 208 208" />
-      </RotateWrapper>
-      <StyledIcon />
-    </DonateWrapper>
+    <>
+      {!scrolled ? (
+        <DonateWrapper>
+          <RotateWrapper>
+            <StyledTextIcon />
+          </RotateWrapper>
+          <StyledIcon />
+        </DonateWrapper>
+      ) : (
+        <DonateHeartWrapper>
+          <StyledTextIcon />
+          <StyledHeart />
+          <StyledIcon />
+        </DonateHeartWrapper>
+      )}
+    </>
   );
 };
 
@@ -16,7 +47,7 @@ export const DonatePulsing = () => {
   return (
     <DonateWrapperPulsing>
       <DonatePulsingButton>
-        <IconSvg type="donate" width="208" height="208" viewBox="0 0 208 208" />
+        <StyledTextIcon />
         <StyledIcon />
       </DonatePulsingButton>
     </DonateWrapperPulsing>
