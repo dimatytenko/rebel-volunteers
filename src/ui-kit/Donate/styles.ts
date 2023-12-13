@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import { IconSvg } from '../../ui-kit/Icon/Svg';
+import { Media } from '../theme/breakpoints';
 
 export const StyledIcon = styled(IconSvg).attrs({
   type: 'arrow-long',
@@ -67,6 +68,12 @@ export const DonateWrapper = styled.div`
   cursor: pointer;
   transition: background-color ${({ theme }) => theme.transition.primary};
 
+  ${Media.down.xl} {
+    left: unset;
+    right: 30px;
+    transform: none;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.palette.colors.redHover};
 
@@ -81,7 +88,7 @@ export const DonateHeartWrapper = styled.div`
   z-index: 100;
   left: 50%;
   bottom: 20px;
-  transform: translateX(+485px);
+  transform: translateX(+620px);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -98,11 +105,23 @@ export const DonateHeartWrapper = styled.div`
     pointer-events: none;
   }
 
+  ${Media.down.xxl} {
+    left: unset;
+    right: 20px;
+    transform: none;
+  }
+
   &:hover {
     width: 208px;
     height: 208px;
-    transform: translateX(+353px);
+    transform: translateX(+488px);
     background-color: ${({ theme }) => theme.palette.colors.redHover};
+
+    ${Media.down.xxl} {
+      left: unset;
+      right: 20px;
+      transform: none;
+    }
 
     ${StyledTextIcon} {
       opacity: 1;
