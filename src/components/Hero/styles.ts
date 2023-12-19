@@ -20,9 +20,9 @@ export const HeroSubtitle = styled(Text1)`
   margin: 42px 0;
 `;
 
-export const ImageWrapper = styled.div``;
-
-export const Image = styled.img``;
+export const ImageWrapper = styled.div`
+  overflow: hidden;
+`;
 
 export const LeftBlock = styled.div`
   display: flex;

@@ -1,13 +1,4 @@
-import {
-  HeroWrapper,
-  HeroTitle,
-  HeroContent,
-  HeroSubtitle,
-  Image,
-  ImageWrapper,
-  RightBlock,
-  LeftBlock,
-} from './styles';
+import { HeroWrapper, HeroTitle, HeroContent, HeroSubtitle, ImageWrapper, RightBlock, LeftBlock } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import img_1 from './assets/img_1.jpg';
@@ -15,6 +6,7 @@ import img_2 from './assets/img_2.jpg';
 import img_3 from './assets/img_3.jpg';
 import img_4 from './assets/img_4.jpg';
 import img_5 from './assets/img_5.jpg';
+import { ImageWithPreview } from '../../ui-kit/ImageWithPreview';
 
 export const HeroComponent = () => {
   return (
@@ -30,22 +22,22 @@ export const HeroComponent = () => {
             </HeroSubtitle>
             <LeftBlock>
               <ImageWrapper>
-                <Image src={img_1} alt="img_1" />
+                <ImageWithPreview src={img_1} width={110} height={140} alt="img_1" />
               </ImageWrapper>
               <ImageWrapper>
-                <Image src={img_2} alt="img_2" />
+                <ImageWithPreview src={img_2} width={110} height={140} alt="img_2" />
               </ImageWrapper>
             </LeftBlock>
           </div>
           <ImageWrapper>
-            <Image src={img_3} alt="img_3" />
+            <ImageWithPreview src={img_3} width={368} height={345} alt="img_3" />
           </ImageWrapper>
           <RightBlock>
             <ImageWrapper>
-              <Image src={img_4} alt="img_4" />
+              <ImageWithPreview src={img_4} width={175} height={235} alt="img_4" />
             </ImageWrapper>
             <ImageWrapper>
-              <Image src={img_5} alt="img_5" />
+              <ImageWithPreview src={img_5} width={245} height={185} alt="img_5" />
             </ImageWrapper>
           </RightBlock>
         </HeroContent>

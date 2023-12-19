@@ -1,0 +1,15 @@
+.ant-image {
+  overflow: hidden;
+}
+
+.ant-image .ant-image-img {
+  transition: transform 0.3s ease-in-out 0s;
+}
+
+.ant-image:hover > .ant-image-img {
+  transform: scale(1.1);
+}
+
+.ant-image .ant-image-mask:hover {
+  opacity: 0;
+}

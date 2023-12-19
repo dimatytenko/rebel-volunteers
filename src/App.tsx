@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/navigation';
 import 'photoswipe/style.css';
+import './ui-kit/ImageWithPreview/styles.css';
 
 function App() {
   return (
