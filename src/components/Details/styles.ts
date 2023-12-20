@@ -15,7 +15,7 @@ export const TopContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 70px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 `;
 
 export const StyledText = styled(Text2)``;

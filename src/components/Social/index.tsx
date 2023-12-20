@@ -16,7 +16,7 @@ export const Social: React.FC<SocialProps> = ({ type, size }) => {
   return (
     <StyledSocial>
       {social.map((item) => (
-        <IconButton key={item.type} href={item.to} target={'_blank'} $type={type}>
+        <IconButton key={item.type} href={item.to} target={item.type === 'mail' ? '_self' : '_blank'} $type={type}>
           {item.type === 'mail' ? (
             <IconSvg
               type={item.type as icon}
