@@ -7,7 +7,6 @@ export const Wrapper = styled.div``;
 export const Title = styled(Heading2)`
   text-transform: uppercase;
   margin-bottom: 70px;
-  line-height: 1.3;
 `;
 
 export const Content = styled.div`

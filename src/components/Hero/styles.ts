@@ -6,7 +6,7 @@ export const HeroWrapper = styled.div``;
 
 export const HeroTitle = styled(Heading1)`
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 `;
 
 export const HeroContent = styled.div`

@@ -13,6 +13,8 @@ import {
   ArrowButtonIcon,
   StyledButton,
   ArrowShortButtonIcon,
+  WrapperLinkText,
+  StyledTextLink,
 } from './styles';
 export const HomeLink: React.FC<WithChildren> = ({ children, ...props }) => {
   return (
@@ -38,6 +40,17 @@ export const LinkButton: React.FC<ButtonProps> = ({ to, href, target, icon, chil
       {icon && icon}
       <Text1>{children}</Text1>
     </ButtonBase>
+  );
+};
+
+export const LinkText: React.FC<ButtonProps> = ({ to, href, target, icon, children, ...props }) => {
+  return (
+    <WrapperLinkText {...props}>
+      {href && <ALink href={href} target={target} />}
+      {to && <LinkRoute to={to} />}
+      {icon && icon}
+      <StyledTextLink>{children}</StyledTextLink>
+    </WrapperLinkText>
   );
 };
 

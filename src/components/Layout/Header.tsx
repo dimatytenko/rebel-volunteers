@@ -23,8 +23,8 @@ export const HeaderComponent: React.FC<HeaderProps> = ({ path }) => {
             <Navigation path={path} />
             <SocialWrapper>
               <LangSwitch />
-              <LinkButton href={SOCIAL.phone} icon={<IconSvg type="phone" />}>
-                +38 096 1105 022
+              <LinkButton href={SOCIAL.phone.href} icon={<IconSvg type="phone" />}>
+                {SOCIAL.phone.text1}
               </LinkButton>
               <Social />
             </SocialWrapper>

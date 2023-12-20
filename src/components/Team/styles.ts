@@ -14,7 +14,6 @@ export const TeamContent = styled.div`
 
 export const Title = styled(Heading2)`
   text-transform: uppercase;
-  line-height: 1.3;
   margin-bottom: 70px;
 `;
 

@@ -14,9 +14,9 @@ export const Main = () => {
     <div>
       <Hero />
       <Br desktop={100} mobile={60} />
-      <Collection />
-      <Br desktop={100} mobile={60} />
       <OurActivity />
+      <Br desktop={100} mobile={60} />
+      <Collection />
       <Br desktop={150} mobile={60} />
       <Passed />
       <Br desktop={100} mobile={60} />

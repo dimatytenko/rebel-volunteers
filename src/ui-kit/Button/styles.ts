@@ -3,6 +3,7 @@ import { Link as RouteLink } from 'react-router-dom';
 
 import { IconSvg } from '../Icon/Svg';
 import { DirectionArrowType } from './types';
+import { Text4Slim } from '../Typography';
 
 export const StyledLink = styled(RouteLink)<{ $active?: boolean }>`
   position: relative;
@@ -115,3 +116,18 @@ export const ArrowShortButtonIcon = styled(IconSvg).attrs({
   fill: 'none',
   stroke: 'secondary',
 })``;
+
+export const StyledTextLink = styled(Text4Slim)`
+  transition: all ${({ theme }) => theme.transition.primary};
+`;
+
+export const WrapperLinkText = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  &:hover ${StyledTextLink} {
+    color: ${({ theme }) => theme.palette.colors.greyHover};
+  }
+`;

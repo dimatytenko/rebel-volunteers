@@ -33,12 +33,10 @@ export const TextWrapper = styled.div`
 
 export const Title = styled(Heading2)`
   text-transform: uppercase;
-  line-height: 1.3;
   margin-bottom: 70px;
 `;
 
 export const Subtitle = styled(Heading3)`
-  line-height: 1.1;
   margin-bottom: 25px;
 `;
 

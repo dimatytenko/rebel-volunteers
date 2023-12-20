@@ -23,7 +23,6 @@ export const TitleWrapper = styled.div`
 
 export const CollectionTitle = styled(Heading2)`
   text-transform: uppercase;
-  line-height: 1.4;
 `;
 
 export const DescriptionWrapper = styled.div`
