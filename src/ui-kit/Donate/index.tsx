@@ -16,7 +16,7 @@ export const Donate = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      window?.pageYOffset > 40 ? setScrolled(true) : setScrolled(false);
+      window?.pageYOffset > 500 ? setScrolled(true) : setScrolled(false);
     };
 
     window.addEventListener('scroll', handleScroll);

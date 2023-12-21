@@ -15,6 +15,7 @@ import {
   ArrowShortButtonIcon,
   WrapperLinkText,
   StyledTextLink,
+  StyledNavLinkText,
 } from './styles';
 export const HomeLink: React.FC<{ onClick?: () => void } & WithChildren> = ({ onClick, children, ...props }) => {
   return (
@@ -27,7 +28,7 @@ export const HomeLink: React.FC<{ onClick?: () => void } & WithChildren> = ({ on
 export const NavLink: React.FC<NavLinkProps> = ({ to, active, onClick, children, ...props }) => {
   return (
     <StyledLink to={to} onClick={onClick} {...props} $active={active}>
-      <Text1>{children}</Text1>
+      <StyledNavLinkText>{children}</StyledNavLinkText>
     </StyledLink>
   );
 };

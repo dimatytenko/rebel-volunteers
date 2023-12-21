@@ -28,6 +28,25 @@ export const StyledHeading1 = styled.h1`
   font-size: 160px;
   line-height: 1.3;
   letter-spacing: -7.5px;
+
+  ${Media.down.xl} {
+    font-size: 140px;
+    font-weight: 500;
+  }
+
+  ${Media.down.l} {
+    font-size: 108px;
+    overflow-wrap: break-word;
+  }
+
+  ${Media.down.m} {
+    font-size: 92px;
+    overflow-wrap: break-word;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 70px;
+  }
 `;
 
 export const StyledHeading2 = styled.h2`
@@ -68,12 +87,6 @@ export const StyledText1 = styled.p`
   ${styles};
   font-family: e-Ukraine;
   line-height: 1.5;
-
-  ${Media.down.l} {
-    font-size: 43px;
-    text-transform: uppercase;
-    line-height: 1;
-  }
 `;
 
 export const StyledText1Slim = styled.p`

@@ -3,7 +3,8 @@ import { Link as RouteLink } from 'react-router-dom';
 
 import { IconSvg } from '../Icon/Svg';
 import { DirectionArrowType } from './types';
-import { Text4Slim } from '../Typography';
+import { Text4Slim, Text1 } from '../Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const StyledLink = styled(RouteLink)<{ $active?: boolean }>`
   position: relative;
@@ -129,5 +130,17 @@ export const WrapperLinkText = styled.div`
 
   &:hover ${StyledTextLink} {
     color: ${({ theme }) => theme.palette.colors.greyHover};
+  }
+`;
+
+export const StyledNavLinkText = styled(Text1)`
+  ${Media.down.l} {
+    font-size: 43px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 36px;
   }
 `;

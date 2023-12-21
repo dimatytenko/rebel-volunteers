@@ -55,11 +55,10 @@ export const RotateWrapper = styled.div`
 `;
 
 export const DonateWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  top: 164px;
-  left: 50%;
-  transform: translateX(+353px);
+  top: 60px;
+  right: 0;
   width: 208px;
   height: 208px;
   border-radius: 50%;
@@ -68,10 +67,11 @@ export const DonateWrapper = styled.div`
   cursor: pointer;
   transition: background-color ${({ theme }) => theme.transition.primary};
 
-  ${Media.down.xl} {
-    left: unset;
-    right: 30px;
-    transform: none;
+  ${Media.down.l} {
+    right: unset;
+    top: unset;
+    left: 16px;
+    bottom: 120px;
   }
 
   &:hover {

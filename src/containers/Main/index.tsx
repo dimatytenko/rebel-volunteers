@@ -13,7 +13,7 @@ export const Main = () => {
   return (
     <div>
       <Hero />
-      <Br desktop={100} mobile={60} />
+      <Br desktop={100} mobile={20} />
       <OurActivity />
       <Br desktop={100} mobile={60} />
       <Collection />

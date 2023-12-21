@@ -4,6 +4,6 @@ import { POINTS } from './types';
 
 export const StyledContainer = styled.div<{ $point?: POINTS }>`
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
   max-width: ${({ $point }) => $point || POINTS.xl}px;
 `;

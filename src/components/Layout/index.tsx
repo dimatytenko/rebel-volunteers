@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { StyledLayout, Main } from './styles';
 import { IAppLayoutProps } from '../../types/layout';
-import { Donate } from '../../ui-kit/Donate';
+
 import { Drawer } from '../Drawer';
 
 export const LayoutComponent: FC<IAppLayoutProps> = ({
@@ -31,7 +31,6 @@ export const LayoutComponent: FC<IAppLayoutProps> = ({
 
       {!hideFooter && footer}
 
-      <Donate />
       <Drawer
         open={isOpenDrawer}
         onClose={onCloseDrawer}
