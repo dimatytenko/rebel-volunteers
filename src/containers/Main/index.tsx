@@ -19,17 +19,17 @@ export const Main = () => {
       <Collection />
       <Br desktop={150} mobile={70} />
       <Passed />
-      <Br desktop={100} mobile={60} />
+      <Br desktop={100} mobile={20} />
       <Directions />
-      <Br desktop={150} mobile={60} />
+      <Br desktop={150} mobile={20} />
       <Team />
-      <Br desktop={150} mobile={60} />
+      <Br desktop={150} mobile={70} />
       <Merch />
-      <Br desktop={100} mobile={60} />
+      <Br desktop={100} mobile={20} />
       <OurSupport />
-      <Br desktop={150} mobile={60} />
+      <Br desktop={150} mobile={70} />
       <Widget />
-      <Br desktop={150} mobile={60} />
+      <Br desktop={150} mobile={70} />
     </div>
   );
 };

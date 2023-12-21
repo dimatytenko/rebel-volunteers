@@ -104,6 +104,10 @@ export const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.palette.colors.red};
   transition: all ${({ theme }) => theme.transition.primary};
 
+    ${Media.down.m} {
+    font-size: 14px;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.palette.colors.redHover};
   }

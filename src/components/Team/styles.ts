@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Heading2, Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const TeamWrapper = styled.div``;
 
@@ -10,11 +11,38 @@ export const TeamContent = styled.div`
   justify-content: center;
   grid-column-gap: 25px;
   grid-row-gap: 37px;
+
+  ${Media.down.xs} {
+    grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+    grid-column-gap: 23px;
+    grid-row-gap: 20px;
+  }
+
+  ${Media.down.xxs} {
+    grid-template-columns: repeat(auto-fit, minmax(83px, 1fr));
+    grid-column-gap: 18px;
+    grid-row-gap: 15px;
+  }
 `;
 
 export const Title = styled(Heading2)`
   text-transform: uppercase;
   margin-bottom: 70px;
+
+  ${Media.down.m} {
+    font-size: 85px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  ${Media.down.s} {
+    font-size: 50px;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 40px;
+  }
 `;
 
 export const TextInfo = styled(Text1)<{ $isLink: boolean }>`
@@ -55,6 +83,16 @@ export const ImageWrapper = styled.div`
   height: 174px;
   border-radius: 50%;
   overflow: hidden;
+
+  ${Media.down.xs} {
+    width: 104px;
+    height: 104px;
+  }
+
+  ${Media.down.xxs} {
+    width: 83px;
+    height: 83px;
+  }
 `;
 
 export const InfoWrapper = styled.div`

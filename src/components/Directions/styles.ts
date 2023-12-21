@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Heading2, Heading3, Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.div``;
 
@@ -9,6 +10,10 @@ export const Content = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
   justify-content: center;
   grid-gap: 30px;
+
+  ${Media.down.m} {
+    grid-gap: 17px;
+  }
 `;
 
 export const Card = styled.div`
@@ -34,10 +39,34 @@ export const TextWrapper = styled.div`
 export const Title = styled(Heading2)`
   text-transform: uppercase;
   margin-bottom: 70px;
+
+  ${Media.down.m} {
+    font-size: 85px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  ${Media.down.s} {
+    font-size: 50px;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 40px;
+  }
 `;
 
 export const Subtitle = styled(Heading3)`
   margin-bottom: 25px;
+
+  ${Media.down.m} {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
 `;
 
-export const StyledText = styled(Text1)``;
+export const StyledText = styled(Text1)`
+  ${Media.down.m} {
+    font-size: 14px;
+  }
+`;

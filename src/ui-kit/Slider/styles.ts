@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { Swiper } from 'swiper/react';
 
 import { SliderProps } from './types';
+import { Media } from '../theme/breakpoints';
 
 const gridStyles = css`
   display: grid;
@@ -25,6 +26,10 @@ export const SliderWrapper = styled.div<{ $isGrid?: boolean }>`
   display: flex;
   flex-direction: column-reverse;
   padding: 0 ${({ $isGrid }) => ($isGrid ? `78px` : `0`)};
+
+  ${Media.down.s} {
+    padding: 0;
+  }
 `;
 
 export const StyledSwiper = styled(Swiper)<SliderProps>`
@@ -38,6 +43,10 @@ export const StyledSwiper = styled(Swiper)<SliderProps>`
 
 export const ArrowsWrapper = styled.div<{ $isGrid?: boolean }>`
   ${({ $isGrid }) => (!$isGrid ? ArrowsWrapperStyles : `undefined`)};
+
+  ${Media.down.s} {
+    ${ArrowsWrapperStyles};
+  }
 `;
 
 const ArrowButtonStyles = css`
@@ -51,6 +60,9 @@ export const ArrowButtonWrapper = styled.div<{
   $isGrid?: boolean;
   $position?: 'right' | 'left';
 }>`
-  ${({ $isGrid }) => ($isGrid ? ArrowButtonStyles : `undefined`)};
+  ${Media.up.s} {
+    ${({ $isGrid }) => ($isGrid ? ArrowButtonStyles : `undefined`)};
+  }
+
   ${({ $position }) => ($position === 'right' ? `right: 0;` : `left: 0;`)};
 `;
