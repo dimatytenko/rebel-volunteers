@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { ThemeType } from '../../types/layout';
 import { Heading4, Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
+import { Logo } from '../../ui-kit/Logo';
 
 export const StyledLayout = styled.div<{ $theme?: ThemeType }>`
   min-height: 100%;
@@ -28,16 +30,48 @@ export const HeaderContent = styled.div`
   gap: 28px;
 `;
 
+export const LogoWrapper = styled.div`
+  flex-shrink: 0;
+`;
+
+export const StyledLogo = styled(Logo)`
+  width: 78px;
+  height: 78px;
+
+  ${Media.down.l} {
+    position: relative;
+    z-index: 9990;
+    width: 48px;
+    height: 48px;
+  }
+`;
+
 export const HeaderRightContent = styled.div`
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+
+  ${Media.down.l} {
+    display: none;
+  }
 `;
 
 export const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 28px;
+  margin-left: 6px;
+`;
+
+export const Menu = styled.div`
+  display: none;
+
+  ${Media.down.l} {
+    position: relative;
+    z-index: 9990;
+    display: block;
+    margin-left: auto;
+  }
 `;
 
 // Footer

@@ -16,17 +16,17 @@ import {
   WrapperLinkText,
   StyledTextLink,
 } from './styles';
-export const HomeLink: React.FC<WithChildren> = ({ children, ...props }) => {
+export const HomeLink: React.FC<{ onClick?: () => void } & WithChildren> = ({ onClick, children, ...props }) => {
   return (
-    <Link to={'/'} {...props}>
+    <Link to={'/'} onClick={onClick} {...props}>
       {children}
     </Link>
   );
 };
 
-export const NavLink: React.FC<NavLinkProps> = ({ to, active, children, ...props }) => {
+export const NavLink: React.FC<NavLinkProps> = ({ to, active, onClick, children, ...props }) => {
   return (
-    <StyledLink to={to} {...props} $active={active}>
+    <StyledLink to={to} onClick={onClick} {...props} $active={active}>
       <Text1>{children}</Text1>
     </StyledLink>
   );

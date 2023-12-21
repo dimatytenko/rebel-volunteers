@@ -5,6 +5,7 @@ import { WithChildren } from '../../types/helpers';
 export interface NavLinkProps extends WithChildren {
   to: string;
   active: boolean;
+  onClick?: () => void;
 }
 
 export type DirectionArrowType = 'left' | 'right';

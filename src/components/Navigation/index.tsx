@@ -29,13 +29,14 @@ const nav = [
 
 interface NavigationProps {
   path: string;
+  onClickItem?: () => void;
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ path }) => {
+export const Navigation: React.FC<NavigationProps> = ({ path, onClickItem }) => {
   return (
     <StyledNavigation>
       {nav.map((item) => (
-        <NavLink key={item.to} to={item.to} active={path.includes(item.to)}>
+        <NavLink key={item.to} to={item.to} onClick={onClickItem} active={path.includes(item.to)}>
           {item.text}
         </NavLink>
       ))}

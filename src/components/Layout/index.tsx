@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { StyledLayout, Main } from './styles';
 import { IAppLayoutProps } from '../../types/layout';
 import { Donate } from '../../ui-kit/Donate';
+import { Drawer } from '../Drawer';
 
 export const LayoutComponent: FC<IAppLayoutProps> = ({
   children,
@@ -12,6 +13,9 @@ export const LayoutComponent: FC<IAppLayoutProps> = ({
   hideHeader,
   hideFooter,
   theme,
+  isOpenDrawer,
+  onToggleDrawer,
+  onCloseDrawer,
   ...props
 }) => {
   const { pathname } = useLocation();
@@ -25,8 +29,17 @@ export const LayoutComponent: FC<IAppLayoutProps> = ({
       {!hideHeader && header}
       <Main>{children}</Main>
 
-      <Donate />
       {!hideFooter && footer}
+
+      <Donate />
+      <Drawer
+        open={isOpenDrawer}
+        onClose={onCloseDrawer}
+        onClickItem={onToggleDrawer}
+        path={pathname}
+        width={'100%'}
+        placement={'right'}
+      />
     </StyledLayout>
   );
 };

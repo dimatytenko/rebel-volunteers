@@ -4,6 +4,7 @@
 import styled, { css, StyledProps } from 'styled-components';
 
 import { TextBaseProps } from './types';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 const color = ({ $color, theme }: StyledProps<TextBaseProps>) => {
   return $color ? theme.palette.colors[$color] : theme.palette.colors.secondary;
@@ -67,6 +68,12 @@ export const StyledText1 = styled.p`
   ${styles};
   font-family: e-Ukraine;
   line-height: 1.5;
+
+  ${Media.down.l} {
+    font-size: 43px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
 `;
 
 export const StyledText1Slim = styled.p`

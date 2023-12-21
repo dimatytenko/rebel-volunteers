@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "antd": "^5.12.2",
+    "hamburger-react": "^2.5.0",
     "photoswipe": "^5.4.3",
+    "rc-drawer": "^6.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.19.0",
