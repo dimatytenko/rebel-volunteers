@@ -1,6 +1,6 @@
 export enum Breakpoint {
   xxxs = 320,
-  xxs = 375,
+  xxs = 390,
   xs = 425,
   s = 640,
   m = 768,

@@ -36,6 +36,7 @@ export const HeroSubtitle = styled(Text1)`
   ${Media.down.l} {
     margin: 0;
     margin-bottom: 17px;
+    font-size: 14px;
   }
 `;
 

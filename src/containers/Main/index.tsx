@@ -15,9 +15,9 @@ export const Main = () => {
       <Hero />
       <Br desktop={100} mobile={20} />
       <OurActivity />
-      <Br desktop={100} mobile={60} />
+      <Br desktop={100} mobile={20} />
       <Collection />
-      <Br desktop={150} mobile={60} />
+      <Br desktop={150} mobile={70} />
       <Passed />
       <Br desktop={100} mobile={60} />
       <Directions />
