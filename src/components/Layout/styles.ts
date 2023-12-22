@@ -34,15 +34,15 @@ export const LogoWrapper = styled.div`
   flex-shrink: 0;
 `;
 
-export const StyledLogo = styled(Logo)`
+export const StyledLogo = styled(Logo)<{ mode?: 'lg' }>`
   width: 78px;
   height: 78px;
 
   ${Media.down.l} {
     position: relative;
-    z-index: 9990;
-    width: 48px;
-    height: 48px;
+    z-index: ${({ mode }) => (mode === 'lg' ? 'unset' : 9999)};
+    width: ${({ mode }) => (mode === 'lg' ? '78px' : '48px')};
+    height: ${({ mode }) => (mode === 'lg' ? '78px' : '48px')};
   }
 `;
 
@@ -76,13 +76,21 @@ export const Menu = styled.div`
 
 // Footer
 export const StyledFooter = styled.footer`
-  padding: 30px 0;
+  padding-bottom: 30px;
+
+  ${Media.down.l} {
+    padding-bottom: 60px;
+  }
 `;
 
 export const FooterContent = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 28px;
+
+  ${Media.down.l} {
+    display: none;
+  }
 `;
 
 export const FooterRightContent = styled.div`
@@ -123,4 +131,22 @@ export const TextReserved = styled(Text1)`
     height: 70%;
     background-color: ${({ theme }) => theme.palette.colors.secondary};
   }
+`;
+
+export const FooterMobileContent = styled.div`
+  ${Media.up.l} {
+    display: none;
+  }
+`;
+
+export const FooterMobileTopContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid ${({ theme }) => theme.palette.colors.secondary};
+`;
+
+export const FooterMobileBottomContent = styled.div`
+  padding-top: 30px;
 `;

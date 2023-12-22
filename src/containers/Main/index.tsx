@@ -29,7 +29,7 @@ export const Main = () => {
       <OurSupport />
       <Br desktop={150} mobile={70} />
       <Widget />
-      <Br desktop={150} mobile={70} />
+      <Br desktop={170} mobile={70} />
     </div>
   );
 };

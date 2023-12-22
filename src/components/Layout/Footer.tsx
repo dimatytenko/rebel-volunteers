@@ -6,10 +6,14 @@ import {
   Title,
   FooterBottomContent,
   TextReserved,
+  StyledLogo,
+  LogoWrapper,
+  FooterMobileContent,
+  FooterMobileTopContent,
+  FooterMobileBottomContent,
 } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { Logo } from '../../ui-kit/Logo';
 import { Social } from '../Social';
 import { Navigation } from '../Navigation';
 
@@ -22,7 +26,9 @@ export const FooterComponent: React.FC<FooterProps> = ({ path }) => {
     <StyledFooter>
       <Container point={POINTS.m}>
         <FooterContent>
-          <Logo width="78px" height="78px" />
+          <LogoWrapper>
+            <StyledLogo mode="lg" />
+          </LogoWrapper>
           <FooterRightContent>
             <FooterTopContent>
               <Title>rebel volunteers</Title>
@@ -34,6 +40,17 @@ export const FooterComponent: React.FC<FooterProps> = ({ path }) => {
             </FooterBottomContent>
           </FooterRightContent>
         </FooterContent>
+        <FooterMobileContent>
+          <FooterMobileTopContent>
+            <LogoWrapper>
+              <StyledLogo mode="lg" />
+            </LogoWrapper>
+            <Social type="secondary" />
+          </FooterMobileTopContent>
+          <FooterMobileBottomContent>
+            <Navigation path={path} />
+          </FooterMobileBottomContent>
+        </FooterMobileContent>
       </Container>
     </StyledFooter>
   );

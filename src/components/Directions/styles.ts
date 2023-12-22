@@ -11,8 +11,9 @@ export const Content = styled.div`
   justify-content: center;
   grid-gap: 30px;
 
-  ${Media.down.m} {
+  ${Media.down.s} {
     grid-gap: 17px;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   }
 `;
 
@@ -34,6 +35,10 @@ export const TextWrapper = styled.div`
   top: 0;
   left: 0;
   padding: 20px 100px 0 40px;
+
+  ${Media.down.s} {
+    padding: 0 15px;
+  }
 `;
 
 export const Title = styled(Heading2)`
@@ -68,5 +73,9 @@ export const Subtitle = styled(Heading3)`
 export const StyledText = styled(Text1)`
   ${Media.down.m} {
     font-size: 14px;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 10px;
   }
 `;

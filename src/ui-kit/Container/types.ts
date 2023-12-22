@@ -1,10 +1,10 @@
 import { WithChildren } from '../../types/helpers';
 
 export enum POINTS {
-  s = 1158, // 1128 + 30
-  m = 1224, // 1194 + 30
-  l = 1380, // 1350 + 30
-  xl = 1470, // 1440 + 30
+  s = 1160, // 1128 + 32
+  m = 1224, // 1194 + 32
+  l = 1382, // 1350 + 32
+  xl = 1472, // 1440 + 32
 }
 
 export interface IContainerProps extends WithChildren {
