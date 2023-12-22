@@ -14,7 +14,7 @@ export const WrapperContent = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  flex: 0 0 276px;
+  flex: 0 0 auto;
   height: 184px;
 `;
 
