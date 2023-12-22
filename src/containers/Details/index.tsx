@@ -1,10 +1,18 @@
 import { DetailsComponent } from '../../components/Details';
+import { Collage } from '../../components/Collage';
 import { SOCIAL } from '../../constants/links';
+import { Br } from '../../ui-kit/Br';
 import mono from './assets/mono.png';
 import paypal from './assets/paypal.png';
 import privat from './assets/privat.png';
 import pumb from './assets/pumb.png';
 import img from './assets/img.jpg';
+import img_1 from './assets/collage/img_1.jpg';
+import img_2 from './assets/collage/img_2.jpg';
+import img_3 from './assets/collage/img_3.jpg';
+import img_4 from './assets/collage/img_4.jpg';
+import img_5 from './assets/collage/img_5.jpg';
+import img_6 from './assets/collage/img_6.jpg';
 
 const links = [
   { id: '1', href: SOCIAL.phone.href, text: SOCIAL.phone.text2 },
@@ -30,6 +38,37 @@ const details = {
   ],
 };
 
+const collageData = [
+  { id: '1', img: img_1 },
+  {
+    id: '2',
+    img: img_2,
+  },
+  {
+    id: '3',
+    img: img_3,
+  },
+  {
+    id: '4',
+    img: img_4,
+  },
+  {
+    id: '5',
+    img: img_5,
+  },
+  {
+    id: '6',
+    img: img_6,
+  },
+];
+
 export const Details = () => {
-  return <DetailsComponent links={links} data={details} />;
+  return (
+    <>
+      <DetailsComponent links={links} data={details} />
+      <Br desktop={150} mobile={70} />
+      <Collage data={collageData} />
+      <Br desktop={150} mobile={70} />
+    </>
+  );
 };

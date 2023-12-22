@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Heading2, Text1 } from '../../ui-kit/Typography';
 import { Media } from '../../ui-kit/theme/breakpoints';
 
-export const TeamWrapper = styled.div``;
+export const TeamWrapper = styled.section``;
 
 export const TeamContent = styled.div`
   display: grid;

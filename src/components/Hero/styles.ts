@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Heading1, Text1 } from '../../ui-kit/Typography';
 import { Media } from '../../ui-kit/theme/breakpoints';
 
-export const HeroWrapper = styled.div``;
+export const HeroWrapper = styled.section``;
 
 export const Wrapper = styled.div`
   position: relative;

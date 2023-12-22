@@ -4,7 +4,7 @@ import { Heading2, Text1 } from '../../ui-kit/Typography';
 import { Button } from '../../ui-kit/Button';
 import { Media } from '../../ui-kit/theme/breakpoints';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.section``;
 
 export const Content = styled.div`
   display: flex;

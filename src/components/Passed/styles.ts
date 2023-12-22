@@ -4,7 +4,7 @@ import { Heading2, Heading3, Heading5, Text1 } from '../../ui-kit/Typography';
 import { Button } from '../../ui-kit/Button';
 import { Media } from '../../ui-kit/theme/breakpoints';
 
-export const PassedWrapper = styled.div``;
+export const PassedWrapper = styled.section``;
 
 export const ContentWrapper = styled.div``;
 

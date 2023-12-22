@@ -4,7 +4,7 @@ import { Heading2, Text1, Text2 } from '../../ui-kit/Typography';
 import { Button } from '../../ui-kit/Button';
 import { Media } from '../../ui-kit/theme/breakpoints';
 
-export const CollectionWrapper = styled.div``;
+export const CollectionWrapper = styled.section``;
 
 export const CollectionContent = styled.div<{ $img: string }>`
   position: relative;

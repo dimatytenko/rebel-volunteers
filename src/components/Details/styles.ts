@@ -2,9 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { Heading2, Text2 } from '../../ui-kit/Typography';
 
-export const Wrapper = styled.div`
-  padding-bottom: 150px;
-`;
+export const Wrapper = styled.section``;
 
 export const Title = styled(Heading2)`
   text-transform: uppercase;

@@ -11,7 +11,7 @@ import { Widget } from '../../components/Widget';
 
 export const Main = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Br desktop={100} mobile={20} />
       <OurActivity />
@@ -30,6 +30,6 @@ export const Main = () => {
       <Br desktop={150} mobile={70} />
       <Widget />
       <Br desktop={170} mobile={70} />
-    </div>
+    </>
   );
 };
