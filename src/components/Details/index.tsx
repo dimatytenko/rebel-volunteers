@@ -1,10 +1,11 @@
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { Wrapper, Title, TopContent, StyledText, BottomContent, BottomLeftContent, BottomRightContent } from './styles';
+import { Wrapper, TopContent, StyledText, BottomContent, BottomLeftContent, BottomRightContent } from './styles';
 import { OrganisationLabel } from '../OrganisationLabel';
 import { Ilink } from '../OrganisationLabel/types';
 import { DetailsBlock } from '../DetailsBlock';
 import { DetailsBlockData } from '../DetailsBlock/types';
+import { Title } from '../../ui-kit/Title';
 
 interface DetailsProps {
   links: Ilink[];

@@ -1,13 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { Heading2, Text2 } from '../../ui-kit/Typography';
+import { Text2 } from '../../ui-kit/Typography';
 
 export const Wrapper = styled.section``;
-
-export const Title = styled(Heading2)`
-  text-transform: uppercase;
-  margin-bottom: 70px;
-`;
 
 export const TopContent = styled.div`
   display: flex;

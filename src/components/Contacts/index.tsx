@@ -5,11 +5,12 @@ import { OrganisationLabel } from '../OrganisationLabel';
 import { Ilink } from '../OrganisationLabel/types';
 import { DetailsBlockData } from '../DetailsBlock/types';
 import { Br } from '../../ui-kit/Br';
-import { Wrapper, Title } from './styles';
+import { Wrapper } from './styles';
 import { IHotLine } from '../HotLines/types';
 import { Hotlines } from '../HotLines';
 import { HelpListData } from '../HelpList/types';
 import { HelpList } from '../HelpList';
+import { Title } from '../../ui-kit/Title';
 
 interface ContactsComponentProps {
   links: Ilink[];

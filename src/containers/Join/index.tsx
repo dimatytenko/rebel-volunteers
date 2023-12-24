@@ -1,3 +1,9 @@
+import { ListOfNecessary } from '../ListOfNecessary';
+
 export const Join = () => {
-  return <div>Join</div>;
+  return (
+    <>
+      <ListOfNecessary />
+    </>
+  );
 };

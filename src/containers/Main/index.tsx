@@ -1,18 +1,18 @@
-import { Hero } from '../Hero';
+import { HeroComponent } from '../../components/Hero';
+import { Directions } from '../../components/Directions';
+import { Widget } from '../../components/Widget';
 import { OurActivity } from '../OurActivity';
 import { Team } from '../Team';
-import { Br } from '../../ui-kit/Br';
 import { Merch } from '../Merch';
-import { Directions } from '../../components/Directions';
 import { OurSupport } from '../OurSupport';
 import { Passed } from '../Passed';
 import { Collection } from '../Collection';
-import { Widget } from '../../components/Widget';
+import { Br } from '../../ui-kit/Br';
 
 export const Main = () => {
   return (
     <>
-      <Hero />
+      <HeroComponent />
       <Br desktop={100} mobile={20} />
       <OurActivity />
       <Br desktop={100} mobile={20} />
