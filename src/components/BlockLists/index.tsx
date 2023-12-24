@@ -53,9 +53,11 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
                     </ListItem>
                   ))}
                 </List>
-                <ReadMoreButton onClick={() => toggle(ind)}>
-                  <ListItemText>{isOpen === ind ? 'Менше' : 'Читати далі'}</ListItemText>
-                </ReadMoreButton>
+                {item.list.length > 15 && (
+                  <ReadMoreButton onClick={() => toggle(ind)}>
+                    <ListItemText>{isOpen === ind ? 'Менше' : 'Читати далі'}</ListItemText>
+                  </ReadMoreButton>
+                )}
               </ListBlock>
             </BlockListsItem>
           ))}

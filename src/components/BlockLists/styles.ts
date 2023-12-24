@@ -32,6 +32,7 @@ export const BlockTitle = styled(Heading3)`
 export const ListBlock = styled.div`
   padding: 20px 13px 25px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
+  min-height: 505px;
 `;
 
 export const List = styled.ul<{ isOpen: boolean }>`
