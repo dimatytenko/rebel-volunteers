@@ -4,10 +4,11 @@ import { Wrapper, Title, TopContent, StyledText, BottomContent, BottomLeftConten
 import { OrganisationLabel } from '../OrganisationLabel';
 import { Ilink } from '../OrganisationLabel/types';
 import { DetailsBlock } from '../DetailsBlock';
+import { DetailsBlockData } from '../DetailsBlock/types';
 
 interface DetailsProps {
   links: Ilink[];
-  data: any;
+  data: DetailsBlockData;
 }
 
 export const DetailsComponent: React.FC<DetailsProps> = ({ links, data }) => {

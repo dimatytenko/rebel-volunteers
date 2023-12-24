@@ -14,12 +14,12 @@ import img_4 from './assets/collage/img_4.jpg';
 import img_5 from './assets/collage/img_5.jpg';
 import img_6 from './assets/collage/img_6.jpg';
 
-const links = [
+export const links = [
   { id: '1', href: SOCIAL.phone.href, text: SOCIAL.phone.text2 },
   { id: '2', href: SOCIAL.mail, text: SOCIAL.mail.split(':')[1] },
 ];
 
-const details = {
+export const details = {
   img: img,
   data: [
     { id: '1', name: 'Mono', img: mono, details: [{ number: '4441 1144 5848 4696' }] },
