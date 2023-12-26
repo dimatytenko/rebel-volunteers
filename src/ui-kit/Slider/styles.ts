@@ -21,11 +21,11 @@ const ArrowsWrapperStyles = css`
   margin-top: 35px;
 `;
 
-export const SliderWrapper = styled.div<{ $isGrid?: boolean }>`
+export const SliderWrapper = styled.div<{ $isMain?: boolean }>`
   position: relative;
   display: flex;
   flex-direction: column-reverse;
-  padding: 0 ${({ $isGrid }) => ($isGrid ? `78px` : `0`)};
+  padding: 0 ${({ $isMain }) => ($isMain ? `78px` : `0`)};
 
   ${Media.down.s} {
     padding: 0;
@@ -34,15 +34,15 @@ export const SliderWrapper = styled.div<{ $isGrid?: boolean }>`
 
 export const StyledSwiper = styled(Swiper)<SliderProps>`
   width: 100%;
-  max-width: ${({ $isGrid }) => ($isGrid ? `1194px` : `100%`)};
+  max-width: ${({ $isMain }) => ($isMain ? `1194px` : `100%`)};
 
   .swiper-wrapper {
     ${({ $isGrid }) => ($isGrid ? gridStyles : `undefined`)};
   }
 `;
 
-export const ArrowsWrapper = styled.div<{ $isGrid?: boolean }>`
-  ${({ $isGrid }) => (!$isGrid ? ArrowsWrapperStyles : `undefined`)};
+export const ArrowsWrapper = styled.div<{ $isMain?: boolean }>`
+  ${({ $isMain }) => (!$isMain ? ArrowsWrapperStyles : `undefined`)};
 
   ${Media.down.s} {
     ${ArrowsWrapperStyles};
@@ -57,11 +57,11 @@ const ArrowButtonStyles = css`
 `;
 
 export const ArrowButtonWrapper = styled.div<{
-  $isGrid?: boolean;
+  $isMain?: boolean;
   $position?: 'right' | 'left';
 }>`
   ${Media.up.s} {
-    ${({ $isGrid }) => ($isGrid ? ArrowButtonStyles : `undefined`)};
+    ${({ $isMain }) => ($isMain ? ArrowButtonStyles : `undefined`)};
   }
 
   ${({ $position }) => ($position === 'right' ? `right: 0;` : `left: 0;`)};

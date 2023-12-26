@@ -6,7 +6,21 @@ import { StyledSwiper, ArrowButtonWrapper, ArrowsWrapper, SliderWrapper } from '
 import { SliderProps } from './types';
 import { ArrowButton } from '../Button';
 
-export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation, isLoop, isGrid, children }) => {
+export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
+  isNavigation,
+  isLoop,
+  isGrid,
+  isMain,
+  spaceBetween,
+  slidesPerViewXS,
+  slidesPerViewM,
+  slidesPerViewL,
+  slidesPerViewXL,
+  slidesPerViewXXL,
+  slidesPerViewXXXL,
+
+  children,
+}) => {
   const modules = [Navigation, Autoplay, Grid];
   const arrayChildren = Children.toArray(children);
   const prevRef = useRef<HTMLDivElement>(null);
@@ -19,12 +33,12 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
   const grid = isGrid ? { rows: 3 } : undefined;
 
   return (
-    <SliderWrapper $isGrid={isGrid}>
-      <ArrowsWrapper $isGrid={isGrid}>
-        <ArrowButtonWrapper ref={prevRef} $isGrid={isGrid} $position="left">
+    <SliderWrapper $isMain={isMain}>
+      <ArrowsWrapper $isMain={isMain}>
+        <ArrowButtonWrapper ref={prevRef} $isMain={isMain} $position="left">
           <ArrowButton direction="left" />
         </ArrowButtonWrapper>
-        <ArrowButtonWrapper ref={nextRef} $isGrid={isGrid} $position="right">
+        <ArrowButtonWrapper ref={nextRef} $isMain={isMain} $position="right">
           <ArrowButton direction="right" />
         </ArrowButtonWrapper>
       </ArrowsWrapper>
@@ -37,14 +51,26 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({ isNavigation
         modules={[...modules]}
         breakpoints={{
           320: {
-            spaceBetween: 15,
+            spaceBetween: spaceBetween ? spaceBetween : 15,
             slidesPerView: 1,
           },
+          378: {
+            slidesPerView: isGrid ? 1 : slidesPerViewXS ? slidesPerViewXS : 1,
+          },
+          768: {
+            slidesPerView: isGrid ? 1 : slidesPerViewM ? slidesPerViewM : 1,
+          },
           900: {
-            slidesPerView: isGrid ? 2 : 1,
+            slidesPerView: isGrid ? 2 : slidesPerViewL ? slidesPerViewL : 1,
+          },
+          1024: {
+            slidesPerView: isGrid ? 2 : slidesPerViewXL ? slidesPerViewXL : 1,
           },
           1224: {
-            slidesPerView: isGrid ? 3 : 1,
+            slidesPerView: isGrid ? 3 : slidesPerViewXXL ? slidesPerViewXXL : 1,
+          },
+          1310: {
+            slidesPerView: isGrid ? 3 : slidesPerViewXXXL ? slidesPerViewXXXL : 1,
           },
         }}
         onInit={(swiper) => {

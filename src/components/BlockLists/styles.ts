@@ -13,12 +13,12 @@ export const BlockListsItem = styled.div`
   flex: 1 1 378px;
 `;
 
-export const TopBlock = styled.div<{ back: string }>`
+export const TopBlock = styled.div<{ $back: string }>`
   display: flex;
   align-items: flex-end;
   width: 100%;
   height: 242px;
-  background-image: url(${({ back }) => back});
+  background-image: url(${({ $back }) => $back});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -35,10 +35,10 @@ export const ListBlock = styled.div`
   min-height: 505px;
 `;
 
-export const List = styled.ul<{ isOpen: boolean }>`
+export const List = styled.ul<{ $isOpen: boolean }>`
   margin-bottom: 15px;
   overflow: hidden;
-  height: ${({ isOpen }) => (isOpen ? 'auto' : '410px')};
+  height: ${({ $isOpen }) => ($isOpen ? 'auto' : '410px')};
 `;
 
 export const ListItem = styled.li`

@@ -42,13 +42,13 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
         <BlockListsContent>
           {list.map((item, ind) => (
             <BlockListsItem key={item.id}>
-              <TopBlock back={item.img}>
+              <TopBlock $back={item.img}>
                 <BlockTitle>{item.title}</BlockTitle>
               </TopBlock>
               <ListBlock>
-                <List isOpen={isOpen === ind}>
-                  {item.list.map((item) => (
-                    <ListItem key={item}>
+                <List $isOpen={isOpen === ind}>
+                  {item.list.map((item, i) => (
+                    <ListItem key={item + i}>
                       <ListItemText>{item}</ListItemText>
                     </ListItem>
                   ))}
