@@ -5,7 +5,7 @@ import { OrganisationLabel } from '../OrganisationLabel';
 import { Ilink } from '../OrganisationLabel/types';
 import { DetailsBlockData } from '../DetailsBlock/types';
 import { Br } from '../../ui-kit/Br';
-import { Wrapper } from './styles';
+import { Wrapper, TopContent } from './styles';
 import { IHotLine } from '../HotLines/types';
 import { Hotlines } from '../HotLines';
 import { HelpListData } from '../HelpList/types';
@@ -24,8 +24,10 @@ export const ContactsComponent: React.FC<ContactsComponentProps> = ({ links, dat
     <Wrapper>
       <Container point={POINTS.m}>
         <Title>Контакти та реквізити</Title>
-        <OrganisationLabel links={links} />
-        <DetailsBlock data={data} />
+        <TopContent>
+          <OrganisationLabel links={links} />
+          <DetailsBlock data={data} />
+        </TopContent>
         <Br desktop={100} mobile={20} />
         <Title>Гарячі лінії</Title>
         <Hotlines list={hotLines} />

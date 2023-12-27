@@ -35,6 +35,10 @@ export const TitleWrapper = styled.div`
 export const CollectionTitle = styled(Heading2)`
   text-transform: uppercase;
 
+  ${Media.down.l} {
+    font-size: 110px;
+  }
+
   ${Media.down.m} {
     font-size: 85px;
     font-weight: 500;
