@@ -13,4 +13,5 @@ export type SliderProps = {
   slidesPerViewXL?: number;
   slidesPerViewXXL?: number;
   slidesPerViewXXXL?: number;
+  noAutoPlay?: boolean;
 };

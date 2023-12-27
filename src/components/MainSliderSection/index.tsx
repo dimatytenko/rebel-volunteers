@@ -22,6 +22,7 @@ export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, dat
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>

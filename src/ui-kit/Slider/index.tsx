@@ -18,7 +18,7 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
   slidesPerViewXL,
   slidesPerViewXXL,
   slidesPerViewXXXL,
-
+  noAutoPlay,
   children,
 }) => {
   const modules = [Navigation, Autoplay, Grid];
@@ -45,7 +45,7 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
       <StyledSwiper
         loop={isLoop}
         navigation={navigation}
-        autoplay={isGrid ? undefined : { delay: 3000 }}
+        autoplay={isGrid || noAutoPlay ? undefined : { delay: 3000 }}
         grid={grid}
         $isGrid={isGrid}
         modules={[...modules]}
