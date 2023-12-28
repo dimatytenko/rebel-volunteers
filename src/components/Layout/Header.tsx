@@ -20,7 +20,14 @@ import { SOCIAL } from '../../constants/links';
 import { LangSwitch } from '../LangSwitch';
 import { IHeaderProps } from '../../types/layout';
 
-export const HeaderComponent: React.FC<IHeaderProps> = ({ path, isOpenDrawer, onToggleDrawer, onCloseDrawer }) => {
+export const HeaderComponent: React.FC<IHeaderProps> = ({
+  path,
+  isOpenDrawer,
+  onToggleDrawer,
+  onCloseDrawer,
+  language,
+  onChangeLanguage,
+}) => {
   return (
     <StyledHeader>
       <Container point={POINTS.m}>
@@ -31,7 +38,7 @@ export const HeaderComponent: React.FC<IHeaderProps> = ({ path, isOpenDrawer, on
           <HeaderRightContent>
             <Navigation path={path} />
             <SocialWrapper>
-              <LangSwitch />
+              <LangSwitch language={language} onChangeLanguage={onChangeLanguage} />
               <LinkButton href={SOCIAL.phone.href} icon={<IconSvg type="phone" />}>
                 {SOCIAL.phone.text1}
               </LinkButton>

@@ -22,7 +22,6 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { route } from '../../constants/routes';
 
 export const PassedComponents: React.FC<PassedProps> = ({ data }) => {
-  console.log('data', data);
   return (
     <PassedWrapper>
       <Container point={POINTS.m}>

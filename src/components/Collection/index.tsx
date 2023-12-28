@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CollectionComponentProps } from './types';
 import {
@@ -17,12 +18,14 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { route } from '../../constants/routes';
 
 export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data }) => {
+  const { t } = useTranslation();
+
   return (
     <CollectionWrapper>
       <Container point={POINTS.m}>
         <CollectionContent $img={data.img}>
           <TitleWrapper>
-            <CollectionTitle>терміновий збір</CollectionTitle>
+            <CollectionTitle>{t('common:titles.collect')}</CollectionTitle>
             <Label>
               <LabeText>Ціль: {data.aim} грн</LabeText>
             </Label>

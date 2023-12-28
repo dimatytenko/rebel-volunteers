@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import img_1 from './assets/img_1.jpg';
 import img_2 from './assets/img_2.jpg';
 import img_3 from './assets/img_3.jpg';
@@ -34,10 +36,12 @@ const data = [
 ];
 
 export const Directions = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>напрямки діяльності</Title>
+        <Title>{t('common:titles.direction')}</Title>
         <Content>
           {data.map((item) => (
             <Card key={item.id}>

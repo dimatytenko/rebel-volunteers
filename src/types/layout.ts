@@ -1,4 +1,5 @@
 import { WithChildren } from '../types/helpers';
+import { Language } from '../states/language';
 
 export type ThemeType = 'secondary' | 'primary';
 
@@ -15,8 +16,13 @@ export interface IAppLayoutProps extends IDrawer, WithChildren {
   theme?: ThemeType;
 }
 
-export interface IHeaderProps extends IDrawer {
+export interface IHeaderProps extends IDrawer, ISwitchLanguageProps {
   path: string;
 }
 
-export type IHeaderContainerProps = Omit<IHeaderProps, 'path'>;
+export type IHeaderContainerProps = ISwitchLanguageProps & Omit<IHeaderProps, 'path'>;
+
+export interface ISwitchLanguageProps {
+  language: Language | null;
+  onChangeLanguage: () => void;
+}

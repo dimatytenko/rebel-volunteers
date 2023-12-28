@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { OurSupportComponentProps } from './types';
 import { Container } from '../../ui-kit/Container';
@@ -7,10 +8,12 @@ import { Wrapper, Title, ImageWrapper, Image, Link, TextLink } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
 export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data }) => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>нас підтримують</Title>
+        <Title>{t('common:titles.support')}</Title>
       </Container>
       <Container point={POINTS.l}>
         <Slider isNavigation isLoop isGrid isMain>

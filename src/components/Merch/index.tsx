@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { useTranslation } from 'react-i18next';
 
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
@@ -9,6 +10,8 @@ import { MerchProps } from './types';
 import { SOCIAL } from '../../constants/links';
 
 export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: `#${data.galleryID}`,
@@ -44,7 +47,7 @@ export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
             </Slider>
           </SliderWrapper>
           <RightSideWrapper>
-            <Title>мерч</Title>
+            <Title>{t('common:titles.merch')}</Title>
             <Subtitle>
               Слідкуйте за нашими колабами! Ми постійно розвиваємось і співпрацюємо з талановитими художниками та
               дизайнерами, щоб пропонувати вам сучасний і оригінальний мерч. Разом з нами ви завжди будете у тренді! За

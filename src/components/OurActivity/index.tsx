@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import { useTranslation } from 'react-i18next';
 
 import { Wrapper, Title, Content, SliderWrapper, TextWrapper, Subtitle } from './styles';
 import { Container } from '../../ui-kit/Container';
@@ -8,6 +9,8 @@ import { Slider } from '../../ui-kit/Slider';
 import { OurAtivityProps } from './types';
 
 export const OurActivityComponent: React.FC<OurAtivityProps> = ({ data }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: `#${data.galleryID}`,
@@ -25,7 +28,7 @@ export const OurActivityComponent: React.FC<OurAtivityProps> = ({ data }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>наша діяльність</Title>
+        <Title>{t('common:titles.activity')}</Title>
         <Content>
           <SliderWrapper id={data.galleryID}>
             <Slider isNavigation isLoop>

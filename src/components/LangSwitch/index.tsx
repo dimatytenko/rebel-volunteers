@@ -1,27 +1,12 @@
-import { useState } from 'react';
-
 import { Text1 } from '../../ui-kit/Typography';
 import { LangWrapper } from './styles';
+import { ISwitchLanguageProps } from '../../types/layout';
+import { Language } from '../../states/language';
 
-enum LANG {
-  uk = 'uk',
-  en = 'en',
-}
-
-export const LangSwitch = () => {
-  const [lang, setLang] = useState<LANG>(LANG.uk);
-
-  const changeLang = () => {
-    if (lang === LANG.uk) {
-      setLang(LANG.en);
-    } else {
-      setLang(LANG.uk);
-    }
-  };
-
+export const LangSwitch: React.FC<ISwitchLanguageProps> = ({ language, onChangeLanguage }) => {
   return (
-    <LangWrapper onClick={changeLang}>
-      <Text1 $case="uppercase">{lang === LANG.uk ? LANG.en : LANG.uk}</Text1>
+    <LangWrapper onClick={onChangeLanguage}>
+      <Text1 $case="uppercase">{language === Language.UK ? Language.EN : Language.UK}</Text1>
     </LangWrapper>
   );
 };

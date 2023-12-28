@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { TeamProps, TeamMemberProps } from './types';
 import {
@@ -16,14 +17,16 @@ import {
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 
-export const TeamComponent: React.FC<TeamProps> = ({ team }) => {
+export const TeamComponent: React.FC<TeamProps> = ({ team, lang }) => {
+  const { t } = useTranslation();
+
   return (
     <TeamWrapper>
       <Container point={POINTS.m}>
-        <Title>Команда</Title>
+        <Title>{t('common:titles.team')}</Title>
         <TeamContent>
           {team.map((member) => {
-            return <TeamMember key={member.id} member={member} />;
+            return <TeamMember key={member.id} member={member} lang={lang} />;
           })}
         </TeamContent>
       </Container>
@@ -31,17 +34,21 @@ export const TeamComponent: React.FC<TeamProps> = ({ team }) => {
   );
 };
 
-export const TeamMember: React.FC<TeamMemberProps> = ({ member }) => {
+export const TeamMember: React.FC<TeamMemberProps> = ({ member, lang }) => {
   return (
-    <TeamMemberWrapper $isLink={!!member.link}>
+    <TeamMemberWrapper $isLink={!!member.insta_link}>
       <ImageWrapper>
-        <Image src={member.img} alt={member.name} />
+        <Image src={member.image_data} alt={member[`name_${lang}`]} />
       </ImageWrapper>
       <InfoWrapper>
-        {member.name ? <TextInfo $isLink={!!member.link}>{member.name}</TextInfo> : <Plug />}
-        <TextInfo $isLink={!!member.link}>{member.nickname}</TextInfo>
-        <TextInfo $isLink={!!member.link}>{member.position}</TextInfo>
-        {member.link && <ALink href={member.link} target="_blank" rel="noopener noreferrer" />}
+        {member[`name_${lang}`] ? (
+          <TextInfo $isLink={!!member.insta_link}>{member[`name_${lang}`]}</TextInfo>
+        ) : (
+          <Plug />
+        )}
+        <TextInfo $isLink={!!member.insta_link}>{member.nickname}</TextInfo>
+        <TextInfo $isLink={!!member.insta_link}>{member[`role_${lang}`]}</TextInfo>
+        {member.insta_link && <ALink href={member.insta_link} target="_blank" rel="noopener noreferrer" />}
       </InfoWrapper>
     </TeamMemberWrapper>
   );

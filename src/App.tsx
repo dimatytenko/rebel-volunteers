@@ -5,6 +5,7 @@ import RoutesSwitch from './Routes';
 import { GlobalStyles } from './styles';
 import { Layout } from './containers/Layout';
 import { defaultTheme } from './ui-kit/theme';
+import RecoilProvider from './containers/RecoilProvider';
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/navigation';
@@ -15,13 +16,15 @@ import './ui-kit/ImageWithPreview/styles.css';
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Layout>
-        <RoutesSwitch />
-      </Layout>
-      <Normalize />
-      <GlobalStyles />
-    </ThemeProvider>
+    <RecoilProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <Layout>
+          <RoutesSwitch />
+        </Layout>
+        <Normalize />
+        <GlobalStyles />
+      </ThemeProvider>
+    </RecoilProvider>
   );
 }
 

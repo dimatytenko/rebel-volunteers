@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   HeroWrapper,
   Wrapper,
@@ -22,11 +24,13 @@ import { ImageWithPreview } from '../../ui-kit/ImageWithPreview';
 import { Donate } from '../../ui-kit/Donate';
 
 export const HeroComponent = () => {
+  const { t } = useTranslation();
+
   return (
     <HeroWrapper>
       <Container point={POINTS.m}>
         <Wrapper>
-          <HeroTitle>rebel volunteers</HeroTitle>
+          <HeroTitle>{t('common:titles.hero')}</HeroTitle>
           <HeroContent>
             <div>
               <HeroSubtitle>
