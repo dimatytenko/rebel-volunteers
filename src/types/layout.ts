@@ -20,7 +20,7 @@ export interface IHeaderProps extends IDrawer, ISwitchLanguageProps {
   path: string;
 }
 
-export type IHeaderContainerProps = ISwitchLanguageProps & Omit<IHeaderProps, 'path'>;
+export type IHeaderContainerProps = Omit<IHeaderProps, 'path' | 'language' | 'onChangeLanguage'>;
 
 export interface ISwitchLanguageProps {
   language: Language | null;
