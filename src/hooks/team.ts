@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { getTeamQuery } from '../queries/main';
+import { TeamMemberT } from '../types/team';
 
 export const useTeam = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [team, setTeam] = useState<any>([]);
+  const [team, setTeam] = useState<TeamMemberT[]>([]);
 
   useEffect(() => {
     getTeam();

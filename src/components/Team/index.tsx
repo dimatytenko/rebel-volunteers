@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { TeamProps, TeamMemberProps } from './types';
+import { TeamProps, TeamMemberProps } from '../../types/team';
 import {
   TeamWrapper,
   TeamContent,

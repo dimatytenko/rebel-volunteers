@@ -3,7 +3,7 @@ import { Wrapper, Info, Title, InfoText } from './styles';
 
 export const HelpList: React.FC<HelpListProps> = ({ data }) => {
   return (
-    <Wrapper back={data.img}>
+    <Wrapper $back={data.img}>
       {data.list.map((item) => {
         return (
           <Info key={item.id}>

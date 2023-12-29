@@ -9,19 +9,21 @@ import { Passed } from '../Passed';
 import { Collection } from '../Collection';
 import { Br } from '../../ui-kit/Br';
 import { TeamComponent } from '../../components/Team';
-import { useTeam } from '../../hooks/team';
 import { useLanguage } from '../../hooks/language';
+import { useTeam } from '../../hooks/team';
+import { useSections } from '../../hooks/sections';
 
-export const Main = () => {
+const Main = () => {
   const { language } = useLanguage();
   const { team, isLoading: teamLoading } = useTeam();
+  const { sections, isLoading: heroLoading } = useSections();
 
-  const isLoading = teamLoading;
+  const isLoading = teamLoading || heroLoading;
   console.log('isLoading', isLoading);
 
   return (
     <>
-      <HeroComponent />
+      <HeroComponent data={sections.find((section) => section.name === 'hero')} lang={language} />
       <Br desktop={100} mobile={20} />
       <OurActivity />
       <Br desktop={100} mobile={20} />
@@ -42,3 +44,5 @@ export const Main = () => {
     </>
   );
 };
+
+export default Main;

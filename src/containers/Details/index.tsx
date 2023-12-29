@@ -62,7 +62,7 @@ const collageData = [
   },
 ];
 
-export const Details = () => {
+const Details = () => {
   return (
     <>
       <DetailsComponent links={links} data={details} />
@@ -72,3 +72,5 @@ export const Details = () => {
     </>
   );
 };
+
+export default Details;

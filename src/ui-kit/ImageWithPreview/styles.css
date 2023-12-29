@@ -3,6 +3,7 @@
 }
 
 .ant-image .ant-image-img {
+  object-fit: cover;
   transition: transform 0.3s ease-in-out 0s;
 }
 

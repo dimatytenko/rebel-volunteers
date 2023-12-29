@@ -1,14 +1,21 @@
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { route } from './constants/routes';
-import { Main } from './containers/Main';
-import { About } from './containers/About';
-import { Join } from './containers/Join';
-import { Contacts } from './containers/Contacts';
-import { Reports } from './containers/Reports';
-import { Details } from './containers/Details';
+// import { About } from './containers/About';
+// import { Join } from './containers/Join';
+// import { Contacts } from './containers/Contacts';
+// import { Reports } from './containers/Reports';
+// import { Details } from './containers/Details';
 
 import { Uikit } from './containers/Uikit';
+
+const Main = lazy(() => import('./containers/Main'));
+const About = lazy(() => import('./containers/About'));
+const Join = lazy(() => import('./containers/Join'));
+const Contacts = lazy(() => import('./containers/Contacts'));
+const Reports = lazy(() => import('./containers/Reports'));
+const Details = lazy(() => import('./containers/Details'));
 
 const PublicRoutes = [
   <Route key="main" path={route.main.path} element={<Main />} />,
@@ -24,11 +31,13 @@ const UikitRoutes = [<Route key="uikit" path={route.uikit.path} element={<Uikit 
 
 const RoutesSwitch = () => {
   return (
-    <Routes>
-      {UikitRoutes}
-      {PublicRoutes}
-      {/* {PrivateRoutes} */}
-    </Routes>
+    <Suspense fallback={<>...Loading</>}>
+      <Routes>
+        {UikitRoutes}
+        {PublicRoutes}
+        {/* {PrivateRoutes} */}
+      </Routes>
+    </Suspense>
   );
 };
 

@@ -1,7 +1,7 @@
 import { ListOfNecessary } from '../ListOfNecessary';
 import { Br } from '../../ui-kit/Br';
 
-export const Join = () => {
+const Join = () => {
   return (
     <>
       <ListOfNecessary />
@@ -9,3 +9,5 @@ export const Join = () => {
     </>
   );
 };
+
+export default Join;

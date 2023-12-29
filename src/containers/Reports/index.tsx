@@ -7,7 +7,7 @@ import { gratitudes } from '../Gratitudes';
 import { chevrones } from '../Chevrones';
 import { reports } from '../ReportsSlider';
 
-export const Reports = () => {
+const Reports = () => {
   return (
     <>
       <OveralResult />
@@ -23,3 +23,5 @@ export const Reports = () => {
     </>
   );
 };
+
+export default Reports;

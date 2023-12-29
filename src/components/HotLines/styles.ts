@@ -8,9 +8,9 @@ export const Wrapper = styled.section`
   gap: 30px;
 `;
 
-export const InfoItem = styled.div<{ back: string }>`
+export const InfoItem = styled.div<{ $back: string }>`
   padding: 0 0 25px 25px;
-  background-image: url(${({ back }) => back});
+  background-image: url(${({ $back }) => $back});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

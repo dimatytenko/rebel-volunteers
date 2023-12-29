@@ -47,6 +47,8 @@ const helpList = {
   ],
 };
 
-export const Contacts = () => {
+const Contacts = () => {
   return <ContactsComponent links={links} data={details} hotLines={hotLines} helpList={helpList} />;
 };
+
+export default Contacts;
