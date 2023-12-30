@@ -2,11 +2,6 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { route } from './constants/routes';
-// import { About } from './containers/About';
-// import { Join } from './containers/Join';
-// import { Contacts } from './containers/Contacts';
-// import { Reports } from './containers/Reports';
-// import { Details } from './containers/Details';
 
 import { Uikit } from './containers/Uikit';
 

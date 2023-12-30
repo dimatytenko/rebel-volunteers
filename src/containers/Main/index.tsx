@@ -11,19 +11,19 @@ import { Br } from '../../ui-kit/Br';
 import { TeamComponent } from '../../components/Team';
 import { useLanguage } from '../../hooks/language';
 import { useTeam } from '../../hooks/team';
-import { useSections } from '../../hooks/sections';
+import { useHero } from '../../hooks/hero';
 
 const Main = () => {
   const { language } = useLanguage();
   const { team, isLoading: teamLoading } = useTeam();
-  const { sections, isLoading: heroLoading } = useSections();
+  const { hero, isLoading: heroLoading } = useHero();
 
   const isLoading = teamLoading || heroLoading;
   console.log('isLoading', isLoading);
 
   return (
     <>
-      <HeroComponent data={sections.find((section) => section.name === 'hero')} lang={language} />
+      <HeroComponent data={hero[0]} lang={language} />
       <Br desktop={100} mobile={20} />
       <OurActivity />
       <Br desktop={100} mobile={20} />

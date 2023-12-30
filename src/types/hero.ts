@@ -1,6 +1,6 @@
 import { LangValueType } from './common';
 
-export interface SectionT {
+export interface HeroT {
   id: 'string';
   name: 'hero';
   photos: PhotoT[];
@@ -14,5 +14,5 @@ export interface PhotoT {
 }
 
 export interface HeroComponentProps extends LangValueType {
-  data?: SectionT;
+  data?: HeroT;
 }
