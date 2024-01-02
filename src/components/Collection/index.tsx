@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { CollectionComponentProps } from './types';
 import {
   CollectionWrapper,
   CollectionContent,
@@ -16,25 +15,27 @@ import {
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { route } from '../../constants/routes';
+import { CollectionComponentProps } from '../../types/collection';
+import { SERVER_URL } from '../../constants/env';
 
-export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data }) => {
+export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
 
   return (
     <CollectionWrapper>
       <Container point={POINTS.m}>
-        <CollectionContent $img={data.img}>
+        <CollectionContent $img={SERVER_URL + data?.photos[0].image}>
           <TitleWrapper>
             <CollectionTitle>{t('common:titles.collect')}</CollectionTitle>
             <Label>
-              <LabeText>Ціль: {data.aim} грн</LabeText>
+              <LabeText>{data && data[`goal_${lang}`]}</LabeText>
             </Label>
           </TitleWrapper>
           <DescriptionWrapper>
-            <CollectionDescription>{data.description}</CollectionDescription>
-            <CollectionDescription>Ціль: {data.aim} грн</CollectionDescription>
+            <CollectionDescription>{data && data[`text_${lang}`]}</CollectionDescription>
+            <CollectionDescription>{data && data[`goal_${lang}`]}</CollectionDescription>
           </DescriptionWrapper>
-          <StyledButton to={route.reports.path}>Задонатити</StyledButton>
+          <StyledButton to={route.reports.path}>{t('common:buttons.donate')}</StyledButton>
         </CollectionContent>
       </Container>
     </CollectionWrapper>

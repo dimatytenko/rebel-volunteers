@@ -9,5 +9,8 @@
     "merch": "Merch",
     "support": "We are supported by",
     "instagram": "We are supported by"
+  },
+  "buttons": {
+    "donate": "Donate"
   }
 }

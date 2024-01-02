@@ -6,7 +6,7 @@ import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const CollectionWrapper = styled.section``;
 
-export const CollectionContent = styled.div<{ $img: string }>`
+export const CollectionContent = styled.div<{ $img?: string }>`
   position: relative;
   background-image: url(${({ $img }) => $img});
   background-size: 786px 303px;
