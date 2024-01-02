@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { route } from './constants/routes';
+import { Loader } from './ui-kit/Loader';
 
 import { Uikit } from './containers/Uikit';
 
@@ -26,7 +27,7 @@ const UikitRoutes = [<Route key="uikit" path={route.uikit.path} element={<Uikit 
 
 const RoutesSwitch = () => {
   return (
-    <Suspense fallback={<>...Loading</>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         {UikitRoutes}
         {PublicRoutes}
