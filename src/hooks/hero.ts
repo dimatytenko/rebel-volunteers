@@ -5,7 +5,7 @@ import { HeroT } from '../types/hero';
 
 export const useHero = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [hero, setHero] = useState<HeroT[]>([]);
+  const [hero, setHero] = useState<HeroT>();
 
   useEffect(() => {
     getHero();

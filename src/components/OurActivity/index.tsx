@@ -6,14 +6,15 @@ import { Wrapper, Title, Content, SliderWrapper, TextWrapper, Subtitle } from '.
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Slider } from '../../ui-kit/Slider';
-import { OurAtivityProps } from './types';
+import { OurAtivityComponentProps } from '../../types/ourActivity';
+import { SERVER_URL } from '../../constants/env';
 
-export const OurActivityComponent: React.FC<OurAtivityProps> = ({ data }) => {
+export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
-      gallery: `#${data.galleryID}`,
+      gallery: '#slider-activity',
       children: 'a',
       pswpModule: () => import('photoswipe'),
     });
@@ -30,33 +31,24 @@ export const OurActivityComponent: React.FC<OurAtivityProps> = ({ data }) => {
       <Container point={POINTS.m}>
         <Title>{t('common:titles.activity')}</Title>
         <Content>
-          <SliderWrapper id={data.galleryID}>
+          <SliderWrapper id="slider-activity">
             <Slider isNavigation isLoop>
-              {data.images.map((item) => (
+              {data?.photos.map((item) => (
                 <a
                   key={item.id}
-                  href={item.img}
+                  href={SERVER_URL + item.image}
                   data-pswp-width={800}
                   data-pswp-height={600}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={item.img} alt="img" />
+                  <img src={SERVER_URL + item.image} alt="slider" />
                 </a>
               ))}
             </Slider>
           </SliderWrapper>
           <TextWrapper>
-            <Subtitle>
-              Ми разом з командою однодумців займаємося підтримкою військових. Наші завдання різноманітні: забезпечення
-              підрозділів харчуванням, надання медикаментів для поранених, аптечок та екіпірування для військових. Також
-              ми надаємо допомогу підрозділам через наш волонтерський центр у місті Миколаєві.
-            </Subtitle>
-            <Subtitle>
-              Віримо в Збройні Сили України, Територіальну Оборону, поліцію, Державну Службу Надзвичайних Ситуацій та
-              лікарів!
-            </Subtitle>
-            <Subtitle>Віримо в кожного громадянина України!</Subtitle>
+            {data?.text.map((item) => <Subtitle key={item.id}>{item[`text_${lang}`]}</Subtitle>)}
           </TextWrapper>
         </Content>
       </Container>

@@ -18,6 +18,7 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { ImageWithPreview } from '../../ui-kit/ImageWithPreview';
 import { Donate } from '../../ui-kit/Donate';
 import { HeroComponentProps } from '../../types/hero';
+import { SERVER_URL } from '../../constants/env';
 
 export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
@@ -33,14 +34,14 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
               <DesktopWrapper>
                 <LeftBlock>
                   <ImageWithPreview
-                    src={data?.photos[0]?.image}
+                    src={SERVER_URL + data?.photos[0]?.image}
                     width={110}
                     height={140}
                     alt="our photo"
                     loading="lazy"
                   />
                   <ImageWithPreview
-                    src={data?.photos[1]?.image}
+                    src={SERVER_URL + data?.photos[1]?.image}
                     width={110}
                     height={140}
                     alt="our photo"
@@ -50,26 +51,44 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
               </DesktopWrapper>
             </div>
             <DesktopWrapper>
-              <ImageWithPreview src={data?.photos[2]?.image} width={368} height={345} alt="our photo" loading="lazy" />
+              <ImageWithPreview
+                src={SERVER_URL + data?.photos[2]?.image}
+                width={368}
+                height={345}
+                alt="our photo"
+                loading="lazy"
+              />
             </DesktopWrapper>
             <DesktopWrapper>
               <RightBlock>
                 <ImageWithPreview
-                  src={data?.photos[3]?.image}
+                  src={SERVER_URL + data?.photos[3]?.image}
                   width={175}
                   height={235}
                   alt="our photo"
                   loading="lazy"
                 />
-                <ImageWithPreview src={data?.photos[4].image} width={245} height={185} alt="our photo" loading="lazy" />
+                <ImageWithPreview
+                  src={SERVER_URL + data?.photos[4].image}
+                  width={245}
+                  height={185}
+                  alt="our photo"
+                  loading="lazy"
+                />
               </RightBlock>
             </DesktopWrapper>
             <MobileWrapper>
-              <ImageWithPreview src={data?.photos[2]?.image} width={265} height={169} alt="our photo" loading="lazy" />
+              <ImageWithPreview
+                src={SERVER_URL + data?.photos[2]?.image}
+                width={265}
+                height={169}
+                alt="our photo"
+                loading="lazy"
+              />
               <MobileBottomWrapper>
                 <MobileImageExclude>
                   <ImageWithPreview
-                    src={data?.photos[4]?.image}
+                    src={SERVER_URL + data?.photos[4]?.image}
                     width={124}
                     height={94}
                     alt="our photo"
@@ -77,14 +96,14 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
                   />
                 </MobileImageExclude>
                 <ImageWithPreview
-                  src={data?.photos[0]?.image}
+                  src={SERVER_URL + data?.photos[0]?.image}
                   width={100}
                   height={128}
                   alt="our photo"
                   loading="lazy"
                 />
                 <ImageWithPreview
-                  src={data?.photos[3]?.image}
+                  src={SERVER_URL + data?.photos[3]?.image}
                   width={114}
                   height={154}
                   alt="our photo"

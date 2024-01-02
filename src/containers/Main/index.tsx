@@ -1,31 +1,32 @@
 import { HeroComponent } from '../../components/Hero';
 import { Directions } from '../../components/Directions';
+import { OurActivityComponent } from '../../components/OurActivity';
+import { TeamComponent } from '../../components/Team';
 import { Widget } from '../../components/Widget';
-import { OurActivity } from '../OurActivity';
-// import { Team } from '../Team';
 import { Merch } from '../Merch';
 import { OurSupport } from '../OurSupport';
 import { Passed } from '../Passed';
 import { Collection } from '../Collection';
 import { Br } from '../../ui-kit/Br';
-import { TeamComponent } from '../../components/Team';
 import { useLanguage } from '../../hooks/language';
 import { useTeam } from '../../hooks/team';
 import { useHero } from '../../hooks/hero';
+import { useOurActivity } from '../../hooks/ourActivity';
 
 const Main = () => {
   const { language } = useLanguage();
   const { team, isLoading: teamLoading } = useTeam();
   const { hero, isLoading: heroLoading } = useHero();
+  const { ourActivity, isLoading: activityLoading } = useOurActivity();
 
-  const isLoading = teamLoading || heroLoading;
+  const isLoading = teamLoading || heroLoading || activityLoading;
   console.log('isLoading', isLoading);
 
   return (
     <>
-      <HeroComponent data={hero[0]} lang={language} />
+      <HeroComponent data={hero} lang={language} />
       <Br desktop={100} mobile={20} />
-      <OurActivity />
+      <OurActivityComponent data={ourActivity} lang={language} />
       <Br desktop={100} mobile={20} />
       <Collection />
       <Br desktop={150} mobile={70} />
