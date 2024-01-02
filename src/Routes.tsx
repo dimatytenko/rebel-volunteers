@@ -7,7 +7,6 @@ import { Loader } from './ui-kit/Loader';
 import { Uikit } from './containers/Uikit';
 
 const Main = lazy(() => import('./containers/Main'));
-const About = lazy(() => import('./containers/About'));
 const Join = lazy(() => import('./containers/Join'));
 const Contacts = lazy(() => import('./containers/Contacts'));
 const Reports = lazy(() => import('./containers/Reports'));
@@ -15,7 +14,6 @@ const Details = lazy(() => import('./containers/Details'));
 
 const PublicRoutes = [
   <Route key="main" path={route.main.path} element={<Main />} />,
-  <Route key="about" path={route.about.path} element={<About />} />,
   <Route key="join" path={route.join.path} element={<Join />} />,
   <Route key="contacts" path={route.contacts.path} element={<Contacts />} />,
   <Route key="reports" path={route.reports.path} element={<Reports />} />,

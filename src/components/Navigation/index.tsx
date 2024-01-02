@@ -6,7 +6,7 @@ import { StyledNavigation } from './styles';
 
 const nav = [
   {
-    to: route.about.path,
+    to: route.main.path,
     text: 'Про нас',
   },
   {
@@ -36,7 +36,7 @@ export const Navigation: React.FC<NavigationProps> = ({ path, onClickItem }) => 
   return (
     <StyledNavigation>
       {nav.map((item) => (
-        <NavLink key={item.to} to={item.to} onClick={onClickItem} active={path.includes(item.to)}>
+        <NavLink key={item.to} to={item.to} onClick={onClickItem} active={path === item.to}>
           {item.text}
         </NavLink>
       ))}
