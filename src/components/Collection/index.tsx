@@ -14,7 +14,6 @@ import {
 } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { route } from '../../constants/routes';
 import { CollectionComponentProps } from '../../types/collection';
 import { SERVER_URL } from '../../constants/env';
 
@@ -35,7 +34,9 @@ export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data, 
             <CollectionDescription>{data && data[`text_${lang}`]}</CollectionDescription>
             <CollectionDescription>{data && data[`goal_${lang}`]}</CollectionDescription>
           </DescriptionWrapper>
-          <StyledButton to={route.reports.path}>{t('common:buttons.donate')}</StyledButton>
+          <StyledButton href={data?.donata_link} target={'_blank'}>
+            {t('common:buttons.donate')}
+          </StyledButton>
         </CollectionContent>
       </Container>
     </CollectionWrapper>
