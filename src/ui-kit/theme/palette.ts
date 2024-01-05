@@ -8,6 +8,7 @@ const colors = {
   greyHover: '#8B8B8B',
   red: '#E40613',
   redHover: '#950700',
+  redDark: 'rgba(228, 6, 19, 0.13)',
   wire: '#505D68',
   system: '#727171',
   systemHover: '#393939',

@@ -54,3 +54,14 @@ export const Subtitle = styled(Text1)`
     font-size: 14px;
   }
 `;
+
+export const ImageWrapper = styled.div`
+  max-width: 686px;
+  max-height: 519px;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;

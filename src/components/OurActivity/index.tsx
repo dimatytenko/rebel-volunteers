@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import { useTranslation } from 'react-i18next';
 
-import { Wrapper, Title, Content, SliderWrapper, TextWrapper, Subtitle } from './styles';
+import { Wrapper, Title, Content, SliderWrapper, TextWrapper, Subtitle, ImageWrapper, Image } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Slider } from '../../ui-kit/Slider';
@@ -42,7 +42,9 @@ export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data,
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={SERVER_URL + item.image} alt="slider" />
+                  <ImageWrapper>
+                    <Image src={SERVER_URL + item.image} alt="slider" />
+                  </ImageWrapper>
                 </a>
               ))}
             </Slider>
