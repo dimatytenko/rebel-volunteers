@@ -8,7 +8,7 @@
     "team": "Our team",
     "merch": "Merch",
     "support": "We are supported by",
-    "instagram": "We are supported by",
+    "instagram": "Our Instagram",
     "necessary": "List of necessary items",
     "helpInform": "How to help informatively",
     "helpMore": "How else can you help?",
@@ -23,11 +23,13 @@
     "hotlines": "Hotlines",
     "assistance": "Assistance in Mykolaiv",
     "banking": "Banking details",
-    "supportOur": "Support our defenders and civilians!"
+    "supportOur": "Support our defenders and civilians!",
+    "transferred": "We have transferred:"
   },
   "buttons": {
     "donate": "Donate",
-    "check": "Check out"
+    "check": "Check out",
+    "report": "See Reports"
   },
   "nav": {
     "about": "About us",

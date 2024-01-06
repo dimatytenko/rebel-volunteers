@@ -22,6 +22,7 @@ import { SERVER_URL } from '../../constants/env';
 
 export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
+  if (!data) return null;
 
   return (
     <HeroWrapper>

@@ -1,14 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { OurSupportComponentProps } from './types';
+import { OurSupportComponentProps } from '../../types/ourSupport';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Title, ImageWrapper, Image, Link, TextLink } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
-export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data }) => {
+export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
+
+  if (!data) return null;
 
   return (
     <Wrapper>
@@ -16,18 +18,18 @@ export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data }
         <Title>{t('common:titles.support')}</Title>
       </Container>
       <Container point={POINTS.l}>
-        <Slider isNavigation isLoop isGrid isMain>
-          {data.map((item) => {
-            return (
+        {data && (
+          <Slider isNavigation isLoop isGrid isMain>
+            {data?.map((item) => (
               <Link key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">
                 <ImageWrapper>
-                  <Image src={item.logo} alt={item.name} />
+                  <Image src={item.logo} alt={item && item[`name_${lang}`]} />
                 </ImageWrapper>
-                <TextLink>{item.name}</TextLink>
+                <TextLink>{item && item[`name_${lang}`]}</TextLink>
               </Link>
-            );
-          })}
-        </Slider>
+            ))}
+          </Slider>
+        )}
       </Container>
     </Wrapper>
   );

@@ -5,8 +5,8 @@ import { CollectionComponent } from '../../components/Collection';
 import { TeamComponent } from '../../components/Team';
 import { MerchComponent } from '../../components/Merch';
 import { Widget } from '../../components/Widget';
-import { OurSupport } from '../OurSupport';
-import { Passed } from '../Passed';
+import { OurSupportComponent } from '../../components/OurSupport';
+import { PassedComponents } from '../../components/Passed';
 import { Br } from '../../ui-kit/Br';
 import { useLanguage } from '../../hooks/language';
 import { useTeam } from '../../hooks/team';
@@ -14,6 +14,8 @@ import { useHero } from '../../hooks/hero';
 import { useOurActivity } from '../../hooks/ourActivity';
 import { useCollection } from '../../hooks/collection';
 import { useMerch } from '../../hooks/merch';
+import { useSupport } from '../../hooks/ourSupport';
+import { useReports } from '../../hooks/reports';
 
 const Main = () => {
   const { language } = useLanguage();
@@ -22,8 +24,17 @@ const Main = () => {
   const { ourActivity, isLoading: activityLoading } = useOurActivity();
   const { collection, isLoading: collectionLoading } = useCollection();
   const { merch, isLoading: merchLoading } = useMerch();
+  const { support, isLoading: supportLoading } = useSupport();
+  const { reports, isLoading: reportsLoading } = useReports();
 
-  const isLoading = teamLoading || heroLoading || activityLoading || collectionLoading || merchLoading;
+  const isLoading =
+    teamLoading ||
+    heroLoading ||
+    activityLoading ||
+    collectionLoading ||
+    merchLoading ||
+    supportLoading ||
+    reportsLoading;
   console.log('isLoading', isLoading);
 
   return (
@@ -34,7 +45,7 @@ const Main = () => {
       <Br desktop={100} mobile={20} />
       <CollectionComponent data={collection} lang={language} />
       <Br desktop={150} mobile={70} />
-      <Passed />
+      <PassedComponents data={reports} lang={language} />
       <Br desktop={100} mobile={20} />
       <Directions />
       <Br desktop={150} mobile={20} />
@@ -42,7 +53,7 @@ const Main = () => {
       <Br desktop={150} mobile={70} />
       <MerchComponent data={merch} lang={language} />
       <Br desktop={100} mobile={20} />
-      <OurSupport />
+      <OurSupportComponent data={support} lang={language} />
       <Br desktop={150} mobile={70} />
       <Widget />
       <Br desktop={170} mobile={70} />

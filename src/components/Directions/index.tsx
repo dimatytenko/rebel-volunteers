@@ -38,6 +38,8 @@ const data = [
 export const Directions = () => {
   const { t } = useTranslation();
 
+  if (!data) return null;
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>

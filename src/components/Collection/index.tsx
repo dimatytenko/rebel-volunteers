@@ -20,6 +20,8 @@ import { SERVER_URL } from '../../constants/env';
 export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data, lang }) => {
   const { t } = useTranslation();
 
+  if (!data) return null;
+
   return (
     <CollectionWrapper>
       <Container point={POINTS.m}>

@@ -26,6 +26,8 @@ export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data,
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (!data) return null;
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>

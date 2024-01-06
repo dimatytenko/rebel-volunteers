@@ -20,6 +20,8 @@ import { POINTS } from '../../ui-kit/Container/types';
 export const TeamComponent: React.FC<TeamProps> = ({ team, lang }) => {
   const { t } = useTranslation();
 
+  if (!team) return null;
+
   return (
     <TeamWrapper>
       <Container point={POINTS.m}>

@@ -12,7 +12,7 @@ export interface TeamMemberT {
 }
 
 export interface TeamProps extends LangValueType {
-  team: TeamMemberT[];
+  team?: TeamMemberT[];
 }
 
 export interface TeamMemberProps extends LangValueType {

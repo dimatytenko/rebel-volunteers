@@ -27,25 +27,29 @@ export const MerchComponent: React.FC<MerchProps> = ({ data, lang }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (!data) return null;
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>
         <Content>
           <SliderWrapper id="merch-slider">
-            <Slider isNavigation isLoop>
-              {data?.photos.map((item) => (
-                <a
-                  key={item.id}
-                  href={SERVER_URL + item.image}
-                  data-pswp-width={800}
-                  data-pswp-height={600}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={SERVER_URL + item.image} alt="img" />
-                </a>
-              ))}
-            </Slider>
+            {data && (
+              <Slider isNavigation isLoop>
+                {data?.photos.map((item) => (
+                  <a
+                    key={item.id}
+                    href={SERVER_URL + item.image}
+                    data-pswp-width={800}
+                    data-pswp-height={600}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={SERVER_URL + item.image} alt="img" />
+                  </a>
+                ))}
+              </Slider>
+            )}
           </SliderWrapper>
           <RightSideWrapper>
             <Title>{t('common:titles.merch')}</Title>
