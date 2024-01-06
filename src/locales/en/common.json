@@ -8,9 +8,32 @@
     "team": "Our team",
     "merch": "Merch",
     "support": "We are supported by",
-    "instagram": "We are supported by"
+    "instagram": "We are supported by",
+    "necessary": "List of necessary items",
+    "helpInform": "How to help informatively",
+    "helpMore": "How else can you help?",
+    "donate": "Donation and rules",
+    "firstAidKit": "First aid kit",
+    "overall": "Overall result",
+    "photoVideo": "Photo and video reports",
+    "talking": "Who are talking about us...",
+    "grattitude": "Gratitude",
+    "chevrons": "Chevrons",
+    "contacts": "Contacts and details",
+    "hotlines": "Hotlines",
+    "assistance": "Assistance in Mykolaiv",
+    "banking": "Banking details",
+    "supportOur": "Support our defenders and civilians!"
   },
   "buttons": {
-    "donate": "Donate"
+    "donate": "Donate",
+    "check": "Check out"
+  },
+  "nav": {
+    "about": "About us",
+    "join": "Join",
+    "contacts": "Contacts",
+    "reports": "Reports",
+    "details": "Bank details"
   }
 }

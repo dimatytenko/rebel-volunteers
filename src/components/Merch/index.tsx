@@ -14,7 +14,7 @@ export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
 
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
-      gallery: `#${data.galleryID}`,
+      gallery: `#merch-slider`,
       children: 'a',
       pswpModule: () => import('photoswipe'),
     });
@@ -30,7 +30,7 @@ export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
     <Wrapper>
       <Container point={POINTS.m}>
         <Content>
-          <SliderWrapper id={data.galleryID}>
+          <SliderWrapper id="merch-slider">
             <Slider isNavigation isLoop>
               {data.images.map((item) => (
                 <a
@@ -54,7 +54,7 @@ export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
               наявністю, слідкуйте в інстаграмі.
             </Subtitle>
             <StyledButton href={SOCIAL.instagram} target="_blank" icon>
-              Подивитись
+              {t('common:buttons.check')}
             </StyledButton>
           </RightSideWrapper>
         </Content>
