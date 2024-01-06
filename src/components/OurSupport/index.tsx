@@ -7,10 +7,10 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Title, ImageWrapper, Image, Link, TextLink } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
-export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data, lang }) => {
+export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
 
-  if (!data) return null;
+  if (!data || isLoading) return null;
 
   return (
     <Wrapper>

@@ -1,6 +1,6 @@
-import { LangValueType } from './common';
+import { CommonType } from './common';
 
-export interface ReportProps extends LangValueType {
+export interface ReportProps extends CommonType {
   data?: ReportData;
 }
 

@@ -9,7 +9,7 @@ import { Slider } from '../../ui-kit/Slider';
 import { OurAtivityComponentProps } from '../../types/ourActivity';
 import { SERVER_URL } from '../../constants/env';
 
-export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data, lang }) => {
+export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data,
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (!data) return null;
+  if (!data || isLoading) return null;
 
   return (
     <Wrapper>

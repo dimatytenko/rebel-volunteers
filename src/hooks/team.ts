@@ -4,7 +4,7 @@ import { getTeamQuery } from '../queries/main';
 import { TeamMemberT } from '../types/team';
 
 export const useTeam = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [team, setTeam] = useState<TeamMemberT[]>();
 
   useEffect(() => {

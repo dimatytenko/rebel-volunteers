@@ -4,7 +4,7 @@ import { getHeroQuery } from '../queries/main';
 import { HeroT } from '../types/hero';
 
 export const useHero = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [hero, setHero] = useState<HeroT>();
 
   useEffect(() => {

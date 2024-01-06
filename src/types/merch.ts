@@ -1,6 +1,6 @@
-import { LangValueType } from './common';
+import { CommonType } from './common';
 
-export interface MerchProps extends LangValueType {
+export interface MerchProps extends CommonType {
   data?: MerchData;
 }
 

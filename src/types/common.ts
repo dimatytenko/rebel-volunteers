@@ -1,5 +1,6 @@
 import { Language } from '../states/language';
 
-export type LangValueType = {
+export type CommonType = {
   lang: Language;
+  isLoading: boolean;
 };

@@ -4,7 +4,7 @@ import { getMerchQuery } from '../queries/main';
 import { MerchData } from '../types/merch';
 
 export const useMerch = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [merch, setMerch] = useState<MerchData>();
 
   useEffect(() => {

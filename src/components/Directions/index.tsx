@@ -35,10 +35,14 @@ const data = [
   },
 ];
 
-export const Directions = () => {
+interface DirectionsProps {
+  isLoading: boolean;
+}
+
+export const Directions: React.FC<DirectionsProps> = ({ isLoading }) => {
   const { t } = useTranslation();
 
-  if (!data) return null;
+  if (isLoading) return null;
 
   return (
     <Wrapper>

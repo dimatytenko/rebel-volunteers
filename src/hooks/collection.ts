@@ -4,7 +4,7 @@ import { getCollectionQuery } from '../queries/main';
 import { CollectionT } from '../types/collection';
 
 export const useCollection = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [collection, setCollection] = useState<CollectionT>();
 
   useEffect(() => {

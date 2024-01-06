@@ -23,21 +23,19 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { route } from '../../constants/routes';
 import { SERVER_URL } from '../../constants/env';
 
-export const PassedComponents: React.FC<ReportProps> = ({ data, lang }) => {
+export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
 
-  console.log('data', data);
-
-  if (!data) return null;
+  if (!data || isLoading) return null;
   return (
     <PassedWrapper>
       <Container point={POINTS.m}>
         <ContentWrapper>
           <CardList>
-            {data?.photos?.map((item) => {
-              if (!item?.image && !item?.title) return <BlankCard key={item.id} />;
+            {data?.photos?.map((item, idx) => {
+              if (!item?.image && !item?.title) return <BlankCard key={item.id + idx} />;
               return (
-                <Card key={item.id}>
+                <Card key={item.id + idx}>
                   {item.title && <Title>{t(`common:titles.${item.title}`)}</Title>}
                   {item.subtitle && <Subtitle>{t(`common:titles.${item.subtitle}`)}</Subtitle>}
                   {item.image && (

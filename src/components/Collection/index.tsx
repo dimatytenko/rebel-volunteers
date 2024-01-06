@@ -17,10 +17,10 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { CollectionComponentProps } from '../../types/collection';
 import { SERVER_URL } from '../../constants/env';
 
-export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data, lang }) => {
+export const CollectionComponent: React.FC<CollectionComponentProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
 
-  if (!data) return null;
+  if (!data || isLoading) return null;
 
   return (
     <CollectionWrapper>

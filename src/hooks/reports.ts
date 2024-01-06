@@ -25,7 +25,7 @@ const secondMockData = [
 ];
 
 export const useReports = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [reports, setReports] = useState<ReportData>();
 
   useEffect(() => {

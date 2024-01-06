@@ -20,9 +20,9 @@ import { Donate } from '../../ui-kit/Donate';
 import { HeroComponentProps } from '../../types/hero';
 import { SERVER_URL } from '../../constants/env';
 
-export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang }) => {
+export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
-  if (!data) return null;
+  if (!data || isLoading) return null;
 
   return (
     <HeroWrapper>

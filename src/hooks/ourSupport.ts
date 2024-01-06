@@ -4,7 +4,7 @@ import { getSupportQuery } from '../queries/main';
 import { OurSupportData } from '../types/ourSupport';
 
 export const useSupport = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [support, setSupport] = useState<OurSupportData[]>();
 
   useEffect(() => {

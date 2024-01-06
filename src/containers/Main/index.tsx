@@ -16,6 +16,7 @@ import { useCollection } from '../../hooks/collection';
 import { useMerch } from '../../hooks/merch';
 import { useSupport } from '../../hooks/ourSupport';
 import { useReports } from '../../hooks/reports';
+import { Loader } from '../../ui-kit/Loader';
 
 const Main = () => {
   const { language } = useLanguage();
@@ -35,27 +36,30 @@ const Main = () => {
     merchLoading ||
     supportLoading ||
     reportsLoading;
-  console.log('isLoading', isLoading);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <>
-      <HeroComponent data={hero} lang={language} />
+      <HeroComponent data={hero} lang={language} isLoading={isLoading} />
       <Br desktop={100} mobile={20} />
-      <OurActivityComponent data={ourActivity} lang={language} />
+      <OurActivityComponent data={ourActivity} lang={language} isLoading={isLoading} />
       <Br desktop={100} mobile={20} />
-      <CollectionComponent data={collection} lang={language} />
+      <CollectionComponent data={collection} lang={language} isLoading={isLoading} />
       <Br desktop={150} mobile={70} />
-      <PassedComponents data={reports} lang={language} />
+      <PassedComponents data={reports} lang={language} isLoading={isLoading} />
       <Br desktop={100} mobile={20} />
-      <Directions />
+      <Directions isLoading={isLoading} />
       <Br desktop={150} mobile={20} />
-      <TeamComponent team={team} lang={language} />
+      <TeamComponent team={team} lang={language} isLoading={isLoading} />
       <Br desktop={150} mobile={70} />
-      <MerchComponent data={merch} lang={language} />
+      <MerchComponent data={merch} lang={language} isLoading={isLoading} />
       <Br desktop={100} mobile={20} />
-      <OurSupportComponent data={support} lang={language} />
+      <OurSupportComponent data={support} lang={language} isLoading={isLoading} />
       <Br desktop={150} mobile={70} />
-      <Widget />
+      <Widget isLoading={isLoading} />
       <Br desktop={170} mobile={70} />
     </>
   );

@@ -1,6 +1,6 @@
-import { LangValueType } from './common';
+import { CommonType } from './common';
 
-export interface OurAtivityComponentProps extends LangValueType {
+export interface OurAtivityComponentProps extends CommonType {
   data?: OurAtivityProps;
 }
 

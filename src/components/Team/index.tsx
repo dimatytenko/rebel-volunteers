@@ -17,10 +17,10 @@ import {
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 
-export const TeamComponent: React.FC<TeamProps> = ({ team, lang }) => {
+export const TeamComponent: React.FC<TeamProps> = ({ team, lang, isLoading }) => {
   const { t } = useTranslation();
 
-  if (!team) return null;
+  if (!team || isLoading) return null;
 
   return (
     <TeamWrapper>

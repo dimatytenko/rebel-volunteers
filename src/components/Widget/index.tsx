@@ -4,8 +4,14 @@ import { Wrapper, Title } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 
-export const Widget = () => {
+interface WidgetProps {
+  isLoading: boolean;
+}
+
+export const Widget: React.FC<WidgetProps> = ({ isLoading }) => {
   const { t } = useTranslation();
+
+  if (isLoading) return null;
 
   return (
     <Wrapper>

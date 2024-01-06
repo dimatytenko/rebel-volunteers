@@ -1,4 +1,4 @@
-import { LangValueType } from './common';
+import { CommonType } from './common';
 
 export interface HeroT {
   id: 'string';
@@ -13,6 +13,6 @@ export interface PhotoT {
   image: string;
 }
 
-export interface HeroComponentProps extends LangValueType {
+export interface HeroComponentProps extends CommonType {
   data?: HeroT;
 }

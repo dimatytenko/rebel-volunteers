@@ -10,7 +10,7 @@ import { MerchProps } from '../../types/merch';
 import { SOCIAL } from '../../constants/links';
 import { SERVER_URL } from '../../constants/env';
 
-export const MerchComponent: React.FC<MerchProps> = ({ data, lang }) => {
+export const MerchComponent: React.FC<MerchProps> = ({ data, lang, isLoading }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const MerchComponent: React.FC<MerchProps> = ({ data, lang }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (!data) return null;
+  if (!data || isLoading) return null;
 
   return (
     <Wrapper>

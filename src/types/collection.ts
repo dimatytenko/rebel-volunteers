@@ -1,6 +1,6 @@
-import { LangValueType } from './common';
+import { CommonType } from './common';
 
-export interface CollectionComponentProps extends LangValueType {
+export interface CollectionComponentProps extends CommonType {
   data?: CollectionT;
 }
 

@@ -4,7 +4,7 @@ import { getOurActivityQuery } from '../queries/main';
 import { OurAtivityProps } from '../types/ourActivity';
 
 export const useOurActivity = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [ourActivity, setOurActivity] = useState<OurAtivityProps>();
 
   useEffect(() => {
