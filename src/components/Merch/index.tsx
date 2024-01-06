@@ -6,10 +6,11 @@ import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Content, SliderWrapper, RightSideWrapper, Title, Subtitle, StyledButton } from './styles';
 import { Slider } from '../../ui-kit/Slider';
-import { MerchProps } from './types';
+import { MerchProps } from '../../types/merch';
 import { SOCIAL } from '../../constants/links';
+import { SERVER_URL } from '../../constants/env';
 
-export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
+export const MerchComponent: React.FC<MerchProps> = ({ data, lang }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -32,27 +33,23 @@ export const MerchComponent: React.FC<MerchProps> = ({ data }) => {
         <Content>
           <SliderWrapper id="merch-slider">
             <Slider isNavigation isLoop>
-              {data.images.map((item) => (
+              {data?.photos.map((item) => (
                 <a
                   key={item.id}
-                  href={item.img}
+                  href={SERVER_URL + item.image}
                   data-pswp-width={800}
                   data-pswp-height={600}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={item.img} alt="img" />
+                  <img src={SERVER_URL + item.image} alt="img" />
                 </a>
               ))}
             </Slider>
           </SliderWrapper>
           <RightSideWrapper>
             <Title>{t('common:titles.merch')}</Title>
-            <Subtitle>
-              Слідкуйте за нашими колабами! Ми постійно розвиваємось і співпрацюємо з талановитими художниками та
-              дизайнерами, щоб пропонувати вам сучасний і оригінальний мерч. Разом з нами ви завжди будете у тренді! За
-              наявністю, слідкуйте в інстаграмі.
-            </Subtitle>
+            <Subtitle>{data && data[`text_${lang}`]}</Subtitle>
             <StyledButton href={SOCIAL.instagram} target="_blank" icon>
               {t('common:buttons.check')}
             </StyledButton>

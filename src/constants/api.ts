@@ -3,4 +3,7 @@ export const mainQueryList = {
   hero: () => '/hero/',
   ourActivity: () => '/activity/',
   colection: () => '/donate/',
+  merch: () => '/merch/',
+  support: () => '/support/',
+  reports: () => '/reports/',
 };
