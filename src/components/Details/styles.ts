@@ -12,7 +12,11 @@ export const TopContent = styled.div`
   margin-bottom: 100px;
 `;
 
-export const StyledText = styled(Text2)``;
+export const StyledText = styled(Text2)`
+  ${Media.down.m} {
+    font-size: 14px;
+  }
+`;
 
 export const BottomContent = styled.div`
   display: flex;
