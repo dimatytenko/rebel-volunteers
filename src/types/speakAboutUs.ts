@@ -1,4 +1,6 @@
-export interface SpeakAboutUsProps {
+import { CommonType } from './common';
+
+export interface SpeakAboutUsProps extends CommonType {
   data: SpeakAboutUsState[];
 }
 

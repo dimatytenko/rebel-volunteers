@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import { useTranslation } from 'react-i18next';
 
 import { Wrapper, Title, Content, SliderWrapper, TextWrapper, Subtitle, ImageWrapper, Image } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Slider } from '../../ui-kit/Slider';
 import { OurAtivityComponentProps } from '../../types/ourActivity';
-import { SERVER_URL } from '../../constants/env';
 
-export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data, lang, isLoading }) => {
-  const { t } = useTranslation();
-
+export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data, lang, isLoading, t }) => {
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#slider-activity',
@@ -38,14 +34,14 @@ export const OurActivityComponent: React.FC<OurAtivityComponentProps> = ({ data,
               {data?.photos.map((item) => (
                 <a
                   key={item.id}
-                  href={SERVER_URL + item.image}
+                  href={item.image}
                   data-pswp-width={800}
                   data-pswp-height={600}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ImageWrapper>
-                    <Image src={SERVER_URL + item.image} alt="slider" />
+                    <Image src={item.image} alt="slider" />
                   </ImageWrapper>
                 </a>
               ))}

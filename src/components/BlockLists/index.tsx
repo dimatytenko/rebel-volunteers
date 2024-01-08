@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Title } from '../../ui-kit/Title';
 import { Container } from '../../ui-kit/Container';
@@ -15,19 +16,11 @@ import {
   ListItemText,
   ReadMoreButton,
 } from './styles';
-
-interface BlockListsProps {
-  title: string;
-  list: {
-    id: string;
-    img: string;
-    title: string;
-    list: string[];
-  }[];
-}
+import { BlockListsProps } from '../../types/blockList';
 
 export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
   const [isOpen, setIsOpen] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const toggle = (index: number) => {
     if (isOpen === index) {
@@ -38,7 +31,7 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>{title}</Title>
+        <Title>{t(`common:titles.${title}`)}</Title>
         <BlockListsContent>
           {list.map((item, ind) => (
             <BlockListsItem key={item.id}>

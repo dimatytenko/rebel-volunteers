@@ -1,9 +1,8 @@
-import { BlockLists } from '../../components/BlockLists';
 import img_1 from './assets/img_1.jpg';
 import img_2 from './assets/img_2.jpg';
 import img_3 from './assets/img_3.jpg';
 
-const data = [
+export const overal = [
   {
     id: '1',
     img: img_1,
@@ -122,7 +121,3 @@ const data = [
     ],
   },
 ];
-
-export const OveralResult = () => {
-  return <BlockLists title="Загальний результат" list={data} />;
-};

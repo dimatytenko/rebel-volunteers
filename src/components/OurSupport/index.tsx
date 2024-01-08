@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { OurSupportComponentProps } from '../../types/ourSupport';
 import { Container } from '../../ui-kit/Container';
@@ -7,9 +6,7 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Title, ImageWrapper, Image, Link, TextLink } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
-export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data, lang, isLoading }) => {
-  const { t } = useTranslation();
-
+export const OurSupportComponent: React.FC<OurSupportComponentProps> = ({ data, lang, isLoading, t }) => {
   if (!data || isLoading) return null;
 
   return (

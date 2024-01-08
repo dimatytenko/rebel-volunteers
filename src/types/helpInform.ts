@@ -1,4 +1,6 @@
-export interface HelpInformProps {
+import { CommonType } from './common';
+
+export interface HelpInformProps extends CommonType {
   data: HelpInformItem[];
 }
 

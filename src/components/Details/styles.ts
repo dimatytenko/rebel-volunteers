@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { Text2 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.section``;
 
@@ -15,7 +16,11 @@ export const StyledText = styled(Text2)``;
 
 export const BottomContent = styled.div`
   display: flex;
-  gap: 33px;
+  gap: 30px;
+
+  ${Media.down.m} {
+    flex-direction: column;
+  }
 `;
 
 const contentStyles = css`

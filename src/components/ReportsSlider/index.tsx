@@ -5,13 +5,13 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { Title } from '../../ui-kit/Title';
 import { Wrapper, SliderWrapper, ImageWrapper, Image } from './styles';
 import { Slider } from '../../ui-kit/Slider';
-import { ReportsSliderProps } from './types';
+import { ReportsSliderProps } from '../../types/reportsSlider';
 
-export const ReportsSlider: React.FC<ReportsSliderProps> = ({ title, data }) => {
+export const ReportsSlider: React.FC<ReportsSliderProps> = ({ title, data, t }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>{title}</Title>
+        <Title>{t(`common:titles.${title}`)}</Title>
       </Container>
       <Container point={POINTS.l}>
         <SliderWrapper>

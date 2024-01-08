@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import { useTranslation } from 'react-i18next';
 
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
@@ -8,11 +7,8 @@ import { Wrapper, Content, SliderWrapper, RightSideWrapper, Title, Subtitle, Sty
 import { Slider } from '../../ui-kit/Slider';
 import { MerchProps } from '../../types/merch';
 import { SOCIAL } from '../../constants/links';
-import { SERVER_URL } from '../../constants/env';
 
-export const MerchComponent: React.FC<MerchProps> = ({ data, lang, isLoading }) => {
-  const { t } = useTranslation();
-
+export const MerchComponent: React.FC<MerchProps> = ({ data, lang, isLoading, t }) => {
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: `#merch-slider`,
@@ -39,13 +35,13 @@ export const MerchComponent: React.FC<MerchProps> = ({ data, lang, isLoading }) 
                 {data?.photos.map((item) => (
                   <a
                     key={item.id}
-                    href={SERVER_URL + item.image}
+                    href={item.image}
                     data-pswp-width={800}
                     data-pswp-height={600}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={SERVER_URL + item.image} alt="img" />
+                    <img src={item.image} alt="img" />
                   </a>
                 ))}
               </Slider>

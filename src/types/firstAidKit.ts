@@ -1,4 +1,6 @@
-export interface IFirstAidKitProps {
+import { CommonType } from './common';
+
+export interface IFirstAidKitProps extends CommonType {
   data: IFirstAidKit;
 }
 

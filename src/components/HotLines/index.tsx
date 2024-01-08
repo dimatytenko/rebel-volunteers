@@ -1,4 +1,4 @@
-import { HotlinesProps } from './types';
+import { HotlinesProps } from '../../types/hotLines';
 import { Wrapper, InfoItem, Title, Info, InfoText } from './styles';
 
 export const Hotlines: React.FC<HotlinesProps> = ({ list }) => {

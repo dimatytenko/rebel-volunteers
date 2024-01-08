@@ -12,26 +12,26 @@ const data = [
   {
     id: '1',
     img: img_1,
-    title: 'Військові',
-    text: 'Постачання військового спорядження, що включає в себе якісне обладнання та засоби індивідуального захисту.',
+    title: 'title_1',
+    text: 'text_1',
   },
   {
     id: '2',
     img: img_2,
-    title: 'Постраждалі',
-    text: 'Ми надаємо продукти та необхідні речі для людей чиє житло було зруйновано або пошкоджено.',
+    title: 'title_2',
+    text: 'text_2',
   },
   {
     id: '3',
     img: img_3,
-    title: 'Лікарні',
-    text: 'Надаємо медичну допомогу і постачання медикаментів для лікування поранених та тих, хто потребує допомоги',
+    title: 'title_3',
+    text: 'text_3',
   },
   {
     id: '4',
     img: img_4,
-    title: 'Тварини',
-    text: 'Забезпечуємо тварин годуванням та необхідною допомогою, щоб вони мали шанс на виживання у важких умовах.',
+    title: 'title_4',
+    text: 'text_4',
   },
 ];
 
@@ -53,8 +53,8 @@ export const Directions: React.FC<DirectionsProps> = ({ isLoading }) => {
             <Card key={item.id}>
               <Image src={item.img} alt={item.title} />
               <TextWrapper>
-                <Subtitle>{item.title}</Subtitle>
-                <StyledText>{item.text}</StyledText>
+                <Subtitle>{t(`common:directions.${item.title}`)}</Subtitle>
+                <StyledText>{t(`common:directions.${item.text}`)}</StyledText>
               </TextWrapper>
             </Card>
           ))}

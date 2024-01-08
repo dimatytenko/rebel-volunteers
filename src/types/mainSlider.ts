@@ -1,4 +1,6 @@
-export interface MainSliderSectionProps {
+import { CommonType } from './common';
+
+export interface MainSliderSectionProps extends CommonType {
   title: string;
   data: {
     galleryID: string;

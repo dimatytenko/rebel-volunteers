@@ -3,13 +3,13 @@ import { Container } from '../../ui-kit/Container';
 
 import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Content, Subtitle, List, Item, ItemText, ImageWrapper, Image } from './styles';
-import { IFirstAidKitProps } from './types';
+import { IFirstAidKitProps } from '../../types/firstAidKit';
 
-export const FirstAidKit: React.FC<IFirstAidKitProps> = ({ data }) => {
+export const FirstAidKit: React.FC<IFirstAidKitProps> = ({ data, t }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>Аптечка</Title>
+        <Title>{t('common:titles.firstAidKit')}</Title>
         <Subtitle>{data.text}</Subtitle>
         <Content>
           <List>

@@ -5,10 +5,10 @@ import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { Title } from '../../ui-kit/Title';
 import { Wrapper, SliderWrapper, ImageWrapper, Image } from './styles';
-import { MainSliderSectionProps } from './types';
+import { MainSliderSectionProps } from '../../types/mainSlider';
 import { Slider } from '../../ui-kit/Slider';
 
-export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, data, height }) => {
+export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, data, height, t }) => {
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
       gallery: `#${data.galleryID}`,
@@ -26,7 +26,7 @@ export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, dat
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>{title}</Title>
+        <Title>{t(`common:titles.${title}`)}</Title>
       </Container>
       <Container point={POINTS.l}>
         <SliderWrapper id={data.galleryID}>

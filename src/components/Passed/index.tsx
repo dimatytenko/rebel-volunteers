@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { ReportProps } from '../../types/report';
 import {
@@ -21,11 +20,8 @@ import {
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { route } from '../../constants/routes';
-import { SERVER_URL } from '../../constants/env';
 
-export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading }) => {
-  const { t } = useTranslation();
-
+export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading, t }) => {
   if (!data || isLoading) return null;
   return (
     <PassedWrapper>
@@ -40,7 +36,7 @@ export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading 
                   {item.subtitle && <Subtitle>{t(`common:titles.${item.subtitle}`)}</Subtitle>}
                   {item.image && (
                     <ImageWrapper>
-                      <Image src={SERVER_URL + item.image} alt={item.id} />
+                      <Image src={item.image} alt={item.id} />
                     </ImageWrapper>
                   )}
                   {item.quantity && <TextCount>{item.quantity}</TextCount>}

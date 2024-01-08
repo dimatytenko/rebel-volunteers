@@ -16,18 +16,22 @@ import {
   CopyIcon,
   NumbersWrapper,
   StyledLine,
+  ImageMobileWrapper,
 } from './styles';
-import { DetailsBlockProps } from './types';
+import { DetailsBlockProps } from '../../types/detailsBlock';
 import { useCopyToClipboard } from '../../hooks/copyToClipboard';
 
-export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data }) => {
+export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t }) => {
   const { copied, copy, text, contextHolder } = useCopyToClipboard(10000);
 
   return (
     <DetailsWrapper>
       {contextHolder}
       <LeftContent>
-        <Title>Реквізити:</Title>
+        <Title>{t('common:titles.details')}:</Title>
+        <ImageMobileWrapper>
+          <StyledImage src={data.img} alt="image" />
+        </ImageMobileWrapper>
         <div>
           {data.data.map((item, ind) => (
             <div key={item.id}>

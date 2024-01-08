@@ -1,4 +1,4 @@
-import { HelpListProps } from './types';
+import { HelpListProps } from '../../types/helpList';
 import { Wrapper, Info, Title, InfoText } from './styles';
 
 export const HelpList: React.FC<HelpListProps> = ({ data }) => {

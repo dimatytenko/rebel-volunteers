@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next';
+
+import { useLanguage } from '../../hooks/language';
 import { DetailsComponent } from '../../components/Details';
 import { Collage } from '../../components/Collage';
 import { SOCIAL } from '../../constants/links';
@@ -63,9 +66,11 @@ const collageData = [
 ];
 
 const Details = () => {
+  const { t } = useTranslation();
+  const { language } = useLanguage();
   return (
     <>
-      <DetailsComponent links={links} data={details} />
+      <DetailsComponent links={links} data={details} lang={language} t={t} />
       <Br desktop={150} mobile={70} />
       <Collage data={collageData} />
       <Br desktop={150} mobile={70} />

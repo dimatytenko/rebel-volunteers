@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { TeamProps, TeamMemberProps } from '../../types/team';
 import {
@@ -17,9 +16,7 @@ import {
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 
-export const TeamComponent: React.FC<TeamProps> = ({ team, lang, isLoading }) => {
-  const { t } = useTranslation();
-
+export const TeamComponent: React.FC<TeamProps> = ({ team, lang, isLoading, t }) => {
   if (!team || isLoading) return null;
 
   return (

@@ -124,6 +124,10 @@ export const ArrowShortButtonIcon = styled(IconSvg).attrs({
 
 export const StyledTextLink = styled(Text4Slim)`
   transition: all ${({ theme }) => theme.transition.primary};
+
+  ${Media.down.m} {
+    font-size: 14px;
+  }
 `;
 
 export const WrapperLinkText = styled.div`

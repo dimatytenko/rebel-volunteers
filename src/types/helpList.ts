@@ -1,4 +1,6 @@
-export interface HelpListProps {
+import { CommonType } from './common';
+
+export interface HelpListProps extends CommonType {
   data: HelpListData;
 }
 

@@ -2,38 +2,28 @@ import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
 import { DetailsBlock } from '../DetailsBlock';
 import { OrganisationLabel } from '../OrganisationLabel';
-import { Ilink } from '../OrganisationLabel/types';
-import { DetailsBlockData } from '../DetailsBlock/types';
 import { Br } from '../../ui-kit/Br';
 import { Wrapper, TopContent } from './styles';
-import { IHotLine } from '../HotLines/types';
-import { Hotlines } from '../HotLines';
-import { HelpListData } from '../HelpList/types';
 import { HelpList } from '../HelpList';
 import { Title } from '../../ui-kit/Title';
+import { Hotlines } from '../HotLines';
+import { ContactsComponentProps } from '../../types/contacts';
 
-interface ContactsComponentProps {
-  links: Ilink[];
-  data: DetailsBlockData;
-  hotLines: IHotLine[];
-  helpList: HelpListData;
-}
-
-export const ContactsComponent: React.FC<ContactsComponentProps> = ({ links, data, hotLines, helpList }) => {
+export const ContactsComponent: React.FC<ContactsComponentProps> = ({ links, data, hotLines, helpList, lang, t }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>Контакти та реквізити</Title>
+        <Title>{t('common:titles.contacts')}</Title>
         <TopContent>
-          <OrganisationLabel links={links} />
-          <DetailsBlock data={data} />
+          <OrganisationLabel links={links} lang={lang} t={t} />
+          <DetailsBlock data={data} lang={lang} t={t} />
         </TopContent>
         <Br desktop={100} mobile={20} />
-        <Title>Гарячі лінії</Title>
-        <Hotlines list={hotLines} />
+        <Title>{t('common:titles.hotlines')}</Title>
+        <Hotlines list={hotLines} lang={lang} t={t} />
         <Br desktop={100} mobile={20} />
-        <Title>Допомога в Миколаєві</Title>
-        <HelpList data={helpList} />
+        <Title>{t('common:titles.assistance')}</Title>
+        <HelpList data={helpList} lang={lang} t={t} />
         <Br desktop={100} mobile={20} />
       </Container>
     </Wrapper>

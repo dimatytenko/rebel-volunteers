@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { HeroComponent } from '../../components/Hero';
 import { Directions } from '../../components/Directions';
 import { OurActivityComponent } from '../../components/OurActivity';
@@ -19,6 +21,7 @@ import { useReports } from '../../hooks/reports';
 import { Loader } from '../../ui-kit/Loader';
 
 const Main = () => {
+  const { t } = useTranslation();
   const { language } = useLanguage();
   const { team, isLoading: teamLoading } = useTeam();
   const { hero, isLoading: heroLoading } = useHero();
@@ -43,21 +46,21 @@ const Main = () => {
 
   return (
     <>
-      <HeroComponent data={hero} lang={language} isLoading={isLoading} />
+      <HeroComponent data={hero} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
-      <OurActivityComponent data={ourActivity} lang={language} isLoading={isLoading} />
+      <OurActivityComponent data={ourActivity} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
-      <CollectionComponent data={collection} lang={language} isLoading={isLoading} />
+      <CollectionComponent data={collection} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={150} mobile={70} />
-      <PassedComponents data={reports} lang={language} isLoading={isLoading} />
+      <PassedComponents data={reports} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
       <Directions isLoading={isLoading} />
       <Br desktop={150} mobile={20} />
-      <TeamComponent team={team} lang={language} isLoading={isLoading} />
+      <TeamComponent team={team} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={150} mobile={70} />
-      <MerchComponent data={merch} lang={language} isLoading={isLoading} />
+      <MerchComponent data={merch} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
-      <OurSupportComponent data={support} lang={language} isLoading={isLoading} />
+      <OurSupportComponent data={support} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={150} mobile={70} />
       <Widget isLoading={isLoading} />
       <Br desktop={170} mobile={70} />

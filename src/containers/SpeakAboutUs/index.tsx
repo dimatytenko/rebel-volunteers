@@ -1,11 +1,10 @@
-import { SpeakAboutUsComponent } from '../../components/SpeakAboutUs';
 import img_1 from './assets/img_1.jpg';
 import img_2 from './assets/img_2.jpg';
 import img_3 from './assets/img_3.jpg';
 import img_4 from './assets/img_4.jpg';
 import img_5 from './assets/img_5.jpg';
 
-const data = [
+export const aboutUs = [
   {
     id: '1',
     img: img_1,
@@ -46,7 +45,3 @@ const data = [
     textButton: 'Дивитись сюжет повністю',
   },
 ];
-
-export const SpeakAboutUs = () => {
-  return <SpeakAboutUsComponent data={data} />;
-};

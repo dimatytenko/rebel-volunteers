@@ -1,4 +1,6 @@
-export interface HotlinesProps {
+import { CommonType } from './common';
+
+export interface HotlinesProps extends CommonType {
   list: IHotLine[];
 }
 export interface IHotLine {

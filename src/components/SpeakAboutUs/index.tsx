@@ -1,7 +1,7 @@
 import { Title } from '../../ui-kit/Title';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { SpeakAboutUsProps } from './types';
+import { SpeakAboutUsProps } from '../../types/speakAboutUs';
 import {
   Wrapper,
   Content,
@@ -15,11 +15,11 @@ import {
   ListItemText,
 } from './styles';
 
-export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data }) => {
+export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, t }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
-        <Title>Про нас говорять</Title>
+        <Title>{t('common:titles.talking')}</Title>
         <Content>
           {data.map((item) => {
             return (

@@ -1,4 +1,6 @@
-export interface DetailsBlockProps {
+import { CommonType } from './common';
+
+export interface DetailsBlockProps extends CommonType {
   data: DetailsBlockData;
 }
 
