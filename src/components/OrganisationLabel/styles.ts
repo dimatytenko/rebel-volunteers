@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 
   ${Media.down.m} {
-    padding: 10px 0;
+    padding: 10px;
   }
 `;
 

@@ -53,7 +53,7 @@ export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 
   ${Media.down.m} {
-    padding: 0 0 40px 0;
+    padding: 0 10px 40px 10px;
   }
 `;
 
@@ -92,7 +92,7 @@ export const DetailInfo = styled.div``;
 
 export const DetailTitle = styled(Text2Bold)`
   ${Media.down.m} {
-    tfont-size: 25px;
+    font-size: 25px;
     margin-bottom: 5px;
     text-align: center;
   }
@@ -103,13 +103,13 @@ export const DetailPrev = styled(Text1)`
   margin-right: 4px;
 
   ${Media.down.m} {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
 
 export const DetailNumber = styled(Text1Slim)`
   ${Media.down.m} {
-    font-size: 12px;
+    font-size: 11px;
   }
 `;
 
@@ -151,7 +151,6 @@ export const StyledLine = styled.div`
   margin-bottom: 18px;
 
   ${Media.down.m} {
-    width: 80%;
     margin: 20px auto;
   }
 `;

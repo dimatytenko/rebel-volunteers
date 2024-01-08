@@ -55,5 +55,12 @@
     "text_2": "We provide products and necessary items for people whose homes have been destroyed or damaged.",
     "text_3": "We provide medical assistance and supply medications for the treatment of the wounded and those in need of help.",
     "text_4": "We provide animals with feeding and necessary assistance to give them a chance of survival in challenging conditions."
+  },
+  "contacts": {
+    "low": "Law enforcement agencies",
+    "municipal": "Municipal",
+    "crew": "Crew of the Red Cross",
+    "contact": "Contact Center at Mykolaiv City Council",
+    "call": "Call if you need accommodation"
   }
 }

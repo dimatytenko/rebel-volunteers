@@ -24,7 +24,7 @@ export const ContactsComponent: React.FC<ContactsComponentProps> = ({ links, dat
         <Br desktop={100} mobile={20} />
         <Title>{t('common:titles.assistance')}</Title>
         <HelpList data={helpList} lang={lang} t={t} />
-        <Br desktop={100} mobile={20} />
+        <Br desktop={100} mobile={70} />
       </Container>
     </Wrapper>
   );
