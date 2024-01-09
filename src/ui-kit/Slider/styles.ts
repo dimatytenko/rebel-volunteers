@@ -13,6 +13,15 @@ const gridStyles = css`
   grid-row-gap: 30px;
 `;
 
+const gridStylesFull = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1038px, 1fr));
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
+  grid-column-gap: 22px;
+  grid-row-gap: 30px;
+`;
+
 const ArrowsWrapperStyles = css`
   display: flex;
   justify-content: center;
@@ -37,7 +46,7 @@ export const StyledSwiper = styled(Swiper)<SliderProps>`
   max-width: ${({ $isMain }) => ($isMain ? `1194px` : `100%`)};
 
   .swiper-wrapper {
-    ${({ $isGrid }) => ($isGrid ? gridStyles : `undefined`)};
+    ${({ $isGrid, $isGridFull }) => ($isGrid ? gridStyles : $isGridFull ? gridStylesFull : `undefined`)};
   }
 `;
 

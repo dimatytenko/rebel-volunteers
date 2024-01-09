@@ -10,6 +10,7 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
   isNavigation,
   isLoop,
   isGrid,
+  isGridFull,
   isMain,
   spaceBetween,
   slidesPerViewXS,
@@ -30,7 +31,7 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
     nextEl: nextRef.current,
   };
   const navigation = isNavigation && navigationRefs;
-  const grid = isGrid ? { rows: 3 } : undefined;
+  const grid = isGrid || isGridFull ? { rows: 3 } : undefined;
 
   return (
     <SliderWrapper $isMain={isMain}>
@@ -45,9 +46,10 @@ export const Slider: React.FC<PropsWithChildren & SliderProps> = ({
       <StyledSwiper
         loop={isLoop}
         navigation={navigation}
-        autoplay={isGrid || noAutoPlay ? undefined : { delay: 3000 }}
+        autoplay={isGrid || isGridFull || noAutoPlay ? undefined : { delay: 3000 }}
         grid={grid}
         $isGrid={isGrid}
+        $isGridFull={isGridFull}
         modules={[...modules]}
         breakpoints={{
           320: {

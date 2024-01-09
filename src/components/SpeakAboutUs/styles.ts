@@ -4,12 +4,6 @@ import { Heading3, Text1 } from '../../ui-kit/Typography';
 
 export const Wrapper = styled.section``;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-`;
-
 export const SpeakWrapper = styled.div`
   display: flex;
 `;

@@ -3,6 +3,8 @@ export type SliderProps = {
   isLoop?: boolean;
   isGrid?: boolean;
   $isGrid?: boolean;
+  isGridFull?: boolean;
+  $isGridFull?: boolean;
   slidesPerView?: number;
   isMain?: boolean;
   $isMain?: boolean;

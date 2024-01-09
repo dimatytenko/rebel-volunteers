@@ -4,7 +4,6 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { SpeakAboutUsProps } from '../../types/speakAboutUs';
 import {
   Wrapper,
-  Content,
   SpeakWrapper,
   ImageWrapper,
   Image,
@@ -14,13 +13,16 @@ import {
   SpeakButton,
   ListItemText,
 } from './styles';
+import { Slider } from '../../ui-kit/Slider';
 
 export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, t }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
         <Title>{t('common:titles.talking')}</Title>
-        <Content>
+      </Container>
+      <Container point={POINTS.l}>
+        <Slider isNavigation isLoop isGridFull isMain>
           {data.map((item) => {
             return (
               <SpeakWrapper key={item.id}>
@@ -41,8 +43,10 @@ export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, t }) 
               </SpeakWrapper>
             );
           })}
-        </Content>
+        </Slider>
       </Container>
+
+      {/* <Content></Content> */}
     </Wrapper>
   );
 };
