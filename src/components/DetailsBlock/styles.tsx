@@ -24,8 +24,8 @@ export const ImageMobileWrapper = styled.div`
 
   ${Media.down.m} {
     display: block;
-    max-width: 234px;
-    max-height: 227px;
+    max-width: 300px;
+    max-height: 230px;
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -53,7 +53,7 @@ export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 
   ${Media.down.m} {
-    padding: 0 10px 40px 10px;
+    padding: 0 10px 0 10px;
   }
 `;
 
@@ -63,7 +63,6 @@ export const DetailsItem = styled.div`
 
   ${Media.down.m} {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
 `;
@@ -77,8 +76,8 @@ export const DetailImageWrapper = styled.div`
   overflow: hidden;
 
   ${Media.down.m} {
-    width: 55px;
-    height: 55px;
+    width: 51px;
+    height: 51px;
   }
 `;
 
@@ -94,7 +93,6 @@ export const DetailTitle = styled(Text2Bold)`
   ${Media.down.m} {
     font-size: 25px;
     margin-bottom: 5px;
-    text-align: center;
   }
 `;
 
@@ -136,6 +134,11 @@ export const CopyIcon = styled(IconSvg).attrs({
   &:hover {
     fill: ${({ theme }) => theme.palette.colors.greyHover};
   }
+
+  ${Media.down.m} {
+    width: 24px;
+    height: 27px;
+  }
 `;
 
 export const NumbersWrapper = styled.div`
@@ -152,5 +155,11 @@ export const StyledLine = styled.div`
 
   ${Media.down.m} {
     margin: 20px auto;
+  }
+`;
+
+export const StyledLineMobile = styled.div`
+  ${Media.up.m} {
+    display: none;
   }
 `;

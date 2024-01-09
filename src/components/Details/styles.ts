@@ -10,6 +10,11 @@ export const TopContent = styled.div`
   flex-direction: column;
   gap: 70px;
   margin-bottom: 100px;
+
+  ${Media.down.m} {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const StyledText = styled(Text2)`
@@ -31,6 +36,10 @@ const contentStyles = css`
   display: flex;
   flex-direction: column;
   gap: 33px;
+
+  ${Media.down.m} {
+    gap: 20px;
+  }
 `;
 
 export const BottomLeftContent = styled.div`

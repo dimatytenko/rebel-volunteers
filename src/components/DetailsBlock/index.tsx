@@ -17,6 +17,7 @@ import {
   NumbersWrapper,
   StyledLine,
   ImageMobileWrapper,
+  StyledLineMobile,
 } from './styles';
 import { DetailsBlockProps } from '../../types/detailsBlock';
 import { useCopyToClipboard } from '../../hooks/copyToClipboard';
@@ -33,7 +34,7 @@ export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t }) => {
           <StyledImage src={data.img} alt="image" />
         </ImageMobileWrapper>
         <div>
-          {data.data.map((item, ind) => (
+          {data.data.map((item, ind, arr) => (
             <div key={item.id}>
               <>{ind !== 0 && <StyledLine />}</>
               <DetailsItem>
@@ -55,6 +56,7 @@ export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t }) => {
                   </NumbersWrapper>
                 </DetailInfo>
               </DetailsItem>
+              <StyledLineMobile>{ind === arr.length - 1 && <StyledLine />}</StyledLineMobile>
             </div>
           ))}
         </div>

@@ -18,7 +18,7 @@ export const OrganisationLabel: React.FC<OrganisationLabelProps> = ({ links, t }
     <Wrapper>
       <Content>
         <div>
-          <StyledLogo width="204px" height="204px" />
+          <StyledLogo />
         </div>
         <InfoWrapper>
           <InfoTitle>{t('common:titles.labelTitle')}</InfoTitle>

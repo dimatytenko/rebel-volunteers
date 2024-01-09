@@ -29,7 +29,7 @@ export const Content = styled.div`
 
   ${Media.down.l} {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 `;
 
@@ -53,9 +53,7 @@ export const InfoTitle = styled(Text3Bold)`
 
 export const SocialWrapper = styled.div`
   ${Media.down.l} {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 `;
 
