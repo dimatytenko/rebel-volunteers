@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 import { Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.section``;
 
 export const Content = styled.div`
   display: flex;
   gap: 30px;
+
+  ${Media.down.m} {
+    flex-direction: column;
+    gap: 37px;
+  }
 `;
 
 export const Item = styled.div`
@@ -33,6 +39,11 @@ export const ItemTitle = styled(Text1)`
   font-size: 31px;
   line-height: 1.29;
   margin-bottom: 25px;
+  word-break: break-word;
+
+  ${Media.down.m} {
+    font-size: 25px;
+  }
 `;
 
 export const ItemDescription = styled(Text1)``;

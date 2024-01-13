@@ -33,6 +33,7 @@ export const TopBlock = styled.div<{ $back: string }>`
 
 export const BlockTitle = styled(Heading3)`
   font-size: 40px;
+  word-break: break-word;
 
   ${Media.down.m} {
     font-size: 25px;

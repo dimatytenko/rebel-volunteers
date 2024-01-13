@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.section`
   height: 100%;
@@ -9,6 +10,10 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   display: flex;
   height: 100%;
+
+  ${Media.down.l} {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Subtitle = styled(Text1)`
@@ -20,6 +25,10 @@ export const Subtitle = styled(Text1)`
 export const List = styled.ul`
   padding: 50px 120px 50px 72px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
+
+  ${Media.down.m} {
+    padding: 10px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -49,4 +58,8 @@ export const Item = styled.li`
   }
 `;
 
-export const ItemText = styled(Text1)``;
+export const ItemText = styled(Text1)`
+  ${Media.down.m} {
+    font-size: 12px;
+  }
+`;

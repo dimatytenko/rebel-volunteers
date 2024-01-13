@@ -37,7 +37,7 @@ export const SpeakContent = styled.div<{ $back?: string }>`
   }
 
   ${Media.down.m} {
-    padding: 10px 10px 10px 0;
+    padding: 10px;
     background-image: url(${({ $back }) => $back});
     background-repeat: no-repeat;
     background-size: cover;

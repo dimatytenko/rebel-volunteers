@@ -57,7 +57,11 @@ export const Subtitle = styled(Text1)`
 
 export const ImageWrapper = styled.div`
   max-width: 686px;
-  max-height: 519px;
+  height: 519px;
+
+  ${Media.down.m} {
+    height: 400px;
+  }
 `;
 
 export const Image = styled.img`
