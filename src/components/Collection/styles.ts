@@ -28,12 +28,12 @@ export const CollectionContent = styled.div<{ $img?: string }>`
 `;
 
 export const TitleWrapper = styled.div`
-  position: relative;
   max-width: 840px;
 `;
 
 export const CollectionTitle = styled(Heading2)`
   text-transform: uppercase;
+  margin-bottom: 36px;
 
   ${Media.down.l} {
     font-size: 110px;
@@ -76,8 +76,8 @@ export const StyledButton = styled(Button)`
 
 export const Label = styled.div`
   position: absolute;
-  bottom: 39px;
-  left: 306px;
+  top: 294px;
+  right: 0;
   border: 2px solid ${({ theme }) => theme.palette.colors.secondary};
   max-width: 276px;
   padding: 14px 34px;

@@ -51,7 +51,7 @@ const Main = () => {
       <OurActivityComponent data={ourActivity} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
       <CollectionComponent data={collection} lang={language} isLoading={isLoading} t={t} />
-      <Br desktop={150} mobile={70} />
+      <Br desktop={150} mobile={20} />
       <PassedComponents data={reports} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />
       <Directions isLoading={isLoading} />

@@ -8,6 +8,26 @@ export const PassedWrapper = styled.section``;
 
 export const ContentWrapper = styled.div``;
 
+export const Title = styled(Heading2)`
+  text-transform: uppercase;
+  margin-bottom: 70px;
+
+  ${Media.down.m} {
+    font-size: 85px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+
+  ${Media.down.s} {
+    font-size: 50px;
+  }
+
+  ${Media.down.xxs} {
+    font-size: 40px;
+  }
+`;
+
 export const CardList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
@@ -51,19 +71,6 @@ export const BlankCard = styled.div`
   }
 `;
 
-export const Title = styled(Heading2)`
-  text-transform: uppercase;
-  line-height: 0.2;
-  margin-bottom: 70px;
-
-  ${Media.down.xl} {
-    font-size: 50px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-  }
-`;
-
 export const Subtitle = styled(Heading3)`
   ${Media.down.xl} {
     font-size: 20px;
@@ -104,26 +111,19 @@ export const Description = styled(Heading5)`
 `;
 
 export const BottomWrapper = styled.div`
-  max-width: 373px;
-  margin: auto;
-
-  ${Media.down.xl} {
-    margin: 0;
-  }
-
   ${Media.down.m} {
     font-size: 14px;
   }
 `;
 
 export const BottomText = styled(Text1)`
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 export const StyledButton = styled(Button)`
   width: 276px;
 
-  ${Media.down.m} {
+  ${Media.down.xl} {
     width: 171px;
     > svg {
       display: none;

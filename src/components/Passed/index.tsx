@@ -27,6 +27,7 @@ export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading,
     <PassedWrapper>
       <Container point={POINTS.m}>
         <ContentWrapper>
+          <Title>{t('common:titles.reports')}</Title>
           <CardList>
             {data?.photos?.map((item, idx) => {
               if (!item?.image && !item?.title) return <BlankCard key={item.id + idx} />;
@@ -44,13 +45,13 @@ export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading,
                 </Card>
               );
             })}
+            <BottomWrapper>
+              <BottomText>{data && data[`text_${lang}`]}</BottomText>
+              <StyledButton to={route.reports.path} icon>
+                {t('common:buttons.report')}
+              </StyledButton>
+            </BottomWrapper>
           </CardList>
-          <BottomWrapper>
-            <BottomText>{data && data[`text_${lang}`]}</BottomText>
-            <StyledButton to={route.reports.path} icon>
-              {t('common:buttons.report')}
-            </StyledButton>
-          </BottomWrapper>
         </ContentWrapper>
       </Container>
     </PassedWrapper>
