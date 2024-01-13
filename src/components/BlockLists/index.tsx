@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { Title } from '../../ui-kit/Title';
 import { Container } from '../../ui-kit/Container';
@@ -18,9 +17,8 @@ import {
 } from './styles';
 import { BlockListsProps } from '../../types/blockList';
 
-export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
+export const BlockLists: React.FC<BlockListsProps> = ({ title, list, lang, isLoading, t, img }) => {
   const [isOpen, setIsOpen] = useState<number | null>(null);
-  const { t } = useTranslation();
 
   const toggle = (index: number) => {
     if (isOpen === index) {
@@ -28,6 +26,9 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
     }
     setIsOpen(index);
   };
+
+  if (!list || isLoading) return null;
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>
@@ -35,18 +36,20 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list }) => {
         <BlockListsContent>
           {list.map((item, ind) => (
             <BlockListsItem key={item.id}>
-              <TopBlock $back={item.img}>
-                <BlockTitle>{item.title}</BlockTitle>
+              <TopBlock $back={img[ind]}>
+                <BlockTitle>{item[`title_${lang}`]}</BlockTitle>
               </TopBlock>
               <ListBlock>
                 <List $isOpen={isOpen === ind}>
-                  {item.list.map((item, i) => (
-                    <ListItem key={item + i}>
-                      <ListItemText>{item}</ListItemText>
+                  {item.items.map((item) => (
+                    <ListItem key={item.id}>
+                      <ListItemText>
+                        {item[`title_${lang}`]} - {item.quantity}
+                      </ListItemText>
                     </ListItem>
                   ))}
                 </List>
-                {item.list.length > 15 && (
+                {item.items.length > 15 && (
                   <ReadMoreButton onClick={() => toggle(ind)}>
                     <ListItemText>{isOpen === ind ? 'Менше' : 'Читати далі'}</ListItemText>
                   </ReadMoreButton>

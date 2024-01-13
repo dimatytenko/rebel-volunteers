@@ -1,14 +1,16 @@
 import { CommonType } from './common';
 
 export interface SpeakAboutUsProps extends CommonType {
-  data: SpeakAboutUsState[];
+  data?: SpeakAboutUsState[];
 }
 
 export interface SpeakAboutUsState {
   id: string;
-  title: string;
-  description?: string;
-  img?: string;
-  link?: string;
-  textButton: string;
+  title_uk: string;
+  title_en: string;
+  text_en?: string;
+  text_uk?: string;
+  image?: string;
+  news_url?: string;
+  // textButton: string;
 }

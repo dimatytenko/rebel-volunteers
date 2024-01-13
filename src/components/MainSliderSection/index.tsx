@@ -8,10 +8,10 @@ import { Wrapper, SliderWrapper, ImageWrapper, Image } from './styles';
 import { MainSliderSectionProps } from '../../types/mainSlider';
 import { Slider } from '../../ui-kit/Slider';
 
-export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, data, height, t }) => {
+export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, isLoading, data, height, t }) => {
   useEffect(() => {
     const lightbox = new PhotoSwipeLightbox({
-      gallery: `#${data.galleryID}`,
+      gallery: `#${data?.galleryID}`,
       children: 'a',
       pswpModule: () => import('photoswipe'),
     });
@@ -23,6 +23,7 @@ export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, dat
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (!data || isLoading) return null;
   return (
     <Wrapper>
       <Container point={POINTS.m}>
@@ -45,14 +46,14 @@ export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, dat
             {data.images.map((item) => (
               <a
                 key={item.id}
-                href={item.img}
+                href={item.image}
                 data-pswp-width={600}
                 data-pswp-height={800}
                 target="_blank"
                 rel="noreferrer"
               >
                 <ImageWrapper $height={height}>
-                  <Image src={item.img} alt="img" />
+                  <Image src={item.image} alt="img" />
                 </ImageWrapper>
               </a>
             ))}

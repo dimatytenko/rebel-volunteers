@@ -18,7 +18,7 @@
     "photoVideo": "Photo and video reports",
     "talking": "Who are talking about us...",
     "grattitude": "Gratitude",
-    "chevrons": "Chevrons",
+    "chevrons": "Military friends",
     "contacts": "Contacts and details",
     "hotlines": "Hotlines",
     "assistance": "Assistance in Mykolaiv",
@@ -31,7 +31,10 @@
   "buttons": {
     "donate": "Donate",
     "check": "Check out",
-    "report": "See Reports"
+    "report": "See Reports",
+    "more": "Read more",
+    "less": "Less",
+    "show": "Show"
   },
   "nav": {
     "about": "About us",

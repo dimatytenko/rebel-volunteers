@@ -15,7 +15,7 @@ const gridStyles = css`
 
 const gridStylesFull = css`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1038px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   grid-template-rows: auto auto auto;
   grid-auto-flow: column;
   grid-column-gap: 22px;

@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 import { Heading3, Text1 } from '../../ui-kit/Typography';
+import { Media } from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.section``;
 
 export const BlockListsContent = styled.div`
   display: flex;
   gap: 30px;
+
+  ${Media.down.m} {
+    flex-direction: column;
+    gap: 15px;
+  }
 `;
 
 export const BlockListsItem = styled.div`
@@ -27,18 +33,30 @@ export const TopBlock = styled.div<{ $back: string }>`
 
 export const BlockTitle = styled(Heading3)`
   font-size: 40px;
+
+  ${Media.down.m} {
+    font-size: 25px;
+  }
 `;
 
 export const ListBlock = styled.div`
   padding: 20px 13px 25px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
   min-height: 505px;
+
+  ${Media.down.m} {
+    min-height: 195px;
+  }
 `;
 
 export const List = styled.ul<{ $isOpen: boolean }>`
   margin-bottom: 15px;
   overflow: hidden;
   height: ${({ $isOpen }) => ($isOpen ? 'auto' : '410px')};
+
+  ${Media.down.m} {
+    height: ${({ $isOpen }) => ($isOpen ? 'auto' : '100px')};
+  }
 `;
 
 export const ListItem = styled.li`
@@ -59,7 +77,11 @@ export const ListItem = styled.li`
   }
 `;
 
-export const ListItemText = styled(Text1)``;
+export const ListItemText = styled(Text1)`
+  ${Media.down.m} {
+    font-size: 14px;
+  }
+`;
 
 export const ReadMoreButton = styled.div`
   position: relative;

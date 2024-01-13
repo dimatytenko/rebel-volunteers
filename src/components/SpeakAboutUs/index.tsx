@@ -15,28 +15,30 @@ import {
 } from './styles';
 import { Slider } from '../../ui-kit/Slider';
 
-export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, t }) => {
+export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, lang, isLoading, t }) => {
+  if (!data || isLoading) return null;
+
   return (
     <Wrapper>
       <Container point={POINTS.m}>
         <Title>{t('common:titles.talking')}</Title>
       </Container>
       <Container point={POINTS.l}>
-        <Slider isNavigation isLoop isGridFull isMain>
+        <Slider isNavigation isLoop isGridFull isMain spaceBetween={30}>
           {data.map((item) => {
             return (
               <SpeakWrapper key={item.id}>
                 <ImageWrapper>
-                  <Image src={item.img} alt={item.title} />
+                  <Image src={item.image} alt={item[`title_${lang}`]} />
                 </ImageWrapper>
-                <SpeakContent>
+                <SpeakContent $back={item.image}>
                   <div>
-                    <SpeakTitle>{item.title}</SpeakTitle>
-                    <SpeakDescription>{item.description}</SpeakDescription>
+                    <SpeakTitle>{item[`title_${lang}`]}</SpeakTitle>
+                    <SpeakDescription>{item[`text_${lang}`]}</SpeakDescription>
                   </div>
                   <div>
-                    <SpeakButton href={item.link} target="_blank" rel="noopener noreferrer">
-                      <ListItemText>{item.textButton}</ListItemText>
+                    <SpeakButton href={item.news_url} target="_blank" rel="noopener noreferrer">
+                      <ListItemText> {t('common:buttons.show')}</ListItemText>
                     </SpeakButton>
                   </div>
                 </SpeakContent>
@@ -45,8 +47,6 @@ export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, t }) 
           })}
         </Slider>
       </Container>
-
-      {/* <Content></Content> */}
     </Wrapper>
   );
 };
