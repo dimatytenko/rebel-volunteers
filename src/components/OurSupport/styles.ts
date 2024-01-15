@@ -27,10 +27,15 @@ export const Title = styled(Heading2)`
 `;
 
 export const ImageWrapper = styled.div`
-  min-width: 64px;
+  width: 64px;
+  overflow: hidden;
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 export const TextLink = styled(Text1)``;
 
