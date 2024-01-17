@@ -28,6 +28,7 @@ export const Title = styled(Heading2)`
 
 export const ImageWrapper = styled.div`
   width: 64px;
+  max-height: 64px;
   overflow: hidden;
 `;
 
