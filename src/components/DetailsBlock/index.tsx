@@ -22,7 +22,7 @@ import {
 import { DetailsBlockProps } from '../../types/detailsBlock';
 import { useCopyToClipboard } from '../../hooks/copyToClipboard';
 
-export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t }) => {
+export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t, lang }) => {
   const { copied, copy, text, contextHolder } = useCopyToClipboard(10000);
 
   return (
@@ -34,7 +34,7 @@ export const DetailsBlock: React.FC<DetailsBlockProps> = ({ data, t }) => {
           <StyledImage src={data.img} alt="image" />
         </ImageMobileWrapper>
         <div>
-          {data.data.map((item, ind, arr) => (
+          {data.data[lang].map((item, ind, arr) => (
             <div key={item.id}>
               <>{ind !== 0 && <StyledLine />}</>
               <DetailsItem>

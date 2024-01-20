@@ -5,15 +5,15 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Content, Subtitle, List, Item, ItemText, ImageWrapper, Image } from './styles';
 import { IFirstAidKitProps } from '../../types/firstAidKit';
 
-export const FirstAidKit: React.FC<IFirstAidKitProps> = ({ data, t }) => {
+export const FirstAidKit: React.FC<IFirstAidKitProps> = ({ data, t, lang }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
         <Title>{t('common:titles.firstAidKit')}</Title>
-        <Subtitle>{data.text}</Subtitle>
+        <Subtitle>{data[`text_${lang}`]}</Subtitle>
         <Content>
           <List>
-            {data.list.map((item, index) => (
+            {data.list[lang].map((item, index) => (
               <Item key={index}>
                 <ItemText>{item}</ItemText>
               </Item>

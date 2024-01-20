@@ -9,9 +9,14 @@ import {
   DonateWrapperPulsing,
   DonatePulsingButton,
   StyledTextIcon,
+  ALink,
 } from './styles';
 
-export const Donate = () => {
+interface DonateProps {
+  link?: string;
+}
+
+export const Donate: React.FC<DonateProps> = ({ link }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -31,12 +36,14 @@ export const Donate = () => {
             <StyledTextIcon />
           </RotateWrapper>
           <StyledIcon />
+          <ALink href={link} target="_blank" />
         </DonateWrapper>
       ) : (
         <DonateHeartWrapper>
           <StyledTextIcon />
           <StyledHeart />
           <StyledIcon />
+          <ALink href={link} target="_blank" />
         </DonateHeartWrapper>
       )}
     </>

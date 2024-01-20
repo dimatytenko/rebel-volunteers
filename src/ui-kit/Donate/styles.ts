@@ -173,3 +173,13 @@ export const DonatePulsingButton = styled.div`
     animation-play-state: paused;
   }
 `;
+
+export const ALink = styled.a`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-underline: none;
+`;

@@ -24,21 +24,38 @@ export const links = [
 
 export const details = {
   img: img,
-  data: [
-    { id: '1', name: 'Mono', img: mono, details: [{ number: '4441 1144 5848 4696' }] },
-    { id: '2', name: 'PayPal', img: paypal, details: [{ number: 'rebelvolmyko@gmail.com' }] },
-    { id: '3', name: 'Приватбанк', img: privat, details: [{ number: 'UA063052990000026000001710109' }] },
-    {
-      id: '4',
-      name: 'ПУМБ',
-      img: pumb,
-      details: [
-        { prev: 'uah', number: 'UA253348510000000026006178855' },
-        { prev: 'usd', number: 'UA253348510000000026006178855' },
-        { prev: 'eur', number: 'UA373348510000000002603140250' },
-      ],
-    },
-  ],
+  data: {
+    uk: [
+      { id: '1', name: 'Mono:', img: mono, details: [{ number: '4441 1144 5848 4696' }] },
+      { id: '2', name: 'PayPal:', img: paypal, details: [{ number: 'rebelvolmyko@gmail.com' }] },
+      { id: '3', name: 'Приватбанк:', img: privat, details: [{ number: 'UA063052990000026000001710109' }] },
+      {
+        id: '4',
+        name: 'ПУМБ:',
+        img: pumb,
+        details: [
+          { prev: 'uah', number: 'UA253348510000000026006178855' },
+          { prev: 'usd', number: 'UA253348510000000026006178855' },
+          { prev: 'eur', number: 'UA373348510000000002603140250' },
+        ],
+      },
+    ],
+    en: [
+      { id: '1', name: 'Mono:', img: mono, details: [{ number: '4441 1144 5848 4696' }] },
+      { id: '2', name: 'PayPal:', img: paypal, details: [{ number: 'rebelvolmyko@gmail.com' }] },
+      { id: '3', name: 'PrivatBank:', img: privat, details: [{ number: 'UA063052990000026000001710109' }] },
+      {
+        id: '4',
+        name: 'PUMB:',
+        img: pumb,
+        details: [
+          { prev: 'uah', number: 'UA253348510000000026006178855' },
+          { prev: 'usd', number: 'UA253348510000000026006178855' },
+          { prev: 'eur', number: 'UA373348510000000002603140250' },
+        ],
+      },
+    ],
+  },
 };
 
 const collageData = [
@@ -68,6 +85,7 @@ const collageData = [
 const Details = () => {
   const { t } = useTranslation();
   const { language } = useLanguage();
+
   return (
     <>
       <DetailsComponent links={links} data={details} lang={language} t={t} />

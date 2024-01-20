@@ -17,7 +17,7 @@ import { ImageWithPreview } from '../../ui-kit/ImageWithPreview';
 import { Donate } from '../../ui-kit/Donate';
 import { HeroComponentProps } from '../../types/hero';
 
-export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoading, t }) => {
+export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoading, t, donate }) => {
   if (!data || isLoading) return null;
 
   return (
@@ -91,7 +91,8 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoad
               </MobileBottomWrapper>
             </MobileWrapper>
           </HeroContent>
-          <Donate />
+
+          <Donate link={donate?.donate_link} />
         </Wrapper>
       </Container>
     </HeroWrapper>

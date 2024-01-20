@@ -4,7 +4,7 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { Wrapper, Content, Subtitle, Item, Number, ItemTitle, ItemDescription, NumberWrapper } from './styles';
 import { DonorProps } from '../../types/donor';
 
-export const Donor: React.FC<DonorProps> = ({ data, t }) => {
+export const Donor: React.FC<DonorProps> = ({ data, t, lang }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
@@ -17,8 +17,8 @@ export const Donor: React.FC<DonorProps> = ({ data, t }) => {
                 <NumberWrapper>
                   <Number>0{idx + 1}</Number>
                 </NumberWrapper>
-                <ItemTitle>{item.title}</ItemTitle>
-                <ItemDescription>{item.description}</ItemDescription>
+                <ItemTitle>{item[`title_${lang}`]}</ItemTitle>
+                <ItemDescription>{item[`description_${lang}`]}</ItemDescription>
               </Item>
             );
           })}

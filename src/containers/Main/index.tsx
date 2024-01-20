@@ -19,6 +19,7 @@ import { useMerch } from '../../hooks/merch';
 import { useSupport } from '../../hooks/ourSupport';
 import { useReports } from '../../hooks/reports';
 import { Loader } from '../../ui-kit/Loader';
+import { useQuickDonate } from '../../hooks/quickDonate';
 
 const Main = () => {
   const { t } = useTranslation();
@@ -30,6 +31,7 @@ const Main = () => {
   const { merch, isLoading: merchLoading } = useMerch();
   const { support, isLoading: supportLoading } = useSupport();
   const { reports, isLoading: reportsLoading } = useReports();
+  const { quickDonate, isLoading: quickDonateLoading } = useQuickDonate();
 
   const isLoading =
     teamLoading ||
@@ -38,7 +40,8 @@ const Main = () => {
     collectionLoading ||
     merchLoading ||
     supportLoading ||
-    reportsLoading;
+    reportsLoading ||
+    quickDonateLoading;
 
   if (isLoading) {
     return <Loader />;
@@ -46,7 +49,7 @@ const Main = () => {
 
   return (
     <>
-      <HeroComponent data={hero} lang={language} isLoading={isLoading} t={t} />
+      <HeroComponent data={hero} lang={language} isLoading={isLoading} t={t} donate={quickDonate} />
       <Br desktop={100} mobile={20} />
       <OurActivityComponent data={ourActivity} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={100} mobile={20} />

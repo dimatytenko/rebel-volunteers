@@ -6,7 +6,10 @@ export interface DetailsBlockProps extends CommonType {
 
 export interface DetailsBlockData {
   img: string;
-  data: DetailsBlockDataItem[];
+  data: {
+    uk: DetailsBlockDataItem[];
+    en: DetailsBlockDataItem[];
+  };
 }
 
 export interface DetailsBlockDataItem {

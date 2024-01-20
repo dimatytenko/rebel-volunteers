@@ -11,6 +11,7 @@ export const mainQueryList = {
   news: () => '/news/',
   thanks: () => '/thanks/',
   chevrons: () => '/chevrons/',
+  donate: () => '/quick_donate/',
 };
 
 export const reportQueryList = {

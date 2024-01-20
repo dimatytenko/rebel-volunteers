@@ -14,6 +14,6 @@ export interface IList {
     id: string;
     title_uk: string;
     title_en: string;
-    quantity: string;
+    quantity: number;
   }[];
 }

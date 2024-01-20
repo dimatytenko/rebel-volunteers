@@ -4,7 +4,7 @@ import { POINTS } from '../../ui-kit/Container/types';
 import { HelpMoreProps } from '../../types/helpMore';
 import { Wrapper, Content, Item, ItemTitle, ItemText } from './styles';
 
-export const HelpMore: React.FC<HelpMoreProps> = ({ data, t }) => {
+export const HelpMore: React.FC<HelpMoreProps> = ({ data, t, lang }) => {
   return (
     <Wrapper>
       <Container point={POINTS.m}>
@@ -13,8 +13,8 @@ export const HelpMore: React.FC<HelpMoreProps> = ({ data, t }) => {
           {data.map((item) => {
             return (
               <Item key={item.id} $back={item.img}>
-                <ItemTitle>{item.title}</ItemTitle>
-                <ItemText>{item.description}</ItemText>
+                <ItemTitle>{item[`title_${lang}`]}</ItemTitle>
+                <ItemText>{item[`description_${lang}`]}</ItemText>
               </Item>
             );
           })}

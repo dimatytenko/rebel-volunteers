@@ -44,7 +44,8 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list, lang, isLoa
                   {item.items.map((item) => (
                     <ListItem key={item.id}>
                       <ListItemText>
-                        {item[`title_${lang}`]} - {item.quantity}
+                        {item[`title_${lang}`]}
+                        {item.quantity ? ` - ${item.quantity}` : ''}
                       </ListItemText>
                     </ListItem>
                   ))}

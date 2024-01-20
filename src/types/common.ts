@@ -9,4 +9,9 @@ export type CommonType = {
   lang: Language;
   isLoading?: boolean;
   t?: TFunction;
+  donate?: DonateI;
 };
+
+interface DonateI {
+  donate_link: string;
+}

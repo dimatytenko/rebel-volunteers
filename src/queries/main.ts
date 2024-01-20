@@ -8,3 +8,4 @@ export const getCollectionQuery = async () => await getQuery(mainQueryList.colec
 export const getMerchQuery = async () => await getQuery(mainQueryList.merch());
 export const getSupportQuery = async () => await getQuery(mainQueryList.support());
 export const getReportsQuery = async () => await getQuery(mainQueryList.reports());
+export const getQuickDonateQuery = async () => await getQuery(mainQueryList.donate());

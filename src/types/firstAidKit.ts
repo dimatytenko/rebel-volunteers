@@ -5,7 +5,11 @@ export interface IFirstAidKitProps extends CommonType {
 }
 
 export interface IFirstAidKit {
-  text: string;
+  text_uk: string;
+  text_en: string;
   img: string;
-  list: string[];
+  list: {
+    uk: string[];
+    en: string[];
+  };
 }

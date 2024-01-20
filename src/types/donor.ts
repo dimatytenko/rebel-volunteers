@@ -9,6 +9,8 @@ export interface DonorProps extends CommonType {
 
 export interface DonorItemProps {
   id: string;
-  title: string;
-  description: string;
+  title_uk: string;
+  description_uk: string;
+  title_en: string;
+  description_en: string;
 }
