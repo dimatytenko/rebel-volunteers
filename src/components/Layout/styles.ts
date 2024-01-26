@@ -41,8 +41,8 @@ export const StyledLogo = styled(Logo)<{ mode?: 'lg' }>`
   ${Media.down.l} {
     position: relative;
     z-index: ${({ mode }) => (mode === 'lg' ? 'unset' : 9999)};
-    width: ${({ mode }) => (mode === 'lg' ? '78px' : '48px')};
-    height: ${({ mode }) => (mode === 'lg' ? '78px' : '48px')};
+    width: ${({ mode }) => (mode === 'lg' ? '78px' : '65px')};
+    height: ${({ mode }) => (mode === 'lg' ? '78px' : '65px')};
   }
 `;
 
@@ -69,7 +69,9 @@ export const Menu = styled.div`
   ${Media.down.l} {
     position: relative;
     z-index: 9990;
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    gap: 26px;
     margin-left: auto;
   }
 `;

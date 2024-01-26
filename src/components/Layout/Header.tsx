@@ -45,8 +45,10 @@ export const HeaderComponent: React.FC<IHeaderProps> = ({
               <Social />
             </SocialWrapper>
           </HeaderRightContent>
-          <Menu onClick={onToggleDrawer}>
-            <Hamburger toggled={isOpenDrawer} aria-label="Burger button" />
+          <Menu>
+            <LangSwitch language={language} onChangeLanguage={onChangeLanguage} />
+
+            <Hamburger toggled={isOpenDrawer} onToggle={onToggleDrawer} aria-label="Burger button" />
           </Menu>
         </HeaderContent>
       </Container>

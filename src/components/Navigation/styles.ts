@@ -15,6 +15,5 @@ export const StyledNavigation = styled.nav`
   ${Media.down.l} {
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
   }
 `;
