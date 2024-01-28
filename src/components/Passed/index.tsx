@@ -7,7 +7,6 @@ import {
   CardList,
   Card,
   Title,
-  Subtitle,
   ImageWrapper,
   Image,
   TextCount,
@@ -15,7 +14,6 @@ import {
   BottomWrapper,
   BottomText,
   StyledButton,
-  BlankCard,
 } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
@@ -29,28 +27,25 @@ export const PassedComponents: React.FC<ReportProps> = ({ data, lang, isLoading,
         <ContentWrapper>
           <Title>{t('common:titles.reports')}</Title>
           <CardList>
-            {data?.photos?.map((item, idx) => {
-              if (!item?.image && !item?.title) return <BlankCard key={item.id + idx} />;
-              return (
-                <Card key={item.id + idx}>
-                  {item.title && <Title>{t(`common:titles.${item.title}`)}</Title>}
-                  {item.subtitle && <Subtitle>{t(`common:titles.${item.subtitle}`)}</Subtitle>}
-                  {item.image && (
-                    <ImageWrapper>
-                      <Image src={item.image} alt={item.id} />
-                    </ImageWrapper>
-                  )}
-                  {item.quantity && <TextCount>{item.quantity}</TextCount>}
-                  {item[`title_${lang}`] && <Description>{item[`title_${lang}`]}</Description>}
-                </Card>
-              );
-            })}
             <BottomWrapper>
               <BottomText>{data && data[`text_${lang}`]}</BottomText>
               <StyledButton to={route.reports.path} icon>
                 {t('common:buttons.report')}
               </StyledButton>
             </BottomWrapper>
+            {data?.photos?.map((item) => {
+              return (
+                <Card key={item.id}>
+                  {item.image && (
+                    <ImageWrapper>
+                      <Image src={item.image} alt={item.id} />
+                    </ImageWrapper>
+                  )}
+                  {item.report.quantity && <TextCount>{item.report.quantity}</TextCount>}
+                  {item.report[`title_${lang}`] && <Description>{item.report[`title_${lang}`]}</Description>}
+                </Card>
+              );
+            })}
           </CardList>
         </ContentWrapper>
       </Container>

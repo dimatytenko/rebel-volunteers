@@ -32,6 +32,7 @@ const Main = () => {
   const { support, isLoading: supportLoading } = useSupport();
   const { reports, isLoading: reportsLoading } = useReports();
   const { quickDonate, isLoading: quickDonateLoading } = useQuickDonate();
+  console.log('reports', reports);
 
   const isLoading =
     teamLoading ||
@@ -65,8 +66,8 @@ const Main = () => {
       <Br desktop={100} mobile={20} />
       <OurSupportComponent data={support} lang={language} isLoading={isLoading} t={t} />
       <Br desktop={150} mobile={70} />
-      <Widget isLoading={isLoading} />
-      <Br desktop={170} mobile={70} />
+      {/* <Widget isLoading={isLoading} /> */}
+      {/* <Br desktop={170} mobile={70} /> */}
     </>
   );
 };

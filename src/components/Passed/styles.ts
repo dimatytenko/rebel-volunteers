@@ -62,21 +62,6 @@ export const Card = styled.div`
   }
 `;
 
-export const BlankCard = styled.div`
-  width: 378px;
-  height: 378px;
-
-  ${Media.down.xl} {
-    display: none;
-  }
-`;
-
-export const Subtitle = styled(Heading3)`
-  ${Media.down.xl} {
-    font-size: 20px;
-  }
-`;
-
 export const ImageWrapper = styled.div`
   max-width: 379px;
   max-height: 250px;

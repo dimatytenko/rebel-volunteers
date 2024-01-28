@@ -13,10 +13,13 @@ export interface ReportData {
 
 export interface PhotoT {
   id: string;
-  image?: string;
-  quantity?: number;
-  title_en?: string;
-  title_uk?: string;
-  title?: string;
-  subtitle?: string;
+  image: string;
+  report: {
+    id: string;
+    quantity?: number;
+    title_en?: string;
+    title_uk?: string;
+  };
+  title_en: string;
+  title_uk: string;
 }
