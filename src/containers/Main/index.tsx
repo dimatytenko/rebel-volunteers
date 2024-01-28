@@ -32,7 +32,6 @@ const Main = () => {
   const { support, isLoading: supportLoading } = useSupport();
   const { reports, isLoading: reportsLoading } = useReports();
   const { quickDonate, isLoading: quickDonateLoading } = useQuickDonate();
-  console.log('reports', reports);
 
   const isLoading =
     teamLoading ||

@@ -5,11 +5,12 @@ import { Wrapper, Content, Subtitle, Item, Number, ItemTitle, ItemDescription, N
 import { DonorProps } from '../../types/donor';
 
 export const Donor: React.FC<DonorProps> = ({ data, t, lang }) => {
+  console.log('data', data);
   return (
     <Wrapper>
       <Container point={POINTS.m}>
         <Title>{t('common:titles.donate')}</Title>
-        <Subtitle>{data.text}</Subtitle>
+        <Subtitle>{data[`text_${lang}`]}</Subtitle>
         <Content>
           {data.list.map((item, idx) => {
             return (

@@ -2,7 +2,8 @@ import { CommonType } from './common';
 
 export interface DonorProps extends CommonType {
   data: {
-    text: string;
+    text_en: string;
+    text_uk: string;
     list: DonorItemProps[];
   };
 }
