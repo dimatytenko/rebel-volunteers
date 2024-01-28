@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Heading2, Heading3, Heading5, Text1 } from '../../ui-kit/Typography';
+import { Heading2, Heading5, Text1 } from '../../ui-kit/Typography';
 import { Button } from '../../ui-kit/Button';
 import { Media } from '../../ui-kit/theme/breakpoints';
 

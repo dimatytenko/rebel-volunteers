@@ -6,7 +6,7 @@ import { OurActivityComponent } from '../../components/OurActivity';
 import { CollectionComponent } from '../../components/Collection';
 import { TeamComponent } from '../../components/Team';
 import { MerchComponent } from '../../components/Merch';
-import { Widget } from '../../components/Widget';
+// import { Widget } from '../../components/Widget';
 import { OurSupportComponent } from '../../components/OurSupport';
 import { PassedComponents } from '../../components/Passed';
 import { Br } from '../../ui-kit/Br';
