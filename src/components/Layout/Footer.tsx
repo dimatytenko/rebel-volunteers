@@ -35,7 +35,7 @@ export const FooterComponent: React.FC<FooterProps> = ({ path }) => {
               <Navigation path={path} />
             </FooterTopContent>
             <FooterBottomContent>
-              <Social type="secondary" />
+              <Social />
               <TextReserved>All right reserved</TextReserved>
             </FooterBottomContent>
           </FooterRightContent>
@@ -45,7 +45,7 @@ export const FooterComponent: React.FC<FooterProps> = ({ path }) => {
             <LogoWrapper>
               <StyledLogo mode="lg" />
             </LogoWrapper>
-            <Social type="secondary" />
+            <Social />
           </FooterMobileTopContent>
           <FooterMobileBottomContent>
             <Navigation path={path} />
