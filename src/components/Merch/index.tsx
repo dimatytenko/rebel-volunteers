@@ -3,7 +3,17 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
-import { Wrapper, Content, SliderWrapper, RightSideWrapper, Title, Subtitle, StyledButton } from './styles';
+import {
+  Wrapper,
+  Content,
+  SliderWrapper,
+  RightSideWrapper,
+  Title,
+  Subtitle,
+  StyledButton,
+  ImageWrapper,
+  Image,
+} from './styles';
 import { Slider } from '../../ui-kit/Slider';
 import { MerchProps } from '../../types/merch';
 import { SOCIAL } from '../../constants/links';
@@ -41,7 +51,9 @@ export const MerchComponent: React.FC<MerchProps> = ({ data, lang, isLoading, t 
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={item.image} alt="img" />
+                    <ImageWrapper>
+                      <Image src={item.image} alt="slider" />
+                    </ImageWrapper>
                   </a>
                 ))}
               </Slider>

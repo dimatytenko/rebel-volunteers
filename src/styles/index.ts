@@ -67,4 +67,8 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  .pswp img {
+  object-fit: contain;
+}
 `;

@@ -80,3 +80,18 @@ export const StyledButton = styled(Button)`
     width: 139px;
   }
 `;
+
+export const ImageWrapper = styled.div`
+  max-width: 482px;
+  height: 482px;
+
+  ${Media.down.m} {
+    height: 358px;
+  }
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
