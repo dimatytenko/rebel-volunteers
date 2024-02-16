@@ -14,6 +14,7 @@ import {
   ListItem,
   ListItemText,
   ReadMoreButton,
+  Link,
 } from './styles';
 import { BlockListsProps } from '../../types/blockList';
 
@@ -46,6 +47,15 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list, lang, isLoa
                       <ListItemText>
                         {item[`title_${lang}`]}
                         {item.quantity ? ` - ${item.quantity}` : ''}
+                        {item?.links &&
+                          item.links.map((link, index) => (
+                            <span key={index}>
+                              {', '}
+                              <Link href={link} target="_blank">
+                                {`link ${index + 1}`}
+                              </Link>
+                            </span>
+                          ))}
                       </ListItemText>
                     </ListItem>
                   ))}

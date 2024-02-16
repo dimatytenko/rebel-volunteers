@@ -104,3 +104,14 @@ export const ReadMoreButton = styled.div`
     width: 100%;
   }
 `;
+
+export const Link = styled.a`
+  color: ${({ theme }) => theme.palette.colors.wire};
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all ${({ theme }) => theme.transition.primary};
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.colors.greyHover};
+  }
+`;

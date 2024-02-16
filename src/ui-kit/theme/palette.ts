@@ -5,6 +5,7 @@ const colors = {
   lightBlack: '#242121',
   accent: '#F2F2F2',
   grey: 'rgba(255, 255, 255, 0.50)',
+  blackOpacity: 'rgba(0, 0, 0, 0.5)',
   greyHover: '#8B8B8B',
   red: '#E40613',
   redHover: '#950700',

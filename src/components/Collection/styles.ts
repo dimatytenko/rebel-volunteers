@@ -18,12 +18,14 @@ export const CollectionContent = styled.div<{ $img?: string }>`
 
   ${Media.down.m} {
     gap: 0;
-    background-size: 376px 144px;
+    /* background-size: 376px 144px; */
+    background-size: contain;
     background-position: right 80%;
   }
 
   ${Media.down.xs} {
-    background-size: 276px 144px;
+    /* background-size: 276px 144px; */
+    background-size: contain;
   }
 `;
 
@@ -81,6 +83,7 @@ export const Label = styled.div`
   border: 2px solid ${({ theme }) => theme.palette.colors.secondary};
   max-width: 276px;
   padding: 14px 34px;
+  background-color: ${({ theme }) => theme.palette.colors.blackOpacity};
 
   ${Media.down.m} {
     display: none;

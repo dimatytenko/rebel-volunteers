@@ -25,7 +25,7 @@ export const helpMoreList = [
   },
   {
     id: '3',
-    title_uk: 'Плетіння сіток',
+    title_uk: 'Плетіння сіток:',
     title_en: 'Weaving nets:',
     description_en: 'Create woven nets using various materials to provide necessary equipment for volunteer aid.',
     description_uk:
