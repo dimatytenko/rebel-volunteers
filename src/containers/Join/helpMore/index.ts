@@ -6,38 +6,42 @@ import img_4 from './assets/img_4.jpg';
 export const helpMoreList = [
   {
     id: '1',
-    title_uk: 'Oкопні свічки:',
-    title_en: 'Trench candles:',
+    title_uk: 'Плетіння сіток:',
+    title_en: 'Weaving nets:',
     description_en:
-      'Create trench candles from simple materials like old candles, canned food jars, or even small tin cans. Your homemade candles will not only provide light but also serve as a symbol of support for those facing challenging conditions.',
+      'Find the points of weaving nets in your city, collect the fabric of the necessary colors and join the weaving in your free time, join your friends, tell us about it in social networks.',
     description_uk:
-      'Створіть окопні свічки із простих матеріалів, таких як старі свічки, банки від консервів чи навіть маленькі бляшанки. Ваші власноруч виготовлені свічки не лише забезпечать світло, але й стануть символом підтримки для тих, хто опинився в складних умовах.',
+      'Знайдіть пункти плетіння сіток в своєму місті, збирайте тканину необхідних кольорів і доєднуйтесь до плетіння у вільний час, долучайте друзів, розкажіть про це в соцмережах.',
     img: img_1,
   },
   {
     id: '2',
-    title_uk: 'Лікувальні пакети:',
-    title_en: 'Medical kits:',
-    description_en: 'Collect medical kits, including essentials and personal hygiene items for volunteer distribution.',
+    title_uk: 'Не будьте байдужими:',
+    title_en: 'Do not be indifferent:',
+    description_en:
+      'Do not pass by, offer help if you see that it is necessary. Do not ignore, thank, because thanks to them we can live in a free Ukraine. Draw postcards, create amulets and letters of wishes to the military. Regularly ask a familiar military what they need. It can be a blanket, pillow, socks, freeze-dried food, goodies, something personal.',
     description_uk:
-      'Збирайте лікувальні пакети, включаючи перші необхідності та особисті гігієнічні засоби для волонтерської розсилки.',
+      'Не проходь повз, запропонуй допомогу, якщо бачиш що вона необхідна. Не ігноруй, подякуй, бо завдяки їм ми можемо жити у вільній Україні. Малюй листівки, створюй обереги та листи-побажання військовим. Регулярно запитуй у знайомої(ого) військової(ого) що їм потрібно. Це може бути плед, подушка, шкарпетки, сублімована їжа, смаколик, щось особисте.',
     img: img_2,
   },
   {
     id: '3',
-    title_uk: 'Плетіння сіток:',
-    title_en: 'Weaving nets:',
-    description_en: 'Create woven nets using various materials to provide necessary equipment for volunteer aid.',
+    title_uk: 'Окопні свічки:',
+    title_en: 'Trench candles:',
+    description_en:
+      'You can not only join the collection of cans and paraffin, but also make trench candles yourself at home. On the Internet you can find instructions, or volunteers who specialize in candles, and join them.',
     description_uk:
-      'Створюйте плетені сітки, використовуючи різноманітні матеріали, щоб надати необхідні устаткування для волонтерської допомоги.',
+      'Ви можете не тільки долучитись збором бляшанок і парафіну, але і виготовити окопні свічки самостійно вдома. В інтернеті можна знайти інструкцію, або волонтерів які спеціалізуються на свічках, і доєднатись до них.',
     img: img_3,
   },
   {
     id: '4',
-    title_uk: 'Теплі речі:',
-    title_en: 'Warm clothing:',
-    description_en: 'Make pillows, blankets, or other comfortable items for veterans or those in need of support.',
-    description_uk: 'Виготовляйте подушки, ковдри чи інші зручні речі для ветеранів або тих, хто потребує підтримки.',
+    title_uk: 'Курси з домедичної допомоги:',
+    title_en: 'Courses on pre-medical care:',
+    description_en:
+      'Take a course on stopping massive bleeding and training cardiopulmonary resuscitation. It can save your life, or other people. Carry a first aid kit, in particular a turnstile and gloves.',
+    description_uk:
+      'Пройдіть курс із зупинки масивної кровотечі «САВ» та тренінг серцево-легеневої реанімації  . Це може врятувати твоє життя, або іншим людям. Носи з собою аптечку, зокрема турнікет і рукавички.',
     img: img_4,
   },
 ];

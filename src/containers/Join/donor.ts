@@ -1,8 +1,8 @@
 export const donor = {
   text_uk:
-    'Протягом 3-х місяців, щодня ми з вами бачимо ранкові та вечірні повідомлення про те, що станції переливання крові приймають донорів, тож вирішили нагадати, що не слід нехтувати важливими правилами перед здачею.',
+    'Здавай кров, бо це рятує життя! Щодня ми з вами бачимо ранкові та вечірні повідомлення про те, що станції переливання крові приймають донорів, тож вирішили нагадати, що не слід нехтувати важливими правилами перед здачею.',
   text_en:
-    'Over the course of 3 months, we see daily morning and evening messages about blood donation centers accepting donors, so we decided to remind you not to overlook the important rules before donating.',
+    'Donate blood because it saves lives! Every day we see morning and evening reports that blood transfusion stations accept donors, so we decided to remind you that you should not neglect important rules before giving.',
   list: [
     {
       id: '1',

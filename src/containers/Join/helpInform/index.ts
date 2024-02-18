@@ -5,31 +5,32 @@ import img_3 from './assets/img_3.jpg';
 export const helpInformList = [
   {
     id: '1',
-    title_uk: 'Розповсюдження інформації:',
-    title_en: 'Dissemination of information: ',
+    title_uk: 'Розповсюджуйте інформацію:',
+    title_en: 'Share the information:',
     description_en:
-      'Help spread news and organization events through social media by creating your own posts and telling your friends.',
+      'Please, repost our fundraiser in your stories, with a link to the money box. Like the post and leave a comment. This will help Instagram algorithms promote the fundraiser, and your friends will see our post.',
     description_uk:
-      'Допомагайте поширювати новини та події організації через соціальні мережі, створюючи власні пости та розповідаючи друзям.',
+      'Будь ласка, репостніть наш збір у сторіз, з посиланням на банку, поставьте лайк, і напишіть комент. Цим ви допоможете алгоритмам інстаграму просувати збір і наш допис побачать ваші друзі.',
     img: img_1,
   },
   {
     id: '2',
-    title_uk: 'Поширення практичних порад:',
-    title_en: 'Sharing practical advice:',
-    description_en: 'Share useful tips and instructions for other volunteers or those interested in joining.',
+    title_uk: 'Збирайте необхідне:',
+    title_en: 'Gather what is needed:',
+    description_en:
+      'For example, collect fabric for nets, clothing for IDP, wax and cans for trench candles, PET lids, used disposable e-cigarettes.',
     description_uk:
-      'Діліться корисними порадами та інструкціями для інших волонтерів або тих, хто цікавиться долучитися.',
+      'Наприклад, передавайте тканину для сіток, одяг ВПО, віск і бляшанки для окопних свічок, кришки PET, використані одноразові електронні сигарети.',
     img: img_2,
   },
   {
     id: '3',
-    title_uk: 'Робота з медіа:',
-    title_en: 'Work with media:',
+    title_uk: 'Будьте свідомими:',
+    title_en: 'Be aware:',
     description_en:
-      'Assist in interacting with media representatives by providing interviews or materials for articles and reports.',
+      'Follow the political situation, attend rallies, sign petitions, communicate in Ukrainian. READ VERIFIED MEDIA AND DO NOT SPREAD FAKE INFORMATION.',
     description_uk:
-      'Допомагайте взаємодіяти з представниками ЗМІ, надаючи інтерв’ю чи матеріали для статей та репортажів.',
+      'Слідкуйте за політичною ситуацією, виходьте на мітинги, підписуйте петиції, спілкуйтеся українською. ЧИТАТИ ПЕРЕВІРЕНІ ЗМІ Й НЕ ПОШИРЮВАТИ ФЕЙКОВУ ІНФОРМАЦІЮ',
     img: img_3,
   },
 ];
