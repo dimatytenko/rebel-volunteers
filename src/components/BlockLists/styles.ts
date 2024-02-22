@@ -67,7 +67,7 @@ export const ListItem = styled.li`
   &::before {
     content: '';
     position: absolute;
-    top: 50%;
+    top: 12px;
     left: 0;
     transform: translateY(-50%);
     display: inline-block;
