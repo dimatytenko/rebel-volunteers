@@ -1,1 +1,3 @@
-export const SERVER_URL = 'https://91.223.180.215:8080';
+const { VITE_SERVER_URL } = import.meta.env;
+
+export const SERVER_URL = VITE_SERVER_URL;
