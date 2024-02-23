@@ -10,6 +10,7 @@ export const list = [
         links: [
           'https://www.narescue.com/combat-application-tourniquet-c-a-t.html',
           'https://shop.tqdnipro.com/dzhhut-krovospynnyi-dnipro-gen-2/',
+          'https://www.instagram.com/tacmedinua?igshid=Mzc1MmZhNjY%3D',
         ],
         quantity: 0,
         title_en: 'Tourniquets (Cat 7/SOFTT-W/SICH)',
