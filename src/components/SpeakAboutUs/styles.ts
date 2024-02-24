@@ -7,6 +7,11 @@ export const Wrapper = styled.section``;
 
 export const SpeakWrapper = styled.div`
   display: flex;
+  height: 260px;
+
+  ${Media.down.m} {
+    height: 110px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -32,7 +37,7 @@ export const SpeakContent = styled.div<{ $back?: string }>`
   padding: 0px 30px 10px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 
-  ${Media.down.l} {
+  ${Media.down.m} {
     justify-content: flex-end;
   }
 
@@ -49,6 +54,10 @@ export const SpeakTitle = styled(Heading3)`
   margin-bottom: 22px;
 
   ${Media.down.l} {
+    font-size: 28px;
+  }
+
+  ${Media.down.m} {
     display: none;
   }
 `;

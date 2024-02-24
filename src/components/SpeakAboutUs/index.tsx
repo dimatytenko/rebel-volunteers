@@ -33,8 +33,17 @@ export const SpeakAboutUsComponent: React.FC<SpeakAboutUsProps> = ({ data, lang,
                 </ImageWrapper>
                 <SpeakContent $back={item.image}>
                   <div>
-                    <SpeakTitle>{item[`title_${lang}`]}</SpeakTitle>
-                    <SpeakDescription>{item[`text_${lang}`]}</SpeakDescription>
+                    <SpeakTitle>
+                      {' '}
+                      {item[`title_${lang}`]?.length > 20
+                        ? `${item[`title_${lang}`]?.slice(0, 20)}...`
+                        : item[`title_${lang}`]}
+                    </SpeakTitle>
+                    <SpeakDescription>
+                      {item[`text_${lang}`]?.length > 40
+                        ? `${item[`text_${lang}`]?.slice(0, 40)}...`
+                        : item[`text_${lang}`]}
+                    </SpeakDescription>
                   </div>
                   <div>
                     <SpeakButton href={item.news_url} target="_blank" rel="noopener noreferrer">
