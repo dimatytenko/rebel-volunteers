@@ -26,6 +26,8 @@ export const Content = styled.div`
 `;
 
 export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 378px;
   padding: 0 20px 30px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
@@ -60,4 +62,5 @@ export const ItemTitle = styled(Text1)`
 
 export const ItemDescription = styled(Text1)`
   font-size: 12px;
+  margin-top: auto;
 `;

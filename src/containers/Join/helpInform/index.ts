@@ -30,7 +30,7 @@ export const helpInformList = [
     description_en:
       'Follow the political situation, attend rallies, sign petitions, communicate in Ukrainian. READ VERIFIED MEDIA AND DO NOT SPREAD FAKE INFORMATION.',
     description_uk:
-      'Слідкуйте за політичною ситуацією, виходьте на мітинги, підписуйте петиції, спілкуйтеся українською. ЧИТАТИ ПЕРЕВІРЕНІ ЗМІ Й НЕ ПОШИРЮВАТИ ФЕЙКОВУ ІНФОРМАЦІЮ',
+      'Слідкуйте за політичною ситуацією, виходьте на мітинги, підписуйте петиції, спілкуйтеся українською. ЧИТАЙТЕ ПЕРЕВІРЕНІ ЗМІ Й НЕ ПОШИРЮЙТЕ ФЕЙКОВУ ІНФОРМАЦІЮ',
     img: img_3,
   },
 ];

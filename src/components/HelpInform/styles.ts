@@ -17,7 +17,7 @@ export const Content = styled.div`
 
 export const Item = styled.div`
   flex: 1 1 100%;
-  padding: 40px 20px 35px;
+  padding: 40px 24px 35px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 `;
 

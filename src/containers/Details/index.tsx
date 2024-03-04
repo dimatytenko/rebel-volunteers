@@ -35,7 +35,7 @@ export const details = {
         img: pumb,
         details: [
           { prev: 'uah', number: 'UA253348510000000026006178855' },
-          { prev: 'usd', number: 'UA253348510000000026006178855' },
+          { prev: 'usd', number: '5355280015075979' },
           { prev: 'eur', number: 'UA373348510000000002603140250' },
         ],
       },
@@ -50,7 +50,7 @@ export const details = {
         img: pumb,
         details: [
           { prev: 'uah', number: 'UA253348510000000026006178855' },
-          { prev: 'usd', number: 'UA253348510000000026006178855' },
+          { prev: 'usd', number: '5355280015075979' },
           { prev: 'eur', number: 'UA373348510000000002603140250' },
         ],
       },
