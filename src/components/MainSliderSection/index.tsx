@@ -13,6 +13,7 @@ export const MainSliderSection: React.FC<MainSliderSectionProps> = ({ title, isL
     const lightbox = new PhotoSwipeLightbox({
       gallery: `#${data?.galleryID}`,
       children: 'a',
+      initialZoomLevel: 'fit',
       pswpModule: () => import('photoswipe'),
     });
     lightbox.init();
