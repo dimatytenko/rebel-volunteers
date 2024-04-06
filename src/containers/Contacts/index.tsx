@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useLanguage } from '../../hooks/language';
 import { ContactsComponent } from '../../components/Contacts';
-import { links, details } from '../Details';
+import { links } from '../Details';
 import img_1 from './assets/img_1.jpg';
 import img_2 from './assets/img_2.jpg';
 import img_3 from './assets/img_3.jpg';
@@ -54,9 +54,7 @@ const Contacts = () => {
   const { t } = useTranslation();
   const { language } = useLanguage();
 
-  return (
-    <ContactsComponent links={links} data={details} hotLines={hotLines} helpList={helpList} lang={language} t={t} />
-  );
+  return <ContactsComponent links={links} hotLines={hotLines} helpList={helpList} lang={language} t={t} />;
 };
 
 export default Contacts;

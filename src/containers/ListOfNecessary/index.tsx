@@ -29,7 +29,9 @@ export const list = [
         quantity: 0,
         title_en: 'Active headphones',
         title_uk: 'Навушники активні',
-        links: ['https://prom.ua/ua/Pritsely-i-mushki'],
+        links: [
+          'https://ukrarmor.com.ua/catalog/aktivni-navusniki-walkers-razor-patriot-od-green/p270?utm_source=google&utm_medium=cpc&utm_campaign=pmax_navushnyky_np&utm_id=%7Bcampaign_id%7D&utm_term=&utm_content=&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppOhZ19qJSkDLMmyTFGK5VRKxHV3b6UaHyBqL-XVsK8-l7GvFughAQxoCkg4QAvD_BwE',
+        ],
       },
       {
         id: '4',
@@ -76,13 +78,7 @@ export const list = [
         title_uk: 'Тактичні рукавички (з пальцями)',
         links: ['https://killa.com.ua/m-tac-perchatki-assault-mk6-oliva.html'],
       },
-      {
-        id: '11',
-        quantity: 0,
-        title_en: 'Knee and elbow pads',
-        title_uk: 'Наколінники, налокітники',
-        links: ['https://hugo.com.ua/ua/p1663573605-komplekt-zaschity-nalokotniki.html'],
-      },
+
       {
         id: '12',
         quantity: 0,
@@ -141,7 +137,9 @@ export const list = [
         quantity: 0,
         title_en: 'Radios (walkie-talkies)',
         title_uk: 'Рації',
-        links: ['https://prom.ua/ua/Peregovornye-ustrojstva'],
+        links: [
+          'https://ukrarmor.com.ua/catalog/aktivni-navusniki-walkers-razor-patriot-od-green/p270?utm_source=google&utm_medium=cpc&utm_campaign=pmax_navushnyky_np&utm_id=%7Bcampaign_id%7D&utm_term=&utm_content=&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppOhZ19qJSkDLMmyTFGK5VRKxHV3b6UaHyBqL-XVsK8-l7GvFughAQxoCkg4QAvD_BwE',
+        ],
       },
       {
         id: '20',
@@ -176,7 +174,7 @@ export const list = [
         title_en: 'EcoFlow stations',
         title_uk: 'Ecoflow станції',
         links: [
-          'https://ecodrive.in.ua/portativnaya-zaryadnaya-stanciya-mini-elektrostanciya-dlya-doma-ecoflow-river-600-vt-256-vtch/',
+          'https://ukrarmor.com.ua/catalog/aktivni-navusniki-walkers-razor-patriot-od-green/p270?utm_source=google&utm_medium=cpc&utm_campaign=pmax_navushnyky_np&utm_id=%7Bcampaign_id%7D&utm_term=&utm_content=&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppOhZ19qJSkDLMmyTFGK5VRKxHV3b6UaHyBqL-XVsK8-l7GvFughAQxoCkg4QAvD_BwE',
         ],
       },
       {
@@ -244,13 +242,6 @@ export const list = [
         title_en: 'Earless helmets',
         title_uk: 'Шоломи безвухі',
         links: ['https://ukrainianarmor.com/shop/sholomy/'],
-      },
-      {
-        id: '35',
-        quantity: 0,
-        title_en: 'AK-74 silencer',
-        title_uk: 'Глушник на АК-74',
-        links: ['https://prom.ua/ua/c3732187-bronya-nikolaev.html'],
       },
       {
         id: '36',

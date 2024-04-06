@@ -1,4 +1,4 @@
-import img_1 from './assets/img_1.jpg';
+import img_1 from './assets/img_1.png';
 
 export const kit = {
   text_uk: 'Що варто мати при собі в аптечці не залежно від того вдома ти, на вулиці чи в магазині.',

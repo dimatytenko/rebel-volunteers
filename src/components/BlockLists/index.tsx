@@ -45,17 +45,23 @@ export const BlockLists: React.FC<BlockListsProps> = ({ title, list, lang, isLoa
                   {item.items.map((item) => (
                     <ListItem key={item.id}>
                       <ListItemText>
-                        {item[`title_${lang}`]}
-                        {item.quantity ? ` - ${item.quantity}` : ''}
-                        {item?.links &&
-                          item.links.map((link, index) => (
-                            <span key={index}>
-                              {', '}
-                              <Link href={link} target="_blank">
-                                {`link ${index + 1}`}
+                        {!item?.links?.length && item[`title_${lang}`]}
+                        {item?.links?.length === 1 && (
+                          <Link href={item.links[0]} target="_blank">
+                            {item[`title_${lang}`]}
+                          </Link>
+                        )}
+                        {item?.links?.length &&
+                          item?.links?.length > 1 &&
+                          item[`title_${lang}`].split('/').map((text, index) => (
+                            <>
+                              <Link key={index} href={item?.links?.[index]} target="_blank">
+                                {index !== 0 ? '/' : ''}
+                                {text}
                               </Link>
-                            </span>
+                            </>
                           ))}
+                        {item.quantity ? ` - ${item.quantity}` : ''}
                       </ListItemText>
                     </ListItem>
                   ))}

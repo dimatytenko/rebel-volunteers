@@ -17,13 +17,13 @@ export const Content = styled.div`
 `;
 
 export const Subtitle = styled(Text1)`
-  font-size: 24px;
+  font-size: 16px;
   max-width: 621px;
   margin-bottom: 70px;
 `;
 
 export const List = styled.ul`
-  padding: 50px 120px 50px 72px;
+  padding: 50px 115px 50px 50px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 
   ${Media.down.m} {
@@ -39,7 +39,7 @@ export const ImageWrapper = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const Item = styled.li`

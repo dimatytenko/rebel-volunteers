@@ -6,11 +6,12 @@ import { Media } from '../../ui-kit/theme/breakpoints';
 export const Wrapper = styled.section``;
 
 export const BlockListsContent = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 30px;
 
-  ${Media.down.m} {
-    flex-direction: column;
+  ${Media.down.l} {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     gap: 15px;
   }
 `;
@@ -106,10 +107,8 @@ export const ReadMoreButton = styled.div`
 `;
 
 export const Link = styled.a`
-  color: ${({ theme }) => theme.palette.colors.wire};
   text-decoration: underline;
   cursor: pointer;
-  transition: all ${({ theme }) => theme.transition.primary};
 
   &:hover {
     color: ${({ theme }) => theme.palette.colors.greyHover};

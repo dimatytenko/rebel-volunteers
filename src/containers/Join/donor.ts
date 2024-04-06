@@ -6,8 +6,8 @@ export const donor = {
   list: [
     {
       id: '1',
-      title_uk: 'Здавати кров може лише здорова людина',
-      title_en: 'Only a healthy person can donate blood',
+      title_uk: 'Бути здоровим',
+      title_en: 'To be healthy',
       description_en:
         'Diabetes, respiratory and viral diseases, mental disorders, cardiovascular diseases, and many other illnesses are absolute contraindications for donation.',
       description_uk:

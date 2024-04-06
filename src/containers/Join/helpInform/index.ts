@@ -1,6 +1,6 @@
-import img_1 from './assets/img_1.jpg';
-import img_2 from './assets/img_2.jpg';
-import img_3 from './assets/img_3.jpg';
+import img_1 from './assets/img_1.png';
+import img_2 from './assets/img_2.png';
+import img_3 from './assets/img_3.png';
 
 export const helpInformList = [
   {
