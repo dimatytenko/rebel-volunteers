@@ -6,7 +6,6 @@ export const list = [
     items: [
       {
         id: '1',
-
         links: [
           'https://www.narescue.com/combat-application-tourniquet-c-a-t.html',
           'https://shop.tqdnipro.com/dzhhut-krovospynnyi-dnipro-gen-2/',
@@ -90,7 +89,7 @@ export const list = [
         id: '13',
         quantity: 0,
         title_en: 'Plate carrier class 4 (certified/tested)',
-        title_uk: 'Плитоноски, плити від 4 класу (сертифіковані/відстріляні) посилання',
+        title_uk: 'Плитоноски, плити від 4 класу (сертифіковані/відстріляні)',
         links: [
           'https://tyrwear.com.ua/ua/p1658243149-plitonoska-neptun-multikam.html',
           'https://ukrainianarmor.com/shop/bronya/broneplyty/',
@@ -137,9 +136,7 @@ export const list = [
         quantity: 0,
         title_en: 'Radios (walkie-talkies)',
         title_uk: 'Рації',
-        links: [
-          'https://ukrarmor.com.ua/catalog/aktivni-navusniki-walkers-razor-patriot-od-green/p270?utm_source=google&utm_medium=cpc&utm_campaign=pmax_navushnyky_np&utm_id=%7Bcampaign_id%7D&utm_term=&utm_content=&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppOhZ19qJSkDLMmyTFGK5VRKxHV3b6UaHyBqL-XVsK8-l7GvFughAQxoCkg4QAvD_BwE',
-        ],
+        links: ['https://bezpeka-veritas.in.ua/ua/g118059269-ratsii'],
       },
       {
         id: '20',
@@ -173,9 +170,7 @@ export const list = [
         quantity: 0,
         title_en: 'EcoFlow stations',
         title_uk: 'Ecoflow станції',
-        links: [
-          'https://ukrarmor.com.ua/catalog/aktivni-navusniki-walkers-razor-patriot-od-green/p270?utm_source=google&utm_medium=cpc&utm_campaign=pmax_navushnyky_np&utm_id=%7Bcampaign_id%7D&utm_term=&utm_content=&gad_source=1&gclid=CjwKCAjwh4-wBhB3EiwAeJsppOhZ19qJSkDLMmyTFGK5VRKxHV3b6UaHyBqL-XVsK8-l7GvFughAQxoCkg4QAvD_BwE',
-        ],
+        links: ['https://www.ebay.de/sch/i.html?_ssn=ecoflow_official'],
       },
       {
         id: '25',

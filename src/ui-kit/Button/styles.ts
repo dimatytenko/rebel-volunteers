@@ -81,7 +81,7 @@ export const ArrowButtonIcon = styled(IconSvg).attrs({
   fill: 'none',
   stroke: 'primary',
 })<{ direction: DirectionArrowType }>`
-  pposition: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: ${({ direction }) => (direction === 'left' ? 'rotate(180deg)' : 'rotate(0deg)')};
@@ -94,7 +94,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   gap: 8px;
   padding: 18px;
-  width 100%;
+  width: 100%;
   font-family: e-Ukraine;
   font-feature-settings:
     'clig' off,
@@ -104,7 +104,7 @@ export const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.palette.colors.red};
   transition: all ${({ theme }) => theme.transition.primary};
 
-    ${Media.down.m} {
+  ${Media.down.m} {
     font-size: 14px;
   }
 
