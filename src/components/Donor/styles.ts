@@ -61,6 +61,10 @@ export const ItemTitle = styled(Text1)`
 `;
 
 export const ItemDescription = styled(Text1)`
-  font-size: 12px;
+  font-size: 16px;
   margin-top: auto;
+
+  ${Media.down.m} {
+    font-size: 12px;
+  }
 `;

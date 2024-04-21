@@ -27,7 +27,7 @@ export const donor = {
       title_uk: 'В день здачі',
       description_en:
         '2-3 hours before donation, have something light for breakfast: boiled cereal, crackers, rusks, boiled meat, or steamed fish. Just before donating blood, it is recommended to drink light tea, water, or fruit compote.',
-      title_en: 'On the day of donation',
+      title_en: 'Donation day',
       description_uk:
         'За 2-3 години до здачі поснідати чимось легким: варена крупа, сухарі, галетне печиво, варене м‘ясо або пропарена риба. Беспосередньо перед здаванням крові рекомендовано випити легкого чаю, води або компоту.',
     },

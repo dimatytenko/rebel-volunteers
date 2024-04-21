@@ -20,16 +20,16 @@ export const Social: React.FC<SocialProps> = ({ type, size }) => {
           {item.type === 'mail' ? (
             <IconSvg
               type={item.type as icon}
-              width={size === 'medium' ? '57' : '29'}
-              height={size === 'medium' ? '45' : '23'}
+              width={size === 'medium' ? '57' : '26'}
+              height={size === 'medium' ? '45' : '21'}
               viewBox="0 0 26 21"
               fill={type === 'secondary' ? 'greyHover' : 'secondary'}
             />
           ) : (
             <IconSvg
               type={item.type as icon}
-              width={size === 'medium' ? '45' : '23'}
-              height={size === 'medium' ? '45' : '23'}
+              width={size === 'medium' ? '45' : '21'}
+              height={size === 'medium' ? '45' : '21'}
               fill={type === 'secondary' ? 'greyHover' : 'secondary'}
             />
           )}

@@ -46,7 +46,6 @@ export const ALink = styled.a`
   width: 100%;
   height: 100%;
   text-decoration: none;
-  text-underline: none;
 `;
 
 export const LinkRoute = styled(RouteLink)`
@@ -56,7 +55,6 @@ export const LinkRoute = styled(RouteLink)`
   width: 100%;
   height: 100%;
   text-decoration: none;
-  text-underline: none;
 `;
 
 export const ArrowButtonBase = styled.button`
@@ -84,7 +82,8 @@ export const ArrowButtonIcon = styled(IconSvg).attrs({
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: ${({ direction }) => (direction === 'left' ? 'rotate(180deg)' : 'rotate(0deg)')};
+  transform: ${({ direction }) =>
+    direction === 'left' ? 'rotate(180deg) translate(50%, 50%)' : 'rotate(0deg) translate(-50%, -50%)'};
 `;
 
 export const StyledButton = styled.button`
