@@ -6,9 +6,9 @@ export const helpInformList = [
   {
     id: '1',
     title_uk: 'Розповсюджуйте інформацію:',
-    title_en: 'Share the information:',
+    title_en: 'Share information:',
     description_en:
-      'Please, repost our fundraiser in your stories, with a link to the money box. Like the post and leave a comment. This will help Instagram algorithms promote the fundraiser, and your friends will see our post.',
+      'Please repost our fundraiser in your stories with a link to the bank, like it, and leave a comment. By doing this, you`ll help Instagram algorithms to promote our campaign, and your friends will see our post.',
     description_uk:
       'Будь ласка, репостніть наш збір у сторіз, з посиланням на банку, поставьте лайк, і напишіть комент. Цим ви допоможете алгоритмам інстаграму просувати збір і наш допис побачать ваші друзі.',
     img: img_1,
@@ -16,9 +16,9 @@ export const helpInformList = [
   {
     id: '2',
     title_uk: 'Збирайте необхідне:',
-    title_en: 'Gather what is needed:',
+    title_en: 'Collect what is necessary:',
     description_en:
-      'For example, collect fabric for nets, clothing for IDP, wax and cans for trench candles, PET lids, used disposable e-cigarettes.',
+      'For example, collect fabric for nets, clothing for internally displaced persons, wax and tin cans for trench candles, PET caps, and used disposable electronic cigarettes.',
     description_uk:
       'Наприклад, передавайте тканину для сіток, одяг ВПО, віск і бляшанки для окопних свічок, кришки PET, використані одноразові електронні сигарети.',
     img: img_2,
@@ -26,9 +26,9 @@ export const helpInformList = [
   {
     id: '3',
     title_uk: 'Будьте свідомими:',
-    title_en: 'Be aware:',
+    title_en: 'Stay informed:',
     description_en:
-      'Follow the political situation, attend rallies, sign petitions, communicate in Ukrainian. READ VERIFIED MEDIA AND DO NOT SPREAD FAKE INFORMATION.',
+      'Keep track of the political situation, participate in rallies, sign petitions, and communicate in Ukrainian. READ RELIABLE MEDIA AND DO NOT SPREAD FAKE INFORMATION.',
     description_uk:
       'Слідкуйте за політичною ситуацією, виходьте на мітинги, підписуйте петиції, спілкуйтеся українською. ЧИТАЙТЕ ПЕРЕВІРЕНІ ЗМІ Й НЕ ПОШИРЮЙТЕ ФЕЙКОВУ ІНФОРМАЦІЮ',
     img: img_3,

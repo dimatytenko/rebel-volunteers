@@ -31,11 +31,10 @@ export const StyledHeart = styled(IconSvg).attrs({
 `;
 
 export const StyledTextIcon = styled(IconSvg).attrs({
-  type: 'donate',
   width: '208px',
   height: '208px',
   viewBox: '0 0 208 208',
-})`
+})<{ lang?: string }>`
   transition: all ${({ theme }) => theme.transition.primary};
 `;
 

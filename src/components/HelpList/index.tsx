@@ -1,7 +1,7 @@
 import { HelpListProps } from '../../types/helpList';
 import { Wrapper, Info, Title, InfoText } from './styles';
 
-export const HelpList: React.FC<HelpListProps> = ({ data, t }) => {
+export const HelpList: React.FC<HelpListProps> = ({ data, t, lang }) => {
   return (
     <Wrapper $back={data.img}>
       {data.list.map((item) => {
@@ -9,7 +9,7 @@ export const HelpList: React.FC<HelpListProps> = ({ data, t }) => {
           <Info key={item.id}>
             <Title>{t(`common:contacts.${item.title}`)}</Title>
             <>
-              {item.info.map((item) => {
+              {item.info[lang].map((item) => {
                 return <InfoText key={item}>{item}</InfoText>;
               })}
             </>

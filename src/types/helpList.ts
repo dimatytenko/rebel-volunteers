@@ -12,5 +12,8 @@ export interface HelpListData {
 interface HelpListDataItem {
   id: string;
   title: string;
-  info: string[];
+  info: {
+    en: string[];
+    uk: string[];
+  };
 }

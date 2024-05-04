@@ -92,7 +92,7 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoad
             </MobileWrapper>
           </HeroContent>
 
-          <Donate link={donate?.donate_link} />
+          <Donate link={donate?.donate_link} lang={lang} />
         </Wrapper>
       </Container>
     </HeroWrapper>

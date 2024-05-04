@@ -1,7 +1,8 @@
 import { HotlinesProps } from '../../types/hotLines';
 import { Wrapper, InfoItem, Title, Info, InfoText } from './styles';
 
-export const Hotlines: React.FC<HotlinesProps> = ({ list, t }) => {
+export const Hotlines: React.FC<HotlinesProps> = ({ list, t, lang }) => {
+  console.log('lang', lang);
   return (
     <Wrapper>
       {list.map((item) => {
@@ -9,7 +10,7 @@ export const Hotlines: React.FC<HotlinesProps> = ({ list, t }) => {
           <InfoItem key={item.id} $back={item.img}>
             <Title>{t(`common:contacts.${item.title}`)}</Title>
             <Info>
-              {item.info.map((item) => {
+              {item.info[lang].map((item) => {
                 return <InfoText key={item}>{item}</InfoText>;
               })}
             </Info>

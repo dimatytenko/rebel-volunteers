@@ -10,6 +10,7 @@ export const iconOptions = <const>[
   'arrow-long',
   'phone',
   'donate',
+  'donate-eng',
   'donate-heart',
   'copy',
 ];

@@ -7,5 +7,8 @@ export interface IHotLine {
   id: string;
   title: string;
   img: string;
-  info: string[];
+  info: {
+    en: string[];
+    uk: string[];
+  };
 }

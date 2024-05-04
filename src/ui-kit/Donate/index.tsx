@@ -14,9 +14,10 @@ import {
 
 interface DonateProps {
   link?: string;
+  lang?: string;
 }
 
-export const Donate: React.FC<DonateProps> = ({ link }) => {
+export const Donate: React.FC<DonateProps> = ({ link, lang }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,14 +34,14 @@ export const Donate: React.FC<DonateProps> = ({ link }) => {
       {!scrolled ? (
         <DonateWrapper>
           <RotateWrapper>
-            <StyledTextIcon />
+            <StyledTextIcon type={lang === 'en' ? 'donate-eng' : 'donate'} />
           </RotateWrapper>
           <StyledIcon />
           <ALink href={link} target="_blank" />
         </DonateWrapper>
       ) : (
         <DonateHeartWrapper>
-          <StyledTextIcon />
+          <StyledTextIcon type={lang === 'en' ? 'donate-eng' : 'donate'} />
           <StyledHeart />
           <StyledIcon />
           <ALink href={link} target="_blank" />

@@ -29,14 +29,15 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   width: 378px;
-  padding: 0 20px 30px;
+  min-height: 486px;
+  padding: 0 20px 20px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
 `;
 
 export const NumberWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 92px;
+  margin-bottom: 130px;
 `;
 
 export const Number = styled(Heading3)`
@@ -53,7 +54,7 @@ export const Number = styled(Heading3)`
 export const ItemTitle = styled(Text1)`
   font-size: 31px;
   line-height: 1.29;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   ${Media.down.xs} {
     font-size: 25px;
@@ -62,7 +63,6 @@ export const ItemTitle = styled(Text1)`
 
 export const ItemDescription = styled(Text1)`
   font-size: 16px;
-  margin-top: auto;
 
   ${Media.down.m} {
     font-size: 12px;
