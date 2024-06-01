@@ -132,7 +132,7 @@ export const CopyIcon = styled(IconSvg).attrs({
   transition: fill ${({ theme }) => theme.transition.primary};
 
   &:hover {
-    fill: ${({ theme }) => theme.palette.colors.greyHover};
+    fill: green;
   }
 
   ${Media.down.m} {
