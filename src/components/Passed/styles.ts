@@ -70,6 +70,7 @@ export const ImageWrapper = styled.div`
 
   ${Media.down.xl} {
     margin-bottom: 10px;
+    height: 120px;
   }
 `;
 

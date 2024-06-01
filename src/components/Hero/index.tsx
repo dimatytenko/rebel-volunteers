@@ -10,6 +10,7 @@ import {
   MobileWrapper,
   MobileBottomWrapper,
   MobileImageExclude,
+  MobileSmallWrapper,
 } from './styles';
 import { Container } from '../../ui-kit/Container';
 import { POINTS } from '../../ui-kit/Container/types';
@@ -90,6 +91,22 @@ export const HeroComponent: React.FC<HeroComponentProps> = ({ data, lang, isLoad
                 />
               </MobileBottomWrapper>
             </MobileWrapper>
+            <MobileSmallWrapper>
+              <ImageWithPreview src={data?.photos[2]?.image} width={213} height={136} alt="our photo" loading="lazy" />
+              <MobileBottomWrapper>
+                <MobileImageExclude>
+                  <ImageWithPreview
+                    src={data?.photos[4]?.image}
+                    width={100}
+                    height={76}
+                    alt="our photo"
+                    loading="lazy"
+                  />
+                </MobileImageExclude>
+                <ImageWithPreview src={data?.photos[0]?.image} width={80} height={103} alt="our photo" loading="lazy" />
+                <ImageWithPreview src={data?.photos[3]?.image} width={92} height={124} alt="our photo" loading="lazy" />
+              </MobileBottomWrapper>
+            </MobileSmallWrapper>
           </HeroContent>
 
           <Donate link={donate?.donate_link} lang={lang} />

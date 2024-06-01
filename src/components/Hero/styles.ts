@@ -70,6 +70,22 @@ export const MobileWrapper = styled.div`
     gap: 5px;
     align-self: end;
   }
+
+  ${Media.down.xxs} {
+    display: none;
+  }
+`;
+
+export const MobileSmallWrapper = styled.div`
+  display: none;
+
+  ${Media.down.xxs} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    align-self: end;
+  }
 `;
 
 export const MobileBottomWrapper = styled.div`
@@ -80,8 +96,4 @@ export const MobileBottomWrapper = styled.div`
 export const MobileImageExclude = styled.div`
   position: relative;
   top: 34px;
-
-  ${Media.down.xxs} {
-    display: none;
-  }
 `;

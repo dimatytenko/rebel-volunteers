@@ -73,6 +73,10 @@ export const DonateWrapper = styled.div`
     bottom: 120px;
   }
 
+  ${Media.down.xxs} {
+    bottom: 65px;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.palette.colors.redHover};
 

@@ -78,7 +78,6 @@ export const StyledHeading4 = styled.h4`
 
 export const StyledHeading5 = styled.h5`
   ${styles};
-  font-feature-settings:
   font-size: 32px;
   line-height: 1.3;
 `;
