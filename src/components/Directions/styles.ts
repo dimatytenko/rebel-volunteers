@@ -21,7 +21,11 @@ export const Card = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  owerflow: hidden;
+  overflow: hidden;
+
+  ${Media.down.xxs} {
+    height: 144px;
+  }
 `;
 
 export const Image = styled.img`
@@ -38,6 +42,10 @@ export const TextWrapper = styled.div`
 
   ${Media.down.s} {
     padding: 0 15px;
+  }
+
+  ${Media.down.xxs} {
+    padding: 8px;
   }
 `;
 
@@ -73,9 +81,5 @@ export const Subtitle = styled(Heading3)`
 export const StyledText = styled(Text1)`
   ${Media.down.m} {
     font-size: 14px;
-  }
-
-  ${Media.down.xxs} {
-    font-size: 10px;
   }
 `;

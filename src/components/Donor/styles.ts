@@ -32,6 +32,10 @@ export const Item = styled.div`
   min-height: 486px;
   padding: 0 20px 20px;
   background-color: ${({ theme }) => theme.palette.colors.lightBlack};
+
+  ${Media.down.m} {
+    min-height: 276px;
+  }
 `;
 
 export const NumberWrapper = styled.div`
