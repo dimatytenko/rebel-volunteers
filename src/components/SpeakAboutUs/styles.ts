@@ -42,23 +42,11 @@ export const SpeakContent = styled.div<{ $back?: string }>`
   }
 
   ${Media.down.m} {
-    position: relative;
     padding: 10px;
-    background-image: url(${({ $back }) => $back});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${({ $back }) => $back});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 1;
-    }
   }
 `;
 
@@ -82,23 +70,4 @@ export const ListItemText = styled(Text1)`
   text-decoration: underline;
 `;
 
-export const SpeakButton = styled.a`
-  position: relative;
-  display: inline-flex;
-  cursor: pointer;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0%;
-    height: 1.5px;
-    background-color: ${({ theme }) => theme.palette.colors.secondary};
-    transition: all ${({ theme }) => theme.transition.primary};
-  }
-
-  &:hover:before {
-    width: 100%;
-  }
-`;
+export const SpeakButton = styled.a``;

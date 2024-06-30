@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 .netlify
-.env
+.env.env
